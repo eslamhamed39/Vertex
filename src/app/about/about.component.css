@@ -1,0 +1,14 @@
+
+#header-container{
+    padding: 5px 80px 15px 80px;
+}
+header{
+    height: 100px;
+    /* background-color: #14141428; */
+}
+#logo img {
+	height: 65px;
+}
+.wp-block-columns.wp-container-3 {
+    flex-wrap: nowrap;
+}

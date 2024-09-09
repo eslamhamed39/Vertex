@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'src/assets/wp-content/plugins/contact-form-7/includes/css/styles42f0.css';
+@import 'src/assets/wp-content/themes/rayden/css/showcaseef10.css';
+@import 'src/assets/wp-content/themes/rayden/css/heroef10.css';
+@import 'src/assets/wp-content/themes/rayden/css/portfolioef10.css';
+@import 'src/assets/wp-content/themes/rayden/css/blogef10.css';
+@import 'src/assets/wp-content/themes/rayden/css/shortcodesef10.css';
+@import 'src/assets/wp-content/themes/rayden/css/assetsef10.css';
+@import 'src/assets/wp-content/themes/rayden/css/shopef10.css';
+@import 'src/assets/wp-content/themes/rayden/styleef10.css';
+@import 'src/assets/wp-content/themes/rayden-child/styleef10.css';
+@import 'src/assets/wp-content/themes/rayden/css/font-awesome.minef10.css';
+@import 'src/assets/fonts.googleapis.com/css9461.css';
+@import 'src/assets/fonts.googleapis.com/cssab94.css';
+@import 'src/assets/fonts.googleapis.com/css9253.css';
+@import 'src/assets/wp-content/themes/rayden/css/style.min.css';
+
+
+
+
+.wp-duotone-000000-7f7f7f-1.wp-block-image img,
+.wp-duotone-000000-7f7f7f-1.wp-block-image .components-placeholder {
+    filter: url(#wp-duotone-000000-7f7f7f-1);
+}
+
+.wp-duotone-000000-7f7f7f-2.wp-block-image img,
+.wp-duotone-000000-7f7f7f-2.wp-block-image .components-placeholder {
+    filter: url(#wp-duotone-000000-7f7f7f-2);
+}
+
+.wp-duotone-000000-7f7f7f-3.wp-block-image img,
+.wp-duotone-000000-7f7f7f-3.wp-block-image .components-placeholder {
+    filter: url(#wp-duotone-000000-7f7f7f-3);
+}
+
+.wp-duotone-000000-7f7f7f-4.wp-block-image img,
+.wp-duotone-000000-7f7f7f-4.wp-block-image .components-placeholder {
+    filter: url(#wp-duotone-000000-7f7f7f-4);
+}
+
+.wp-duotone-000000-7f7f7f-5.wp-block-image img,
+.wp-duotone-000000-7f7f7f-5.wp-block-image .components-placeholder {
+    filter: url(#wp-duotone-000000-7f7f7f-5);
+}
+
+.wp-duotone-000000-7f7f7f-6.wp-block-image img,
+.wp-duotone-000000-7f7f7f-6.wp-block-image .components-placeholder {
+    filter: url(#wp-duotone-000000-7f7f7f-6);
+}
+
+.wp-duotone-000000-7f7f7f-7.wp-block-image img,
+.wp-duotone-000000-7f7f7f-7.wp-block-image .components-placeholder {
+    filter: url(#wp-duotone-000000-7f7f7f-7);
+}
+
+.wp-duotone-000000-7f7f7f-8.wp-block-image img,
+.wp-duotone-000000-7f7f7f-8.wp-block-image .components-placeholder {
+    filter: url(#wp-duotone-000000-7f7f7f-8);
+}
+
+.wp-duotone-000000-7f7f7f-9.wp-block-image img,
+.wp-duotone-000000-7f7f7f-9.wp-block-image .components-placeholder {
+    filter: url(#wp-duotone-000000-7f7f7f-9);
+}
+
+.wp-duotone-000000-7f7f7f-10.wp-block-image img,
+.wp-duotone-000000-7f7f7f-10.wp-block-image .components-placeholder {
+    filter: url(#wp-duotone-000000-7f7f7f-10);
+}
+
+.wp-duotone-000000-7f7f7f-11.wp-block-image img,
+.wp-duotone-000000-7f7f7f-11.wp-block-image .components-placeholder {
+    filter: url(#wp-duotone-000000-7f7f7f-11);
+}
+
+.see_more {
+    transition: all 0.3s ease;
+    /* Adjust duration as needed */
+}
