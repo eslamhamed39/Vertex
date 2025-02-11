@@ -55,14 +55,14 @@ export class AboutComponent implements OnInit, AfterViewInit {
     this.scene = new THREE.Scene();
 
     this.camera = new THREE.PerspectiveCamera(50, this.ww / this.wh, 0.1, 10000);
-    this.camera.position.set(-100, 0, 220);
+    this.camera.position.set(-100, 0, 320);
     this.camera.lookAt(this.centerVector);
     this.scene.add(this.camera);
 
     const textureLoader = new THREE.TextureLoader();
     textureLoader.crossOrigin = '';
     // textureLoader.load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/127738/transparentMap.png', (texture) => {
-    textureLoader.load('assets/Image/Asset_1.png', (texture) => {
+    textureLoader.load('https://i.ibb.co/JWsfjrpG/white-Log-small.webp', (texture) => {
       this.imagedata = this.getImageData(texture.image);
       this.drawTheMap();
     });

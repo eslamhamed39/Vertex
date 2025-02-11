@@ -24,7 +24,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
     NgbModule,
     RecaptchaModule
   ],
-  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
