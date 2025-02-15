@@ -1,5 +1,6 @@
 import { Component, AfterViewInit, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+// import {faYoutube} from '@fortawesome/free-solid-svg-icons';
 
 declare var PageLoad: any;
 declare var ScrollEffects: any;
@@ -12,6 +13,7 @@ declare var PageLoadActions: any;
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements AfterViewInit, OnDestroy {
+  isHovered = false;
   captcha:string;
   email: string;
   constructor(private router: Router) {

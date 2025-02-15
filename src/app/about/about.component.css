@@ -1,14 +1,46 @@
-
-#header-container{
+#header-container {
     padding: 5px 80px 15px 80px;
 }
-header{
+
+header {
     height: 100px;
     /* background-color: #14141428; */
 }
+
 #logo img {
-	height: 65px;
+    height: 65px;
 }
+
 .wp-block-columns.wp-container-3 {
     flex-wrap: nowrap;
+}
+
+#page-nav::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: var(--border-width, 0%);
+    height: 2px;
+    background-color: #ee4437ff;
+    transform: translateX(-50%);
+}
+
+.gradient-text {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ee4437ff, #ffd903, #ee4437ff, #ffd903, #ee4437ff);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }

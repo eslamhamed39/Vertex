@@ -10,21 +10,32 @@ import { RecaptchaModule } from 'ng-recaptcha';
 import { AboutComponent } from './about/about.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { About2Component } from './about2/about2.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     FooterComponent,
     AboutComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    About2Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    RecaptchaModule
+    RecaptchaModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(library: FaIconLibrary) {
+    library.addIcons(faYoutube);  // Add the YouTube icon to the library
+  }
+}

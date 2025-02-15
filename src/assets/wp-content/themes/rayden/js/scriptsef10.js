@@ -18,12 +18,13 @@ jQuery(function ($) {
 		Shop();	
 		Shortcodes();
 		Sliders();	
-		if( (typeof ClapatRaydenThemeOptions != 'undefined') && (ClapatRaydenThemeOptions.enable_ajax == "1") ){
-			AjaxLoad();
-			FitThumbScreen();
-		} else {
-			PageLoadNoAjax();
-		}
+		// if( (typeof ClapatRaydenThemeOptions != 'undefined') && (ClapatRaydenThemeOptions.enable_ajax == "1") ){
+		// 	AjaxLoad();
+		// 	FitThumbScreen();
+		// } else {
+		// 	PageLoadNoAjax();
+		// }
+		PageLoadNoAjax();
 		JustifiedGrid();
 		Lightbox();	
 		PlayVideo();
@@ -529,7 +530,7 @@ function ScrollEffects() {
 		
 		var bottomProjectParallax = gsap.to('.next-project-image', {duration: 1, top:"0",  scale:1, opacity:0.8, ease:Linear.easeNone});
 		var bottomProjectCaptionParallax = gsap.to('.next-project-wrap', {duration: 0.5, top:"0", scale:1, opacity:1, ease:Linear.easeNone});
-		var bottomPageCaptionParallax = gsap.to('.next-page-title', {duration: 0.5, top:"0", scale:1, opacity:1, ease:Linear.easeNone});
+		var bottomPageCaptionParallax = gsap.to('.next-page-title', {duration: 0.5, top:"2", scale:1, opacity:1, ease:Linear.easeNone});
 		
 		var controller = new ScrollMagic.Controller();
 		

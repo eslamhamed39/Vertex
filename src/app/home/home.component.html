@@ -1,16 +1,10 @@
 <body
   class="home page-template page-template-home-page page-template-home-page-php page page-id-3826 wp-embed-responsive"
-  data-primary-color="#8da0a0"
->
+  data-primary-color="#8da0a0">
   <!-- <app-preloader></app-preloader> -->
   <!-- Preloader -->
-  <div
-    class="preloader-wrap"
-    data-firstline="Stay"
-    data-secondline="Online."
-    data-cursor-default-color="#f33a3a"
-    data-cursor-hover-color="#f33a3a"
-  >
+  <div class="preloader-wrap" data-firstline="Stay" data-secondline="Online." data-cursor-default-color="#f33a3a"
+    data-cursor-hover-color="#f33a3a">
     <div class="outer">
       <div class="inner">
         <div class="trackbar">
@@ -31,11 +25,15 @@
     <div id="page-content" class="light-content" data-bgcolor="#141414">
       <div id="info-details">
         <div class="social-icons">
-          <a href="" target="_blank" class="parallax-element">
+          <a href="https://www.facebook.com/geomakani" target="_blank" class="parallax-element">
             <i class="fa fa-facebook" aria-hidden="true"></i>
           </a>
           <!-- <span>|</span>
 						<a href="../www.instagram.com/geo.data/index.html" target="_blank" class="parallax-element">
+							<i class="fa fa-instagram" aria-hidden="true"></i>
+						</a>
+          <!-- <span>|</span>
+						<a href="../www.instagram.com/geo.data/index.html" target="_blank" class="parallax-element">`
 							<i class="fa fa-instagram" aria-hidden="true"></i>
 						</a>
 						<span>|</span>
@@ -43,7 +41,16 @@
 							<i class="fa fa-twitter" aria-hidden="true"></i>
 						</a> -->
           <span>|</span>
-          <a href="" target="_blank" class="parallax-element">
+          <a href="https://www.youtube.com/@Geomakani2018" target="_blank" class="parallax-element">
+            <!-- <i class="fa-brands fa-youtube" aria-hidden="true"></i> -->
+            <fa-icon [icon]="['fab', 'youtube']" [ngStyle]="{color: isHovered ? 'red' : 'white'}"
+              (mouseenter)="isHovered = true" (mouseleave)="isHovered = false">
+            </fa-icon>
+
+          </a>
+          <span>|</span>
+          <a href="https://www.linkedin.com/company/geomakani-official-page/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BM8yY2mgWROKfO6q7B%2BOg3g%3D%3D"
+            target="_blank" class="parallax-element">
             <i class="fa fa-linkedin" aria-hidden="true"></i>
           </a>
         </div>
@@ -55,41 +62,29 @@
           <div id="search">
             <form role="search" method="get" class="search-form" action="">
               <label>
-                <input
-                  type="search"
-                  class="search-field"
-                  placeholder="Search …"
-                  value=""
-                  name="s"
-                  title="Search for:"
-                />
+                <input type="search" class="search-field" placeholder="Search …" value="" name="s"
+                  title="Search for:" />
               </label>
               <button type="submit" class="search-submit">
                 <i class="fa fa-search" aria-hidden="true"></i>
               </button>
             </form>
           </div>
-          <div id="search-btn" onclick="displaySearch()">
+          <!-- <div id="search-btn" onclick="displaySearch()">
             <i class="fa fa-search" aria-hidden="true"></i>
-          </div>
+          </div> -->
           <!--<div class="address">
 						1F Nautica Building The Water Club, Beach Rd, Granger Bay, Cape Town
 					</div>-->
           <div class="email">
-            <a
-              href="mailto:info@geomakani.com"
-              target="_blank"
-              class="parallax-element"
-              ><i class="fa fa-envelope-o" aria-hidden="true"></i>Email:
-              info&#64;geomakani.com</a
-            >
+            <a href="mailto:info@geomakani.com" target="_blank" class="parallax-element"><i class="fa fa-envelope-o"
+                aria-hidden="true"></i>Email:
+              info&#64;geomakani.com</a>
           </div>
-          <div class="phone">
+          <!-- <div class="phone">
             <i class="fa fa-phone" aria-hidden="true"></i> Phone:
-            <a href="tel:+20000000000" target="_blank" class="parallax-element"
-              >+20000000000</a
-            >
-          </div>
+            <a href="tel:+20000000000" target="_blank" class="parallax-element">+20000000000</a>
+          </div> -->
         </div>
       </div>
       <!-- Header -->
@@ -98,16 +93,8 @@
           <!-- Logo -->
           <div id="logo" class="hide-ball disable-drag">
             <a class="ajax-link" data-type="page-transition" href="index.html">
-              <img
-                class="white-logo logo-big"
-                src="https://i.ibb.co/jZDL8JXm/white-Log.webp"
-                alt="Logo White"
-              />
-              <img
-                class="black-logo logo-big"
-                src="https://i.ibb.co/jZDL8JXm/white-Log.webp"
-                alt="Logo Black"
-              />
+              <img class="white-logo logo-big" src="https://i.ibb.co/0jLQ3dzS/bitmap2323.webp" alt="Logo White" />
+              <img class="black-logo logo-big" src="https://i.ibb.co/0jLQ3dzS/bitmap2323.webp" alt="Logo Black" />
               <!-- <span class="stagline">
 									EXCELLENCE IN<br>
 									LOCATION-INTELLIGENCE<br>
@@ -122,67 +109,44 @@
             <div class="nav-height">
               <div class="outer">
                 <div class="inner">
-                  <ul
-                    id="menu-main-menu"
-                    data-breakpoint="1025"
-                    class="flexnav menu"
-                  >
-                    <li
-                      id="menu-item-4808"
-                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3826 current_page_item menu-item-4808 link menu-timeline active"
-                    >
-                      <a
-                        [routerLink]="['/Home']"
-                        aria-current="page"
-                        data-type="page-transition"
-                        class="ajax-link active"
-                      >
+                  <ul id="menu-main-menu" data-breakpoint="1025" class="flexnav menu">
+                    <li id="menu-item-4808"
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3826 current_page_item menu-item-4808 link menu-timeline active">
+                      <a [routerLink]="['/Home']" aria-current="page" data-type="page-transition"
+                        class="ajax-link active">
                         <div class="before-span">
                           <span data-hover="Home">Home</span>
                         </div>
                       </a>
                     </li>
-                    <li
-                      id="menu-item-4809"
-                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3826 current_page_item menu-item-4808 link menu-timeline active"
-                    >
-                      <a
-                        [routerLink]="['/about']"
-                        aria-current="page"
-                        data-type="page-transition"
-                        class="ajax-link active"
-                      >
+                    <li id="menu-item-4809"
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3826 current_page_item menu-item-4808 link menu-timeline active">
+                      <!-- <a [routerLink]="['/about']" aria-current="page" class="ajax-link active"
+                        routerLinkActive="active"> -->
+                      <a href="/about" aria-current="page" class="ajax-link active" routerLinkActive="active">
                         <div class="before-span">
                           <span data-hover="WHO WE ARE">WHO WE ARE</span>
                         </div>
                       </a>
                     </li>
-                    <li
-                      id="menu-item-4801"
-                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4801 link menu-timeline"
-                    >
+                    <li id="menu-item-4801"
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4801 link menu-timeline">
                       <a href="">
                         <div class="before-span">
                           <span data-hover="What We Do">What We Do </span>
                         </div>
                       </a>
                       <ul class="sub-menu">
-                        <li
-                          id="menu-item-15"
-                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15 link"
-                        >
+                        <li id="menu-item-15"
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15 link">
                           <a href="">Products</a>
                         </li>
-                        <li
-                          id="menu-item-14"
-                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14 link"
-                        >
+                        <li id="menu-item-14"
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14 link">
                           <a href="">Solutions</a>
                         </li>
-                        <li
-                          id="menu-item-13"
-                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13 link"
-                        >
+                        <li id="menu-item-13"
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13 link">
                           <a href="">Services</a>
                         </li>
                       </ul>
@@ -252,10 +216,8 @@
 													</li>
 												</ul>
 											</li> -->
-                    <li
-                      id="menu-item-4690"
-                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4690 link menu-timeline"
-                    >
+                    <li id="menu-item-4690"
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4690 link menu-timeline">
                       <a href="" data-type="page-transition" class="ajax-link">
                         <div class="before-span">
                           <span data-hover="Contact">Contact</span>
@@ -296,41 +258,23 @@
           </a>
         </div>
         <!-- Showcase Slider Holder -->
-        <div
-          id="showcase-slider-webgl-holder"
-          class="disable-drag"
-          data-pattern-img="assets/wp-content/themes/rayden/images/displacement/aqua-light.jpg"
-        >
+        <div id="showcase-slider-webgl-holder" class="disable-drag"
+          data-pattern-img="assets/wp-content/themes/rayden/images/displacement/aqua-light.jpg">
           <div id="slider-webgl" class="swiper-container">
             <div id="trigger-slides" class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="slide-wrap active" data-slide="0"></div>
-                <div
-                  class="outer"
-                  data-swiper-parallax="0"
-                  data-swiper-parallax-opacity="0.3"
-                >
+                <div class="outer" data-swiper-parallax="0" data-swiper-parallax-opacity="0.3">
                   <div class="inner">
                     <div class="slide-title-wrapper">
-                      <div
-                        class="slide-title"
-                        data-fill-img="./Image/satellite-bg-compress-1.jpg"
-                        data-firstline="Read"
-                        data-secondline="More"
-                      >
+                      <div class="slide-title" data-fill-img="./Image/satellite-bg-compress-1.jpg" data-firstline="Read"
+                        data-secondline="More">
                         <span><span>Satellite Imagery</span></span>
                       </div>
-                      <a
-                        class="slide-link"
-                        data-type="page-transition"
-                        href=""
-                      ></a>
+                      <a class="slide-link" data-type="page-transition" href=""></a>
                     </div>
                     <div class="subtitle" data-swiper-parallax-opacity="0">
-                      <span
-                        ><span
-                          >Very High Resolution Satellite Imagery<br /><br /><br /></span
-                      ></span>
+                      <span><span>Very High Resolution Satellite Imagery<br /><br /><br /></span></span>
                     </div>
                   </div>
                 </div>
@@ -357,36 +301,21 @@
 								</div> -->
               <div class="swiper-slide">
                 <div class="slide-wrap" data-slide="2"></div>
-                <div
-                  class="outer"
-                  data-swiper-parallax="0"
-                  data-swiper-parallax-opacity="0.3"
-                >
+                <div class="outer" data-swiper-parallax="0" data-swiper-parallax-opacity="0.3">
                   <div class="inner">
                     <div class="slide-title-wrapper">
-                      <div
-                        class="slide-title"
+                      <div class="slide-title"
                         data-fill-img="assets/wp-content/uploads/2020/12/geospatial-software-header.jpg"
-                        data-firstline="Read"
-                        data-secondline="More"
-                      >
+                        data-firstline="Read" data-secondline="More">
                         <span><span>Geospatial Solution</span></span>
                       </div>
-                      <a
-                        class="slide-link"
-                        data-type="page-transition"
-                        href=""
-                      ></a>
+                      <a class="slide-link" data-type="page-transition" href=""></a>
                     </div>
                     <div class="subtitle" data-swiper-parallax-opacity="0">
-                      <span
-                        ><span
-                          >Providing you with tools to visualize, analyze and
+                      <span><span>Providing you with tools to visualize, analyze and
                           <br />
                           derive insight from location information to <br />
-                          solve mission and business-critical problems.</span
-                        ></span
-                      >
+                          solve mission and business-critical problems.</span></span>
                     </div>
                   </div>
                 </div>
@@ -412,35 +341,20 @@
 								</div> -->
               <div class="swiper-slide">
                 <div class="slide-wrap" data-slide="4"></div>
-                <div
-                  class="outer"
-                  data-swiper-parallax="0"
-                  data-swiper-parallax-opacity="0.3"
-                >
+                <div class="outer" data-swiper-parallax="0" data-swiper-parallax-opacity="0.3">
                   <div class="inner">
                     <div class="slide-title-wrapper">
-                      <div
-                        class="slide-title"
+                      <div class="slide-title"
                         data-fill-img="assets/wp-content/uploads/2020/12/GDD-Website-GEM-Picture-2-01.png"
-                        data-firstline="Read"
-                        data-secondline="More"
-                      >
+                        data-firstline="Read" data-secondline="More">
                         <span><span>GEM</span></span>
                       </div>
-                      <a
-                        class="slide-link"
-                        data-type="page-transition"
-                        href=""
-                      ></a>
+                      <a class="slide-link" data-type="page-transition" href=""></a>
                     </div>
                     <div class="subtitle" data-swiper-parallax-opacity="0">
-                      <span
-                        ><span
-                          >Geo change analytics solution based on very<br />
+                      <span><span>Geo change analytics solution based on very<br />
                           high-resolution satellite imagery focused on <br />
-                          detecting changes around your assets.</span
-                        ></span
-                      >
+                          detecting changes around your assets.</span></span>
                     </div>
                   </div>
                 </div>
@@ -452,39 +366,24 @@
         <!-- canvas slider -->
         <div id="canvas-slider" class="canvas-slider">
           <div class="slider-img" data-slide="0">
-            <img
-              class="slide-img"
-              src="assets/wp-content/uploads/2022/07/satellite-bg-compress-1.jpg"
-              alt="Slide Image"
-            />
+            <img class="slide-img" src="assets/wp-content/uploads/2022/07/satellite-bg-compress-1.jpg"
+              alt="Slide Image" />
           </div>
           <div class="slider-img" data-slide="1">
-            <img
-              class="slide-img"
-              src="assets/wp-content/uploads/2020/12/shutterstock_1668474607-1.jpg"
-              alt="Slide Image"
-            />
+            <img class="slide-img" src="assets/wp-content/uploads/2020/12/shutterstock_1668474607-1.jpg"
+              alt="Slide Image" />
           </div>
           <div class="slider-img" data-slide="2">
-            <img
-              class="slide-img"
-              src="assets/wp-content/uploads/2020/12/geospatial-software-header.jpg"
-              alt="Slide Image"
-            />
+            <img class="slide-img" src="assets/wp-content/uploads/2020/12/geospatial-software-header.jpg"
+              alt="Slide Image" />
           </div>
           <div class="slider-img" data-slide="3">
-            <img
-              class="slide-img"
-              src="assets/wp-content/uploads/2020/12/training-service-header.jpg"
-              alt="Slide Image"
-            />
+            <img class="slide-img" src="assets/wp-content/uploads/2020/12/training-service-header.jpg"
+              alt="Slide Image" />
           </div>
           <div class="slider-img" data-slide="4">
-            <img
-              class="slide-img"
-              src="assets/wp-content/uploads/2020/12/GDD-Website-GEM-Picture-2-01.png"
-              alt="Slide Image"
-            />
+            <img class="slide-img" src="assets/wp-content/uploads/2020/12/GDD-Website-GEM-Picture-2-01.png"
+              alt="Slide Image" />
           </div>
         </div>
 
@@ -518,36 +417,24 @@
           <!-- Main Content -->
           <div id="main-content">
             <div id="main-page-content">
-              <div
-                class="wp-block-rayden-gutenberg-container reduced-block border-red"
-                style="background-color: transparent; text-align: left"
-              >
-                <div
-                  class="wp-block-rayden-gutenberg-container"
-                  style="background-color: #f2f2f2; text-align: left"
-                >
+              <div class="wp-block-rayden-gutenberg-container reduced-block border-red"
+                style="background-color: transparent; text-align: left">
+                <div class="wp-block-rayden-gutenberg-container" style="background-color: #f2f2f2; text-align: left">
                   <div
                     class="wp-block-rayden-gutenberg-half-background-container row-half-color half-dark-section undefined first full bgimage"
-                    data-bgcolor="#225a4f"
-                  ></div>
+                    data-bgcolor="#225a4f"></div>
 
                   <div
-                    class="wp-block-rayden-gutenberg-half-background-container row-half-color half-white-section undefined second change-header-color about_transation"
-                  >
+                    class="wp-block-rayden-gutenberg-half-background-container row-half-color half-white-section undefined second change-header-color about_transation">
                     <p></p>
                   </div>
 
-                  <div
-                    class="wp-block-rayden-gutenberg-container position-relative bg"
-                    style="
+                  <div class="wp-block-rayden-gutenberg-container position-relative bg" style="
                       background-color: transparent;
                       padding-top: 30px;
                       text-align: center;
-                    "
-                  >
-                    <h3
-                      class="has-text-align-center no-bottom-margin wp-block-heading"
-                    >
+                    ">
+                    <h3 class="has-text-align-center no-bottom-margin wp-block-heading">
                       About Us
                     </h3>
 
@@ -571,266 +458,156 @@
                   </div>
 
                   <div class="wp-block-cover is-light">
-                    <span
-                      aria-hidden="true"
-                      class="wp-block-cover__background has-background-dim"
-                    ></span
-                    ><img
-                      decoding="async"
-                      class="wp-block-cover__image-background wp-image-4788"
-                      alt=""
-                      src="assets/wp-content/uploads/2022/08/GDD_Img2.jpg"
-                      data-object-fit="cover"
-                    />
-                    <div
-                      class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow"
-                    >
-                      <p
-                        class="has-text-align-center sml-text has-large-font-size"
-                      >
-                        <strong
-                          >Vertex are providers of geospatial solutions using
+                    <span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><img
+                      decoding="async" class="wp-block-cover__image-background wp-image-4788" alt=""
+                      src="assets/wp-content/uploads/2022/08/GDD_Img2.jpg" data-object-fit="cover" />
+                    <div class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow">
+                      <p class="has-text-align-center sml-text has-large-font-size">
+                        <strong>Geomakani are providers of geospatial solutions using
                           very High Resolution Satellite Imagery and
-                          Location-Intelligence.</strong
-                        >
+                          Location-Intelligence.</strong>
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div
-                class="wp-block-rayden-gutenberg-container has-animation full row_padding_bottom"
-                style="
+              <div class="wp-block-rayden-gutenberg-container has-animation full row_padding_bottom" style="
                   background-color: #000;
                   padding-top: 80px;
                   padding-bottom: 80px;
                   text-align: left;
-                "
-              >
-                <div
-                  class="wp-block-rayden-gutenberg-container"
-                  style="
+                ">
+                <div class="wp-block-rayden-gutenberg-container" style="
                     background-color: #000;
                     padding-bottom: 50px;
                     text-align: center;
-                  "
-                >
+                  ">
                   <h5 class="has-text-align-center small wp-block-heading">
-                    <span class="fs-5 fw-bold"
-                      >To help our clients in a rapidly changing world</span
-                    ><br />
+                    <span class="fs-5 fw-bold">To help our clients in a rapidly changing world</span><br />
                     we must continuously innovate and extend our capabilities.
                   </h5>
 
-                  <div
-                    class="wp-block-rayden-gutenberg-container"
-                    style="background-color: #f2f2f2; text-align: left"
-                  ></div>
+                  <div class="wp-block-rayden-gutenberg-container" style="background-color: #f2f2f2; text-align: left">
+                  </div>
                 </div>
 
-                <div
-                  class="wp-block-rayden-gutenberg-container medium-width"
-                  style="background-color: transparent; text-align: left"
-                >
+                <div class="wp-block-rayden-gutenberg-container medium-width"
+                  style="background-color: transparent; text-align: left">
                   <div
-                    class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-3 wp-block-columns-is-layout-flex"
-                  >
+                    class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-3 wp-block-columns-is-layout-flex">
                     <div
                       class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow"
-                      style="flex-basis: 50%"
-                    >
+                      style="flex-basis: 50%">
                       <div
-                        class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-1 wp-block-columns-is-layout-flex"
-                      >
+                        class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-1 wp-block-columns-is-layout-flex">
                         <div
                           class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow"
-                          style="flex-basis: 25%"
-                        >
-                          <figure
-                            class="wp-block-image size-full wp-duotone-000000-7f7f7f-1"
-                          >
-                            <img
-                              decoding="async"
-                              src="assets/wp-content/uploads/2022/08/GDD-Website-Icons-22.png"
-                              alt=""
-                              class="wp-image-4897"
-                            />
+                          style="flex-basis: 25%">
+                          <figure class="wp-block-image size-full wp-duotone-000000-7f7f7f-1">
+                            <img decoding="async" src="assets/wp-content/uploads/2022/08/GDD-Website-Icons-22.png"
+                              alt="" class="wp-image-4897" />
                           </figure>
 
-                          <div
-                            style="height: 40px"
-                            aria-hidden="true"
-                            class="wp-block-spacer"
-                          ></div>
+                          <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
 
                         <div
                           class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow"
-                          style="flex-basis: 75%"
-                        >
+                          style="flex-basis: 75%">
                           <p class="grey-text">
-                            <span class="fs-3 fw-bold">Productivity</span
-                            ><br />We ensure the maximum productivity <br />to
+                            <span class="fs-3 fw-bold">Productivity</span><br />We ensure the maximum productivity
+                            <br />to
                             meet customers expectations.
                           </p>
 
-                          <div
-                            style="height: 40px"
-                            aria-hidden="true"
-                            class="wp-block-spacer"
-                          ></div>
+                          <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
                       </div>
                     </div>
 
-                    <div
-                      class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                      style="flex-basis: 50%"
-                    >
+                    <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis: 50%">
                       <div
-                        class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-2 wp-block-columns-is-layout-flex"
-                      >
+                        class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-2 wp-block-columns-is-layout-flex">
                         <div
                           class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow"
-                          style="flex-basis: 25%"
-                        >
-                          <figure
-                            class="wp-block-image size-full is-resized wp-duotone-000000-7f7f7f-2"
-                          >
-                            <img
-                              decoding="async"
-                              src="assets/wp-content/uploads/2022/08/GDD-Website-Icons-plane.png"
-                              alt=""
-                              class="wp-image-4900"
-                              width="109"
-                              height="109"
-                            />
+                          style="flex-basis: 25%">
+                          <figure class="wp-block-image size-full is-resized wp-duotone-000000-7f7f7f-2">
+                            <img decoding="async" src="assets/wp-content/uploads/2022/08/GDD-Website-Icons-plane.png"
+                              alt="" class="wp-image-4900" width="109" height="109" />
                           </figure>
 
-                          <div
-                            style="height: 40px"
-                            aria-hidden="true"
-                            class="wp-block-spacer"
-                          ></div>
+                          <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
 
                         <div
                           class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow"
-                          style="flex-basis: 75%"
-                        >
+                          style="flex-basis: 75%">
                           <p class="grey-text">
-                            <span class="fs-3 fw-bold">Efficiency</span
-                            ><br />Using best techniques to increase efficiency.
+                            <span class="fs-3 fw-bold">Efficiency</span><br />Using best techniques to increase
+                            efficiency.
                           </p>
-                          <div
-                            style="height: 40px"
-                            aria-hidden="true"
-                            class="wp-block-spacer"
-                          ></div>
+                          <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <div
-                    class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-6 wp-block-columns-is-layout-flex"
-                  >
+                    class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-6 wp-block-columns-is-layout-flex">
                     <div
                       class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow"
-                      style="flex-basis: 50%"
-                    >
+                      style="flex-basis: 50%">
                       <div
-                        class="wp-block-columns are-vertically-aligned-center is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-4 wp-block-columns-is-layout-flex"
-                      >
+                        class="wp-block-columns are-vertically-aligned-center is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-4 wp-block-columns-is-layout-flex">
                         <div
                           class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow"
-                          style="flex-basis: 25%"
-                        >
-                          <figure
-                            class="wp-block-image size-full is-resized wp-duotone-000000-7f7f7f-3"
-                          >
-                            <img
-                              decoding="async"
-                              src="assets/wp-content/uploads/2022/08/GDD-Website-Icons-hand.png"
-                              alt=""
-                              class="wp-image-4893"
-                              width="133"
-                              height="126"
-                            />
+                          style="flex-basis: 25%">
+                          <figure class="wp-block-image size-full is-resized wp-duotone-000000-7f7f7f-3">
+                            <img decoding="async" src="assets/wp-content/uploads/2022/08/GDD-Website-Icons-hand.png"
+                              alt="" class="wp-image-4893" width="133" height="126" />
                           </figure>
 
-                          <div
-                            style="height: 40px"
-                            aria-hidden="true"
-                            class="wp-block-spacer"
-                          ></div>
+                          <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
 
                         <div
                           class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow"
-                          style="flex-basis: 75%"
-                        >
+                          style="flex-basis: 75%">
                           <p class="grey-text">
                             <span class="fs-3 fw-bold">Quality</span><br />Our
                             company guarantees the quality <br />
                             of our products and solutions.
                           </p>
 
-                          <div
-                            style="height: 40px"
-                            aria-hidden="true"
-                            class="wp-block-spacer"
-                          ></div>
+                          <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
                       </div>
                     </div>
 
-                    <div
-                      class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                      style="flex-basis: 50%"
-                    >
+                    <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis: 50%">
                       <div
-                        class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-5 wp-block-columns-is-layout-flex"
-                      >
+                        class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-5 wp-block-columns-is-layout-flex">
                         <div
                           class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow"
-                          style="flex-basis: 25%"
-                        >
-                          <figure
-                            class="wp-block-image size-full is-resized wp-duotone-000000-7f7f7f-4"
-                          >
-                            <img
-                              decoding="async"
-                              src="assets/wp-content/uploads/2022/08/globe-1.png"
-                              alt=""
-                              class="wp-image-4908"
-                              width="109"
-                              height="109"
-                            />
+                          style="flex-basis: 25%">
+                          <figure class="wp-block-image size-full is-resized wp-duotone-000000-7f7f7f-4">
+                            <img decoding="async" src="assets/wp-content/uploads/2022/08/globe-1.png" alt=""
+                              class="wp-image-4908" width="109" height="109" />
                           </figure>
 
-                          <div
-                            style="height: 40px"
-                            aria-hidden="true"
-                            class="wp-block-spacer"
-                          ></div>
+                          <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
 
                         <div
                           class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow"
-                          style="flex-basis: 75%"
-                        >
+                          style="flex-basis: 75%">
                           <p class="grey-text">
                             <span class="fs-3 fw-bold">Security</span><br />We
                             are committed to confidentiality and data security
                             of our customers
                           </p>
-                          <div
-                            style="height: 40px"
-                            aria-hidden="true"
-                            class="wp-block-spacer"
-                          ></div>
+                          <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
                       </div>
                     </div>
@@ -839,60 +616,37 @@
                   <hr class="wp-block-separator has-css-opacity bottom-line" />
                 </div>
 
-                <div
-                  class="wp-block-rayden-gutenberg-container medium-width"
-                  style="background-color: transparent; text-align: left"
-                >
-                  <div
-                    class="wp-block-rayden-gutenberg-container"
-                    style="
+                <div class="wp-block-rayden-gutenberg-container medium-width"
+                  style="background-color: transparent; text-align: left">
+                  <div class="wp-block-rayden-gutenberg-container" style="
                       background-color: transparent;
                       padding-top: 40px;
                       padding-bottom: 40px;
                       text-align: left;
-                    "
-                  >
+                    ">
                     <h2 class="has-text-align-center wp-block-heading">
                       Geospatial Solutions
                     </h2>
                   </div>
 
                   <div
-                    class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-17 wp-block-columns-is-layout-flex justify-content-center"
-                  >
-                    <div
-                      class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                      style="flex-basis: 100%"
-                    >
+                    class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-17 wp-block-columns-is-layout-flex justify-content-center">
+                    <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis: 100%">
                       <div
-                        class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-9 wp-block-columns-is-layout-flex"
-                      >
-                        <div
-                          class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                        >
+                        class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-9 wp-block-columns-is-layout-flex">
+                        <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
                           <div
-                            class="hover_img wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-7 wp-block-columns-is-layout-flex"
-                          >
-                            <div
-                              class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                              style="flex-basis: 33.33%"
-                            >
-                              <figure
-                                class="wp-block-image size-full wp-duotone-000000-7f7f7f-5"
-                              >
-                                <img
-                                  decoding="async"
-                                  src="assets/wp-content/uploads/2022/08/smart_city.png"
-                                  alt=""
-                                  class="wp-image-4970 img_1"
-                                />
+                            class="hover_img wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-7 wp-block-columns-is-layout-flex">
+                            <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+                              style="flex-basis: 33.33%">
+                              <figure class="wp-block-image size-full wp-duotone-000000-7f7f7f-5">
+                                <img decoding="async" src="assets/wp-content/uploads/2022/08/smart_city.png" alt=""
+                                  class="wp-image-4970 img_1" />
                               </figure>
                             </div>
 
-                            <div
-                              class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                              style="flex-basis: 66.66%"
-                            >
+                            <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+                              style="flex-basis: 66.66%">
                               <h2 class="wp-block-heading">
                                 Smart Cities Ecosystem
                               </h2>
@@ -901,49 +655,27 @@
                                 between systems, collaboration between teams...
                               </p>
                               <p>
-                                <a
-                                  href=""
-                                  class="primary-color see_more"
-                                  id="color_img"
-                                  >See More</a
-                                >
+                                <a href="" class="primary-color see_more" id="color_img">See More</a>
                               </p>
                             </div>
                           </div>
 
-                          <div
-                            style="height: 40px"
-                            aria-hidden="true"
-                            class="wp-block-spacer"
-                          ></div>
+                          <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
 
-                        <div
-                          class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                        >
+                        <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
                           <div
-                            class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-8 wp-block-columns-is-layout-flex"
-                          >
-                            <div
-                              class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                              style="flex-basis: 33.33%"
-                            >
-                              <figure
-                                class="wp-block-image size-full wp-duotone-000000-7f7f7f-6"
-                              >
-                                <img
-                                  decoding="async"
-                                  src="assets/wp-content/uploads/2022/08/public-safety2.png"
-                                  alt=""
-                                  class="wp-image-4970 img_2"
-                                />
+                            class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-8 wp-block-columns-is-layout-flex">
+                            <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+                              style="flex-basis: 33.33%">
+                              <figure class="wp-block-image size-full wp-duotone-000000-7f7f7f-6">
+                                <img decoding="async" src="assets/wp-content/uploads/2022/08/public-safety2.png" alt=""
+                                  class="wp-image-4970 img_2" />
                               </figure>
                             </div>
 
-                            <div
-                              class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                              style="flex-basis: 66.66%"
-                            >
+                            <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+                              style="flex-basis: 66.66%">
                               <h2 class="wp-block-heading">
                                 Public Safety Ecosystem
                               </h2>
@@ -953,52 +685,29 @@
                                 technology ...
                               </p>
                               <p>
-                                <a
-                                  href=""
-                                  class="primary-color see_more"
-                                  id="color_img2"
-                                  >See More</a
-                                >
+                                <a href="" class="primary-color see_more" id="color_img2">See More</a>
                               </p>
                             </div>
                           </div>
 
-                          <div
-                            style="height: 40px"
-                            aria-hidden="true"
-                            class="wp-block-spacer"
-                          ></div>
+                          <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
                       </div>
                       <div
-                        class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-12 wp-block-columns-is-layout-flex"
-                      >
-                        <div
-                          class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                        >
+                        class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-12 wp-block-columns-is-layout-flex">
+                        <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
                           <div
-                            class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-10 wp-block-columns-is-layout-flex"
-                          >
-                            <div
-                              class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                              style="flex-basis: 33.33%"
-                            >
-                              <figure
-                                class="wp-block-image size-full wp-duotone-000000-7f7f7f-7"
-                              >
-                                <img
-                                  decoding="async"
-                                  src="assets/wp-content/uploads/2022/08/agriculture2.png"
-                                  alt=""
-                                  class="wp-image-4970 img_3"
-                                />
+                            class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-10 wp-block-columns-is-layout-flex">
+                            <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+                              style="flex-basis: 33.33%">
+                              <figure class="wp-block-image size-full wp-duotone-000000-7f7f7f-7">
+                                <img decoding="async" src="assets/wp-content/uploads/2022/08/agriculture2.png" alt=""
+                                  class="wp-image-4970 img_3" />
                               </figure>
                             </div>
 
-                            <div
-                              class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                              style="flex-basis: 66.66%"
-                            >
+                            <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+                              style="flex-basis: 66.66%">
                               <h2 class="wp-block-heading">
                                 Agriculture Ecosystem
                               </h2>
@@ -1007,49 +716,27 @@
                                 inventories, mapping and analysis solutions...
                               </p>
                               <p>
-                                <a
-                                  href=""
-                                  class="primary-color see_more"
-                                  id="color_img3"
-                                  >See More</a
-                                >
+                                <a href="" class="primary-color see_more" id="color_img3">See More</a>
                               </p>
                             </div>
                           </div>
 
-                          <div
-                            style="height: 40px"
-                            aria-hidden="true"
-                            class="wp-block-spacer"
-                          ></div>
+                          <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
 
-                        <div
-                          class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                        >
+                        <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
                           <div
-                            class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-11 wp-block-columns-is-layout-flex"
-                          >
-                            <div
-                              class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                              style="flex-basis: 33.33%"
-                            >
-                              <figure
-                                class="wp-block-image size-full wp-duotone-000000-7f7f7f-8"
-                              >
-                                <img
-                                  decoding="async"
-                                  src="assets/wp-content/uploads/2022/08/Land_mangement(2).png"
-                                  alt=""
-                                  class="wp-image-4970 img_4"
-                                />
+                            class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-11 wp-block-columns-is-layout-flex">
+                            <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+                              style="flex-basis: 33.33%">
+                              <figure class="wp-block-image size-full wp-duotone-000000-7f7f7f-8">
+                                <img decoding="async" src="assets/wp-content/uploads/2022/08/Land_mangement(2).png"
+                                  alt="" class="wp-image-4970 img_4" />
                               </figure>
                             </div>
 
-                            <div
-                              class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                              style="flex-basis: 66.66%"
-                            >
+                            <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+                              style="flex-basis: 66.66%">
                               <h2 class="wp-block-heading">
                                 Land Management Ecosystem
                               </h2>
@@ -1059,51 +746,28 @@
                                 activities...
                               </p>
                               <p>
-                                <a
-                                  href=""
-                                  class="primary-color see_more"
-                                  id="color_img4"
-                                  >See More</a
-                                >
+                                <a href="" class="primary-color see_more" id="color_img4">See More</a>
                               </p>
                             </div>
                           </div>
 
-                          <div
-                            style="height: 40px"
-                            aria-hidden="true"
-                            class="wp-block-spacer"
-                          ></div>
+                          <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
                       </div>
                       <div
-                        class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-12 wp-block-columns-is-layout-flex"
-                      >
-                        <div
-                          class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                        >
+                        class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-12 wp-block-columns-is-layout-flex">
+                        <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
                           <div
-                            class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-10 wp-block-columns-is-layout-flex"
-                          >
-                            <div
-                              class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                              style="flex-basis: 33.33%"
-                            >
-                              <figure
-                                class="wp-block-image size-full wp-duotone-000000-7f7f7f-7"
-                              >
-                                <img
-                                  decoding="async"
-                                  src="assets/wp-content/uploads/2022/08/forest(1).png"
-                                  alt=""
-                                  class="wp-image-4970 img_5"
-                                />
+                            class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-10 wp-block-columns-is-layout-flex">
+                            <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+                              style="flex-basis: 33.33%">
+                              <figure class="wp-block-image size-full wp-duotone-000000-7f7f7f-7">
+                                <img decoding="async" src="assets/wp-content/uploads/2022/08/forest(1).png" alt=""
+                                  class="wp-image-4970 img_5" />
                               </figure>
                             </div>
-                            <div
-                              class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                              style="flex-basis: 66.66%"
-                            >
+                            <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+                              style="flex-basis: 66.66%">
                               <h2 class="wp-block-heading">
                                 Forestry Ecosystem
                               </h2>
@@ -1112,46 +776,24 @@
                                 professionals for improved decision-making...
                               </p>
                               <p>
-                                <a
-                                  href=""
-                                  class="primary-color see_more"
-                                  id="color_img5"
-                                  >See More</a
-                                >
+                                <a href="" class="primary-color see_more" id="color_img5">See More</a>
                               </p>
                             </div>
                           </div>
-                          <div
-                            style="height: 40px"
-                            aria-hidden="true"
-                            class="wp-block-spacer"
-                          ></div>
+                          <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
-                        <div
-                          class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                        >
+                        <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
                           <div
-                            class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-11 wp-block-columns-is-layout-flex"
-                          >
-                            <div
-                              class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                              style="flex-basis: 33.33%"
-                            >
-                              <figure
-                                class="wp-block-image size-full wp-duotone-000000-7f7f7f-8"
-                              >
-                                <img
-                                  decoding="async"
-                                  src="assets/wp-content/uploads/2022/08/Water & Drought2.png"
-                                  alt=""
-                                  class="wp-image-4970 img_6"
-                                />
+                            class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-11 wp-block-columns-is-layout-flex">
+                            <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+                              style="flex-basis: 33.33%">
+                              <figure class="wp-block-image size-full wp-duotone-000000-7f7f7f-8">
+                                <img decoding="async" src="assets/wp-content/uploads/2022/08/Water & Drought2.png"
+                                  alt="" class="wp-image-4970 img_6" />
                               </figure>
                             </div>
-                            <div
-                              class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                              style="flex-basis: 66.66%"
-                            >
+                            <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+                              style="flex-basis: 66.66%">
                               <h2 class="wp-block-heading">
                                 Water & Drought Ecosystem
                               </h2>
@@ -1160,50 +802,27 @@
                                 data to build and implement spatial models...
                               </p>
                               <p>
-                                <a
-                                  href=""
-                                  class="primary-color see_more"
-                                  id="color_img6"
-                                  >See More</a
-                                >
+                                <a href="" class="primary-color see_more" id="color_img6">See More</a>
                               </p>
                             </div>
                           </div>
-                          <div
-                            style="height: 40px"
-                            aria-hidden="true"
-                            class="wp-block-spacer"
-                          ></div>
+                          <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
                       </div>
                       <div
-                        class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-12 wp-block-columns-is-layout-flex"
-                      >
-                        <div
-                          class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                        >
+                        class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-12 wp-block-columns-is-layout-flex">
+                        <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
                           <div
-                            class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-10 wp-block-columns-is-layout-flex"
-                          >
-                            <div
-                              class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                              style="flex-basis: 33.33%"
-                            >
-                              <figure
-                                class="wp-block-image size-full wp-duotone-000000-7f7f7f-7"
-                              >
-                                <img
-                                  decoding="async"
-                                  src="assets/wp-content/uploads/2022/08/utilities.png"
-                                  alt=""
-                                  class="wp-image-4970 img_7"
-                                />
+                            class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-10 wp-block-columns-is-layout-flex">
+                            <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+                              style="flex-basis: 33.33%">
+                              <figure class="wp-block-image size-full wp-duotone-000000-7f7f7f-7">
+                                <img decoding="async" src="assets/wp-content/uploads/2022/08/utilities.png" alt=""
+                                  class="wp-image-4970 img_7" />
                               </figure>
                             </div>
-                            <div
-                              class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                              style="flex-basis: 66.66%"
-                            >
+                            <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+                              style="flex-basis: 66.66%">
                               <h2 class="wp-block-heading">
                                 Utilities Ecosystem
                               </h2>
@@ -1213,338 +832,163 @@
                                 representation...
                               </p>
                               <p>
-                                <a
-                                  href=""
-                                  class="primary-color see_more"
-                                  id="color_img7"
-                                  >See More</a
-                                >
+                                <a href="" class="primary-color see_more" id="color_img7">See More</a>
                               </p>
                             </div>
                           </div>
-                          <div
-                            style="height: 40px"
-                            aria-hidden="true"
-                            class="wp-block-spacer"
-                          ></div>
+                          <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
-                        <div
-                          class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                        >
+                        <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
                           <div
-                            class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-11 wp-block-columns-is-layout-flex"
-                          >
-                            <div
-                              class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                              style="flex-basis: 33.33%"
-                            >
-                              <figure
-                                class="wp-block-image size-full wp-duotone-000000-7f7f7f-8"
-                              >
-                                <img
-                                  decoding="async"
-                                  src="assets/wp-content/uploads/2022/08/mining.png"
-                                  alt=""
-                                  class="wp-image-4970 img_8"
-                                />
+                            class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-11 wp-block-columns-is-layout-flex">
+                            <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+                              style="flex-basis: 33.33%">
+                              <figure class="wp-block-image size-full wp-duotone-000000-7f7f7f-8">
+                                <img decoding="async" src="assets/wp-content/uploads/2022/08/mining.png" alt=""
+                                  class="wp-image-4970 img_8" />
                               </figure>
                             </div>
-                            <div
-                              class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                              style="flex-basis: 66.66%"
-                            >
+                            <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+                              style="flex-basis: 66.66%">
                               <h2 class="wp-block-heading">Mining Ecosystem</h2>
                               <p>
                                 Empower the mine exploration process with the
                                 ability to monitor, manage and analyze...
                               </p>
                               <p>
-                                <a
-                                  href=""
-                                  class="primary-color see_more"
-                                  id="color_img8"
-                                  >See More</a
-                                >
+                                <a href="" class="primary-color see_more" id="color_img8">See More</a>
                               </p>
                             </div>
                           </div>
-                          <div
-                            style="height: 40px"
-                            aria-hidden="true"
-                            class="wp-block-spacer"
-                          ></div>
+                          <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div
-                class="wp-block-rayden-gutenberg-container full contact-us-bg"
-                style="text-align: left"
-              >
+              <div class="wp-block-rayden-gutenberg-container full contact-us-bg" style="text-align: left">
                 <div
                   class="wp-block-rayden-gutenberg-container green-section row_padding_top row_padding_bottom row_padding_left row_padding_right"
-                  style="text-align: left"
-                >
+                  style="text-align: left">
                   <h2 class="text-align-center wp-block-heading">Contact Us</h2>
-                  <p
-                    class="text-align-center has-white-color has-medium-font-size"
-                  >
+                  <p class="text-align-center has-white-color has-medium-font-size">
                     To Simplify Your Wishes
                   </p>
-                  <div
-                    class="wp-block-contact-form-7-contact-form-selector text-align-center"
-                  >
-                    <div
-                      role="form"
-                      class="wpcf7"
-                      id="wpcf7-f5-p3826-o1"
-                      lang="en-US"
-                      dir="ltr"
-                    >
+                  <div class="wp-block-contact-form-7-contact-form-selector text-align-center">
+                    <div role="form" class="wpcf7" id="wpcf7-f5-p3826-o1" lang="en-US" dir="ltr">
                       <div class="screen-reader-response">
-                        <p
-                          role="status"
-                          aria-live="polite"
-                          aria-atomic="true"
-                        ></p>
+                        <p role="status" aria-live="polite" aria-atomic="true"></p>
                         <ul></ul>
                       </div>
-                      <form
-                        action="/#wpcf7-f5-p3826-o1"
-                        method="post"
-                        class="wpcf7-form init"
-                        novalidate="novalidate"
-                        data-status="init"
-                      >
+                      <form action="/#wpcf7-f5-p3826-o1" method="post" class="wpcf7-form init" novalidate="novalidate"
+                        data-status="init">
                         <div style="display: none">
                           <input type="hidden" name="_wpcf7" value="5" />
-                          <input
-                            type="hidden"
-                            name="_wpcf7_version"
-                            value="5.6.3"
-                          />
-                          <input
-                            type="hidden"
-                            name="_wpcf7_locale"
-                            value="en_US"
-                          />
-                          <input
-                            type="hidden"
-                            name="_wpcf7_unit_tag"
-                            value="wpcf7-f5-p3826-o1"
-                          />
-                          <input
-                            type="hidden"
-                            name="_wpcf7_container_post"
-                            value="3826"
-                          />
-                          <input
-                            type="hidden"
-                            name="_wpcf7_posted_data_hash"
-                            value=""
-                          />
+                          <input type="hidden" name="_wpcf7_version" value="5.6.3" />
+                          <input type="hidden" name="_wpcf7_locale" value="en_US" />
+                          <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f5-p3826-o1" />
+                          <input type="hidden" name="_wpcf7_container_post" value="3826" />
+                          <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
                         </div>
                         <div id="contact-formular" class="disable-drag">
                           <div class="name-box has-animation">
-                            <span
-                              class="wpcf7-form-control-wrap"
-                              data-name="first-name"
-                              ><input
-                                type="text"
-                                name="first-name"
-                                value=""
-                                size="40"
-                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                aria-required="true"
-                                aria-invalid="false"
-                                placeholder="First Name"
-                            /></span>
+                            <span class="wpcf7-form-control-wrap" data-name="first-name"><input type="text"
+                                name="first-name" value="" size="40"
+                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true"
+                                aria-invalid="false" placeholder="First Name" /></span>
                           </div>
                           <div class="name-box has-animation email-box">
-                            <span
-                              class="wpcf7-form-control-wrap"
-                              data-name="last-name"
-                              ><input
-                                type="text"
-                                name="last-name"
-                                value=""
-                                size="40"
-                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                aria-required="true"
-                                aria-invalid="false"
-                                placeholder="Last Name"
-                            /></span>
+                            <span class="wpcf7-form-control-wrap" data-name="last-name"><input type="text"
+                                name="last-name" value="" size="40"
+                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true"
+                                aria-invalid="false" placeholder="Last Name" /></span>
                           </div>
                           <div class="name-box has-animation">
-                            <span
-                              class="wpcf7-form-control-wrap"
-                              data-name="company-name"
-                              ><input
-                                type="text"
-                                name="company-name"
-                                value=""
-                                size="40"
-                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                aria-required="true"
-                                aria-invalid="false"
-                                placeholder="Company"
-                            /></span>
+                            <span class="wpcf7-form-control-wrap" data-name="company-name"><input type="text"
+                                name="company-name" value="" size="40"
+                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true"
+                                aria-invalid="false" placeholder="Company" /></span>
                           </div>
                           <div class="name-box has-animation email-box">
-                            <span
-                              class="wpcf7-form-control-wrap"
-                              data-name="tel-936"
-                              ><input
-                                type="tel"
-                                name="tel-936"
-                                value=""
-                                size="40"
+                            <span class="wpcf7-form-control-wrap" data-name="tel-936"><input type="tel" name="tel-936"
+                                value="" size="40"
                                 class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel num-box"
-                                aria-required="true"
-                                aria-invalid="false"
-                                placeholder="Phone Number"
-                            /></span>
+                                aria-required="true" aria-invalid="false" placeholder="Phone Number" /></span>
                           </div>
                           <div class="email_div w-100">
                             <div class="name-box has-animation w-100">
-                              <span
-                                class="wpcf7-form-control-wrap"
-                                data-name="your-email"
-                                ><input
-                                  type="email"
-                                  name="your-email"
-                                  value=""
-                                  size="80"
+                              <span class="wpcf7-form-control-wrap" data-name="your-email"><input type="email"
+                                  name="your-email" value="" size="80"
                                   class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email text-align-center"
-                                  aria-required="true"
-                                  aria-invalid="false"
-                                  placeholder="E-mail"
-                              /></span>
+                                  aria-required="true" aria-invalid="false" placeholder="E-mail" /></span>
                             </div>
                           </div>
                           <hr />
                           <div class="message-box has-animation">
-                            <span
-                              class="wpcf7-form-control-wrap"
-                              data-name="your-message"
-                            >
-                              <textarea
-                                name="your-message"
-                                cols="40"
-                                rows="10"
+                            <span class="wpcf7-form-control-wrap" data-name="your-message">
+                              <textarea name="your-message" cols="40" rows="10"
                                 class="wpcf7-form-control wpcf7-text wpcf7-textarea wpcf7-validates-as-required"
-                                id="message"
-                                aria-required="true"
-                                aria-invalid="false"
-                                placeholder="Type your Message here"
-                              ></textarea>
+                                id="message" aria-required="true" aria-invalid="false"
+                                placeholder="Type your Message here"></textarea>
                             </span>
                           </div>
                           <hr />
                           <div>
-                            <span
-                              class="wpcf7-form-control-wrap"
-                              data-name="acceptance-863"
-                              ><span
-                                class="wpcf7-form-control wpcf7-acceptance optional"
-                                ><span class="wpcf7-list-item"
-                                  ><label
-                                    ><input
-                                      type="checkbox"
-                                      name="acceptance-863"
-                                      value="1"
-                                      aria-invalid="false"
-                                    /><span class="wpcf7-list-item-label"
-                                      >To receive electronic marketing
+                            <span class="wpcf7-form-control-wrap" data-name="acceptance-863"><span
+                                class="wpcf7-form-control wpcf7-acceptance optional"><span
+                                  class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-863" value="1"
+                                      aria-invalid="false" /><span class="wpcf7-list-item-label">To receive electronic
+                                      marketing
                                       communications on products, services,
-                                      publications, and events</span
-                                    ></label
-                                  ></span
-                                ></span
-                              ></span
-                            >
+                                      publications, and events</span></label></span></span></span>
                           </div>
                           <hr />
                           <div class="d-flex justify-content-center">
                             <!-- <p>Hello potential human...</p> -->
-                            <re-captcha
-                              (resolved)="resolved($event)"
-                              siteKey="6LckdjUqAAAAAHUxsjpCo91A0Yb391YGf3HvL_-p"
-                            ></re-captcha>
+                            <re-captcha (resolved)="resolved($event)"
+                              siteKey="6LckdjUqAAAAAHUxsjpCo91A0Yb391YGf3HvL_-p"></re-captcha>
                           </div>
 
-                          <div
-                            class="button-box has-animation"
-                            data-delay="100"
-                          >
-                            <div
-                              class="clapat-button-wrap circle parallax-wrap bigger"
-                            >
+                          <div class="button-box has-animation" data-delay="100">
+                            <div class="clapat-button-wrap circle parallax-wrap bigger">
                               <div class="clapat-button parallax-element">
-                                <div
-                                  class="button-border outline parallax-element-second"
-                                >
-                                  <input
-                                    type="submit"
-                                    value="Submit"
-                                    class="wpcf7-form-control has-spinner wpcf7-submit"
-                                  />
+                                <div class="button-border outline parallax-element-second">
+                                  <input type="submit" value="Submit"
+                                    class="wpcf7-form-control has-spinner wpcf7-submit" />
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div
-                          class="wpcf7-response-output"
-                          aria-hidden="true"
-                        ></div>
+                        <div class="wpcf7-response-output" aria-hidden="true"></div>
                       </form>
                     </div>
                   </div>
                 </div>
-                <div
-                  class="wp-block-rayden-gutenberg-container full"
-                  style="text-align: left"
-                >
+                <div class="wp-block-rayden-gutenberg-container full" style="text-align: left">
                   <div
                     class="wp-block-rayden-gutenberg-container row_padding_top row_padding_bottom white-section text-align-center small change-header-color color_white"
-                    style="text-align: left"
-                  >
+                    style="text-align: left">
                     <h2 class="text-align-center wp-block-heading text-white">
                       Connect with us
                     </h2>
                     <!-- <p class="has-text-align-left text-align-center text-white">Excellence in
 												Location-intelligence Solutions</p> -->
+                    <div style="height: 46px" aria-hidden="true" class="wp-block-spacer"></div>
                     <div
-                      style="height: 46px"
-                      aria-hidden="true"
-                      class="wp-block-spacer"
-                    ></div>
-                    <div
-                      class="wp-block-columns text-align-center is-layout-flex wp-container-core-columns-is-layout-18 wp-block-columns-is-layout-flex"
-                    >
-                      <div
-                        class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                      >
+                      class="wp-block-columns text-align-center is-layout-flex wp-container-core-columns-is-layout-18 wp-block-columns-is-layout-flex">
+                      <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
                         <div class="clapat-icon icon_contact">
-                          <a href="mailto:info@geomakani.com"
-                            ><img
-                              src="assets/Image/icons8-email-100.png"
-                              alt="email"
-                          /></a>
+                          <a href="mailto:info@geomakani.com"><img src="assets/Image/icons8-email-100.png"
+                              alt="email" /></a>
                         </div>
                         <h5 class="secondary-font text-white">
-                          <a href="mailto:info@geomakani.com"
-                            >info&#64;geomakani.com</a
-                          >
+                          <a href="mailto:info@geomakani.com">info&#64;geomakani.com</a>
                         </h5>
                         <p>Email</p>
                       </div>
-                      <div
-                        class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                      >
+                      <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
                         <div class="clapat-icon icon_contact">
                           <img src="assets/Image/location.png" alt="location" />
                         </div>
@@ -1554,15 +998,10 @@
                         </p>
                         <p>Location</p>
                       </div>
-                      <div
-                        class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                      >
+                      <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
                         <div class="clapat-icon icon_contact">
                           <a href="tel:+20000000000">
-                            <img
-                              src="assets/Image/icons8-phone.png"
-                              alt="phone"
-                            />
+                            <img src="assets/Image/icons8-phone.png" alt="phone" />
                           </a>
                         </div>
                         <h5 class="secondary-font text-white">
@@ -1641,10 +1080,7 @@
 										</div>
 									</div>
 								</div> -->
-              <div
-                class="wp-block-rayden-gutenberg-container"
-                style="background-color: #000; text-align: left"
-              ></div>
+              <div class="wp-block-rayden-gutenberg-container" style="background-color: #000; text-align: left"></div>
             </div>
           </div>
           <!--/Main Content-->
@@ -1669,27 +1105,16 @@
 	</div> -->
   <div id="clone-image"></div>
   <div id="rotate-device"></div>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 0 0"
-    width="0"
-    height="0"
-    focusable="false"
-    role="none"
-    style="
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="
       visibility: hidden;
       position: absolute;
       left: -9999px;
       overflow: hidden;
-    "
-  >
+    ">
     <defs>
       <filter id="wp-duotone-000000-7f7f7f-1">
-        <feColorMatrix
-          color-interpolation-filters="sRGB"
-          type="matrix"
-          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
-        />
+        <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
         <feComponentTransfer color-interpolation-filters="sRGB">
           <feFuncR type="table" tableValues="0 0.49803921568627" />
           <feFuncG type="table" tableValues="0 0.49803921568627" />
@@ -1698,28 +1123,18 @@
         </feComponentTransfer>
         <feComposite in2="SourceGraphic" operator="in" />
       </filter>
-    </defs></svg
-  ><svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 0 0"
-    width="0"
-    height="0"
-    focusable="false"
-    role="none"
+    </defs>
+  </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
     style="
       visibility: hidden;
       position: absolute;
       left: -9999px;
       overflow: hidden;
-    "
-  >
+    ">
     <defs>
       <filter id="wp-duotone-000000-7f7f7f-2">
-        <feColorMatrix
-          color-interpolation-filters="sRGB"
-          type="matrix"
-          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
-        />
+        <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
         <feComponentTransfer color-interpolation-filters="sRGB">
           <feFuncR type="table" tableValues="0 0.49803921568627" />
           <feFuncG type="table" tableValues="0 0.49803921568627" />
@@ -1728,28 +1143,18 @@
         </feComponentTransfer>
         <feComposite in2="SourceGraphic" operator="in" />
       </filter>
-    </defs></svg
-  ><svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 0 0"
-    width="0"
-    height="0"
-    focusable="false"
-    role="none"
+    </defs>
+  </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
     style="
       visibility: hidden;
       position: absolute;
       left: -9999px;
       overflow: hidden;
-    "
-  >
+    ">
     <defs>
       <filter id="wp-duotone-000000-7f7f7f-3">
-        <feColorMatrix
-          color-interpolation-filters="sRGB"
-          type="matrix"
-          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
-        />
+        <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
         <feComponentTransfer color-interpolation-filters="sRGB">
           <feFuncR type="table" tableValues="0 0.49803921568627" />
           <feFuncG type="table" tableValues="0 0.49803921568627" />
@@ -1758,28 +1163,18 @@
         </feComponentTransfer>
         <feComposite in2="SourceGraphic" operator="in" />
       </filter>
-    </defs></svg
-  ><svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 0 0"
-    width="0"
-    height="0"
-    focusable="false"
-    role="none"
+    </defs>
+  </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
     style="
       visibility: hidden;
       position: absolute;
       left: -9999px;
       overflow: hidden;
-    "
-  >
+    ">
     <defs>
       <filter id="wp-duotone-000000-7f7f7f-4">
-        <feColorMatrix
-          color-interpolation-filters="sRGB"
-          type="matrix"
-          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
-        />
+        <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
         <feComponentTransfer color-interpolation-filters="sRGB">
           <feFuncR type="table" tableValues="0 0.49803921568627" />
           <feFuncG type="table" tableValues="0 0.49803921568627" />
@@ -1788,28 +1183,18 @@
         </feComponentTransfer>
         <feComposite in2="SourceGraphic" operator="in" />
       </filter>
-    </defs></svg
-  ><svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 0 0"
-    width="0"
-    height="0"
-    focusable="false"
-    role="none"
+    </defs>
+  </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
     style="
       visibility: hidden;
       position: absolute;
       left: -9999px;
       overflow: hidden;
-    "
-  >
+    ">
     <defs>
       <filter id="wp-duotone-000000-7f7f7f-5">
-        <feColorMatrix
-          color-interpolation-filters="sRGB"
-          type="matrix"
-          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
-        />
+        <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
         <feComponentTransfer color-interpolation-filters="sRGB">
           <feFuncR type="table" tableValues="0 0.49803921568627" />
           <feFuncG type="table" tableValues="0 0.49803921568627" />
@@ -1818,28 +1203,18 @@
         </feComponentTransfer>
         <feComposite in2="SourceGraphic" operator="in" />
       </filter>
-    </defs></svg
-  ><svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 0 0"
-    width="0"
-    height="0"
-    focusable="false"
-    role="none"
+    </defs>
+  </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
     style="
       visibility: hidden;
       position: absolute;
       left: -9999px;
       overflow: hidden;
-    "
-  >
+    ">
     <defs>
       <filter id="wp-duotone-000000-7f7f7f-6">
-        <feColorMatrix
-          color-interpolation-filters="sRGB"
-          type="matrix"
-          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
-        />
+        <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
         <feComponentTransfer color-interpolation-filters="sRGB">
           <feFuncR type="table" tableValues="0 0.49803921568627" />
           <feFuncG type="table" tableValues="0 0.49803921568627" />
@@ -1848,28 +1223,18 @@
         </feComponentTransfer>
         <feComposite in2="SourceGraphic" operator="in" />
       </filter>
-    </defs></svg
-  ><svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 0 0"
-    width="0"
-    height="0"
-    focusable="false"
-    role="none"
+    </defs>
+  </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
     style="
       visibility: hidden;
       position: absolute;
       left: -9999px;
       overflow: hidden;
-    "
-  >
+    ">
     <defs>
       <filter id="wp-duotone-000000-7f7f7f-7">
-        <feColorMatrix
-          color-interpolation-filters="sRGB"
-          type="matrix"
-          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
-        />
+        <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
         <feComponentTransfer color-interpolation-filters="sRGB">
           <feFuncR type="table" tableValues="0 0.49803921568627" />
           <feFuncG type="table" tableValues="0 0.49803921568627" />
@@ -1878,28 +1243,18 @@
         </feComponentTransfer>
         <feComposite in2="SourceGraphic" operator="in" />
       </filter>
-    </defs></svg
-  ><svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 0 0"
-    width="0"
-    height="0"
-    focusable="false"
-    role="none"
+    </defs>
+  </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
     style="
       visibility: hidden;
       position: absolute;
       left: -9999px;
       overflow: hidden;
-    "
-  >
+    ">
     <defs>
       <filter id="wp-duotone-000000-7f7f7f-8">
-        <feColorMatrix
-          color-interpolation-filters="sRGB"
-          type="matrix"
-          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
-        />
+        <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
         <feComponentTransfer color-interpolation-filters="sRGB">
           <feFuncR type="table" tableValues="0 0.49803921568627" />
           <feFuncG type="table" tableValues="0 0.49803921568627" />
@@ -1908,28 +1263,18 @@
         </feComponentTransfer>
         <feComposite in2="SourceGraphic" operator="in" />
       </filter>
-    </defs></svg
-  ><svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 0 0"
-    width="0"
-    height="0"
-    focusable="false"
-    role="none"
+    </defs>
+  </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
     style="
       visibility: hidden;
       position: absolute;
       left: -9999px;
       overflow: hidden;
-    "
-  >
+    ">
     <defs>
       <filter id="wp-duotone-000000-7f7f7f-9">
-        <feColorMatrix
-          color-interpolation-filters="sRGB"
-          type="matrix"
-          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
-        />
+        <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
         <feComponentTransfer color-interpolation-filters="sRGB">
           <feFuncR type="table" tableValues="0 0.49803921568627" />
           <feFuncG type="table" tableValues="0 0.49803921568627" />
@@ -1938,28 +1283,18 @@
         </feComponentTransfer>
         <feComposite in2="SourceGraphic" operator="in" />
       </filter>
-    </defs></svg
-  ><svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 0 0"
-    width="0"
-    height="0"
-    focusable="false"
-    role="none"
+    </defs>
+  </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
     style="
       visibility: hidden;
       position: absolute;
       left: -9999px;
       overflow: hidden;
-    "
-  >
+    ">
     <defs>
       <filter id="wp-duotone-000000-7f7f7f-10">
-        <feColorMatrix
-          color-interpolation-filters="sRGB"
-          type="matrix"
-          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
-        />
+        <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
         <feComponentTransfer color-interpolation-filters="sRGB">
           <feFuncR type="table" tableValues="0 0.49803921568627" />
           <feFuncG type="table" tableValues="0 0.49803921568627" />
@@ -1968,28 +1303,18 @@
         </feComponentTransfer>
         <feComposite in2="SourceGraphic" operator="in" />
       </filter>
-    </defs></svg
-  ><svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 0 0"
-    width="0"
-    height="0"
-    focusable="false"
-    role="none"
+    </defs>
+  </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
     style="
       visibility: hidden;
       position: absolute;
       left: -9999px;
       overflow: hidden;
-    "
-  >
+    ">
     <defs>
       <filter id="wp-duotone-000000-7f7f7f-11">
-        <feColorMatrix
-          color-interpolation-filters="sRGB"
-          type="matrix"
-          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
-        />
+        <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+          values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
         <feComponentTransfer color-interpolation-filters="sRGB">
           <feFuncR type="table" tableValues="0 0.49803921568627" />
           <feFuncG type="table" tableValues="0 0.49803921568627" />

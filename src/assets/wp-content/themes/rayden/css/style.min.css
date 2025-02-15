@@ -609,6 +609,7 @@
     padding: 1em;
     position: relative;
     border-radius: 55px;
+    border: 2px solid #ee4437ff;
 }
 
 .wp-block-cover .has-background-dim:not([class*=-background-color]),

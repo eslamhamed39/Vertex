@@ -679,8 +679,11 @@
  		position: relative;
 
  		box-sizing: border-box;
- 		background-color: #4e494941;
- 		border-radius: 50px 50px 0 0;
+		 background-color: #000;
+		 border-radius: 50px 50px 0 0;
+		 border-top: 2px solid #ee4437ff;
+		 border-left: 2px solid #ee4437ff;
+		 border-right: 2px solid #ee4437ff;
  	}
 
 

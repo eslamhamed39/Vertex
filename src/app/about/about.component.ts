@@ -35,7 +35,27 @@ export class AboutComponent implements OnInit, AfterViewInit {
 
   constructor(private el: ElementRef) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.updateBorder(); // تحديث الحد عند تحميل الصفحة
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.updateBorder();
+  }
+
+  updateBorder() {
+    const pageContent = document.getElementById('page-nav');
+    if (pageContent) {
+      const scrollPosition = window.scrollY;
+      const maxScroll = document.body.scrollHeight - window.innerHeight;
+      const scrollProgress = Math.min(scrollPosition / maxScroll,1); // نسبة التمرير
+
+      const borderWidth = scrollProgress * 100; // حساب العرض بالنسبة للتمرير
+
+      pageContent.style.setProperty('--border-width', `${borderWidth}%`);
+    }
+  }
 
   ngAfterViewInit() {
     this.init();
