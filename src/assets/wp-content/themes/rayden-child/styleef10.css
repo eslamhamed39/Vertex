@@ -811,12 +811,11 @@ ul.custom-list li {
 .wp-duotone-000000-7f7f7f-7 img:hover,
 .wp-duotone-000000-7f7f7f-8 img:hover,
 .wp-duotone-000000-7f7f7f-9 img:hover,
-.wp-duotone-000000-7f7f7f-10 img:hover,
-.wp-duotone-000000-7f7f7f-11 img:hover {
+.wp-duotone-000000-7f7f7f-10 img:hover {
 	filter: none !important;
 }
 
-.color_img:hover ~ .wp-block-column img{
+.color_img:hover ~ .wp-block-column img {
 	filter: none !important;
 }
 

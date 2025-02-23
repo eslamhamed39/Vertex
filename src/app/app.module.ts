@@ -3,17 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './Component/home/home.component';
+import { FooterComponent } from './Component/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RecaptchaModule } from 'ng-recaptcha';
-import { AboutComponent } from './about/about.component';
+import { AboutComponent } from './Component/about/about.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { NotfoundComponent } from './notfound/notfound.component';
-import { About2Component } from './about2/about2.component';
+import { NotfoundComponent } from './Component/notfound/notfound.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
+import * as LocomotiveScroll from 'locomotive-scroll';
+import { WhatwedoComponent } from './Component/whatwedo/whatwedo.component';
+import { NavbarComponent } from './Component/navbar/navbar.component';
+import { EarthComponent } from './Component/earth/earth.component';
+import { SolutionComponent } from './Component/solution/solution.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +27,10 @@ import { faYoutube } from '@fortawesome/free-brands-svg-icons';
     FooterComponent,
     AboutComponent,
     NotfoundComponent,
-    About2Component,
+    WhatwedoComponent,
+    NavbarComponent,
+    EarthComponent,
+    SolutionComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +38,7 @@ import { faYoutube } from '@fortawesome/free-brands-svg-icons';
     NgbModule,
     RecaptchaModule,
     FontAwesomeModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

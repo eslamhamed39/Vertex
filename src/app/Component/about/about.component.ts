@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit } from '@angular/core';
 import * as THREE from 'three';
 import { TweenMax, Power2 } from 'gsap';
 
@@ -22,7 +22,7 @@ interface CustomBufferGeometry extends THREE.BufferGeometry {
 
 
 
-export class AboutComponent implements OnInit, AfterViewInit {
+export class AboutComponent implements OnInit, AfterViewInit{
   private renderer!: THREE.WebGLRenderer;
   private scene!: THREE.Scene;
   private camera!: THREE.PerspectiveCamera;
@@ -32,6 +32,7 @@ export class AboutComponent implements OnInit, AfterViewInit {
   private centerVector = new THREE.Vector3(0, 0, 0);
   private previousTime = 0;
   private imagedata!: ImageData;
+  private locomotiveScroll: LocomotiveScroll | null = null;
 
   constructor(private el: ElementRef) { }
 
@@ -60,6 +61,8 @@ export class AboutComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.init();
   }
+
+
 
   private init() {
     this.ww = window.innerWidth;
