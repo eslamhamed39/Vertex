@@ -750,9 +750,9 @@
 }
 
 /* .carousel.showDetail::before {
-  transform: translate(-100%, -50%) rotate(90deg);
-  filter: blur(130px);
-} */
+    transform: translate(-100%, -50%) rotate(90deg);
+    filter: blur(130px);
+  } */
 
 @media screen and (max-width: 991px) {
 
@@ -783,8 +783,8 @@
   }
 
   /* .carousel .list {
-      height: 100%;
-  } */
+        height: 100%;
+    } */
 
   .carousel .list .item:nth-child(2) .introduce {
     width: 50%;
@@ -841,6 +841,7 @@
     opacity: 0;
     transform: scale(0.9);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -854,6 +855,7 @@
     opacity: 1;
     transform: scale(1);
   }
+
   100% {
     opacity: 0;
     transform: scale(0.9);
@@ -883,6 +885,17 @@
 
 /* Rest of your existing carousel styles remain unchanged */
 
-.solutionContainer{
-  margin-bottom: 100px !important;
+.solutionContainer {
+  /* margin-bottom: 100px !important; */
+  overflow-y: hidden;
+}
+
+app-footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+app-footer footer a {
+  color: #fff !important;
 }

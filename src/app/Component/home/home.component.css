@@ -1,7 +1,8 @@
-.email_div{
+.email_div {
     width: 100%;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
+
 .wp-container-core-columns-is-layout-1.wp-container-core-columns-is-layout-1 {
     flex-wrap: nowrap;
 }
@@ -80,24 +81,134 @@
 
 
 
-body, html {
+body,
+html {
     background-color: #000 !important;
     color: white;
     margin: 0;
     padding: 0;
-  }
-  
-  .home-container {
+}
+
+.home-container {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     text-align: center;
-  }
-  
-  .title {
+}
+
+.title {
     font-size: 4rem;
     font-weight: bold;
     color: white;
-  }
-  
+}
+
+
+
+
+
+
+/* ------------------------------------------------- */
+/* 2) Responsive overrides                           */
+/* ------------------------------------------------- */
+
+/* Remove or override forced 'nowrap' at smaller screens */
+@media only screen and (max-width: 992px) {
+
+    /* Let columns wrap or stack in a single column if needed */
+    .wp-block-columns.is-layout-flex,
+    .wp-container-core-columns-is-layout-1,
+    .wp-container-core-columns-is-layout-2,
+    .wp-container-core-columns-is-layout-3,
+    .wp-container-core-columns-is-layout-4,
+    .wp-container-core-columns-is-layout-5,
+    .wp-container-core-columns-is-layout-6,
+    .wp-container-core-columns-is-layout-7,
+    .wp-container-core-columns-is-layout-8,
+    .wp-container-core-columns-is-layout-9,
+    .wp-container-core-columns-is-layout-10,
+    .wp-container-core-columns-is-layout-11,
+    .wp-container-core-columns-is-layout-12,
+    .wp-container-core-columns-is-layout-13,
+    .wp-container-core-columns-is-layout-14,
+    .wp-container-core-columns-is-layout-15,
+    .wp-container-core-columns-is-layout-16,
+    .wp-container-core-columns-is-layout-17,
+    .wp-container-core-columns-is-layout-18,
+    .wp-container-core-columns-is-layout-19 {
+        flex-wrap: wrap !important;
+        /* If you want them to stack vertically, also use:  */
+        flex-direction: column;
+
+    }
+
+    /* Adjust large titles on smaller screens */
+    .title {
+        font-size: 2rem;
+    }
+
+    /* Example: Decrease the height for the home-container on smaller screens 
+       so content isn't cut off */
+    .home-container {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    /* Adjust spacing for contact form fields, icons, etc. */
+    .email_div {
+        /* background-color: aqua; */
+        /* or your desired color */
+        padding: 1rem;
+    }
+}
+
+/* Further refinements for very narrow screens, if needed */
+@media only screen and (max-width: 576px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Center text or adjust margins for smaller devices */
+    .grey-text {
+        text-align: center;
+    }
+
+    .slide-title {
+        font-size: 2rem;
+    }
+}
+
+/* .inner{
+    width: 50%;
+}
+.inner span{
+    text-align: center;
+    text-wrap: wrap;
+} */
+
+/* .outer{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+} */
+
+
+@media only screen and (max-width: 479px) {
+    #sliderNav {
+        padding: 0 30px;
+        bottom: 35vh !important;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .wp-block-rayden-gutenberg-container {
+        padding: 0px !important;
+    }
+}
+

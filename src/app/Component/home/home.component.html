@@ -28,25 +28,11 @@
           <a href="https://www.facebook.com/geomakani" target="_blank" class="parallax-element">
             <i class="fa fa-facebook" aria-hidden="true"></i>
           </a>
-          <!-- <span>|</span>
-						<a href="../www.instagram.com/geo.data/index.html" target="_blank" class="parallax-element">
-							<i class="fa fa-instagram" aria-hidden="true"></i>
-						</a>
-          <!-- <span>|</span>
-						<a href="../www.instagram.com/geo.data/index.html" target="_blank" class="parallax-element">`
-							<i class="fa fa-instagram" aria-hidden="true"></i>
-						</a>
-						<span>|</span>
-						<a href="../x.com/geodatadesign.html" target="_blank" class="parallax-element">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
-						</a> -->
           <span>|</span>
           <a href="https://www.youtube.com/@Geomakani2018" target="_blank" class="parallax-element">
-            <!-- <i class="fa-brands fa-youtube" aria-hidden="true"></i> -->
             <fa-icon [icon]="['fab', 'youtube']" [ngStyle]="{color: isHovered ? 'red' : 'white'}"
               (mouseenter)="isHovered = true" (mouseleave)="isHovered = false">
             </fa-icon>
-
           </a>
           <span>|</span>
           <a href="https://www.linkedin.com/company/geomakani-official-page/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BM8yY2mgWROKfO6q7B%2BOg3g%3D%3D"
@@ -55,10 +41,6 @@
           </a>
         </div>
         <div class="contact-details">
-          <!--<div class="search-box">
-						<button class="btn-search"><i class="fa fa-search" aria-hidden="true"></i></button>
-						<input type="text" class="input-search" placeholder="Type to Search...">
-					</div>-->
           <div id="search">
             <form role="search" method="get" class="search-form" action="">
               <label>
@@ -70,21 +52,11 @@
               </button>
             </form>
           </div>
-          <!-- <div id="search-btn" onclick="displaySearch()">
-            <i class="fa fa-search" aria-hidden="true"></i>
-          </div> -->
-          <!--<div class="address">
-						1F Nautica Building The Water Club, Beach Rd, Granger Bay, Cape Town
-					</div>-->
           <div class="email">
             <a href="mailto:info@geomakani.com" target="_blank" class="parallax-element"><i class="fa fa-envelope-o"
                 aria-hidden="true"></i>Email:
               info&#64;geomakani.com</a>
           </div>
-          <!-- <div class="phone">
-            <i class="fa fa-phone" aria-hidden="true"></i> Phone:
-            <a href="tel:+20000000000" target="_blank" class="parallax-element">+20000000000</a>
-          </div> -->
         </div>
       </div>
       <!-- Header -->
@@ -103,7 +75,7 @@
                   <ul id="menu-main-menu" data-breakpoint="1025" class="flexnav menu">
                     <li id="menu-item-4808"
                       class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3826 current_page_item menu-item-4808 link menu-timeline active">
-                      <a [routerLink]="['/Home']" aria-current="page" data-type="page-transition"
+                      <a href="#" (click)="navigateWithReload('/Home')" aria-current="page" data-type="page-transition"
                         class="ajax-link active">
                         <div class="before-span">
                           <span data-hover="Home">Home</span>
@@ -112,7 +84,7 @@
                     </li>
                     <li id="menu-item-4809"
                       class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3826 current_page_item menu-item-4808 link menu-timeline active">
-                      <a href="/about" aria-current="page" class="ajax-link active" routerLinkActive="active">
+                      <a href="#" (click)="navigateWithReload('/about')" aria-current="page" class="ajax-link active">
                         <div class="before-span">
                           <span data-hover="WHO WE ARE">WHO WE ARE</span>
                         </div>
@@ -120,30 +92,30 @@
                     </li>
                     <li id="menu-item-4801"
                       class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4801 link menu-timeline">
-                      <a href="/what-we-do">
+                      <a href="#" (click)="navigateWithReload('/what-we-do')">
                         <div class="before-span">
                           <span data-hover="What We Do">What We Do </span>
                         </div>
                       </a>
                       <ul class="sub-menu">
-                        <li id="menu-item-15"
-                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15 link">
-                          <a href="">Products</a>
-                        </li>
                         <li id="menu-item-14"
                           class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14 link">
-                          <a href="/Solution">Solutions</a>
+                          <a href="#" (click)="navigateWithReload('/Solution')">Solutions</a>
                         </li>
                         <li id="menu-item-13"
                           class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13 link">
-                          <a href="">Services</a>
+                          <a href="#" (click)="navigateWithReload('/Services')">Services</a>
+                        </li>
+                        <li id="menu-item-15"
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15 link">
+                          <a href="#" (click)="navigateWithReload('/Training')">Training</a>
                         </li>
                       </ul>
                     </li>
-                    
+
                     <li id="menu-item-4690"
                       class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4690 link menu-timeline">
-                      <a href="" data-type="page-transition" class="ajax-link">
+                      <a href="/Contact" data-type="page-transition" class="ajax-link">
                         <div class="before-span">
                           <span data-hover="Contact">Contact</span>
                         </div>
@@ -182,7 +154,7 @@
         </div>
         <!-- Showcase Slider Holder -->
         <div id="showcase-slider-webgl-holder" class="disable-drag"
-          data-pattern-img="assets/wp-content/themes/rayden/images/displacement/aqua-light.jpg">
+          data-pattern-img="assets/wp-content/uploads/2020/12/GDD-Website-GEM-Picture-2-01.png">
           <div id="slider-webgl" class="swiper-container">
             <div id="trigger-slides" class="swiper-wrapper">
               <div class="swiper-slide">
@@ -202,26 +174,6 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="swiper-slide">
-									<div class="slide-wrap" data-slide="1"></div>
-									<div class="outer" data-swiper-parallax="0" data-swiper-parallax-opacity="0.3">
-										<div class="inner">
-											<div class="slide-title-wrapper">
-												<div class="slide-title"
-													data-fill-img="assets/wp-content/uploads/2020/12/shutterstock_1668474607-1.jpg"
-													data-firstline="Read" data-secondline="More">
-													<span><span>PROMETEO</span></span>
-												</div>
-												<a class="slide-link" data-type="page-transition"
-													href="geodata/prometeo/index.html"></a>
-											</div>
-											<div class="subtitle" data-swiper-parallax-opacity="0"><span><span>Satellite
-														based vegetation fire<br>
-														probability solution offered as <br>
-														a subscription service.</span></span></div>
-										</div>
-									</div>
-								</div> -->
               <div class="swiper-slide">
                 <div class="slide-wrap" data-slide="2"></div>
                 <div class="outer" data-swiper-parallax="0" data-swiper-parallax-opacity="0.3">
@@ -268,16 +220,15 @@
                   <div class="inner">
                     <div class="slide-title-wrapper">
                       <div class="slide-title"
-                        data-fill-img="assets/wp-content/uploads/2020/12/GDD-Website-GEM-Picture-2-01.png"
+                        data-fill-img="assets/wp-content/themes/rayden/images/displacement/aqua-light.jpg"
                         data-firstline="Read" data-secondline="More">
-                        <span><span>GEM</span></span>
+                        <span><span>Geospatial Services</span></span>
                       </div>
                       <a class="slide-link" data-type="page-transition" href=""></a>
                     </div>
                     <div class="subtitle" data-swiper-parallax-opacity="0">
-                      <span><span>Geo change analytics solution based on very<br />
-                          high-resolution satellite imagery focused on <br />
-                          detecting changes around your assets.</span></span>
+                      <span><span>Empowering you with cutting-edge tools <br>to analyze visualize, and interpret
+                          geospatial data <br>for smarter decision-making and optimized operations.</span></span>
                     </div>
                   </div>
                 </div>
@@ -289,7 +240,7 @@
         <!-- canvas slider -->
         <div id="canvas-slider" class="canvas-slider">
           <div class="slider-img" data-slide="0">
-            <img class="slide-img" src="assets/wp-content/uploads/2022/07/satellite-bg-compress-1.jpg"
+            <img class="slide-img" src="assets/wp-content/uploads/2020/12/GDD-Website-GEM-Picture-2-01.png"
               alt="Slide Image" />
           </div>
           <div class="slider-img" data-slide="1">
@@ -305,7 +256,7 @@
               alt="Slide Image" />
           </div>
           <div class="slider-img" data-slide="4">
-            <img class="slide-img" src="assets/wp-content/uploads/2020/12/GDD-Website-GEM-Picture-2-01.png"
+            <img class="slide-img" src="assets/wp-content/uploads/2022/07/satellite-bg-compress-1.jpg"
               alt="Slide Image" />
           </div>
         </div>
@@ -360,17 +311,12 @@
                     <h3 class="has-text-align-center no-bottom-margin wp-block-heading">
                       About Us
                     </h3>
-
-                    <!-- <p class="has-text-align-center has-white-color">Excellence in
-												Location-intelligence Solutions</p> -->
-
                     <h5 class="has-text-align-center wp-block-heading pt-3">
                       An Egyptian company established 2019 in Cairo, Egypt. With
                       <span class="fs-3">7</span> years calibers experience
                       <br />
                       in Business Development.
                     </h5>
-
                     <p class="white sml-height">
                       Our Solutions transform complex data to simple shareable
                       information for a faster decision-making with the
@@ -379,7 +325,6 @@
                       efficiency to meet customer value.
                     </p>
                   </div>
-
                   <div class="wp-block-cover is-light">
                     <span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><img
                       decoding="async" class="wp-block-cover__image-background wp-image-4788" alt=""
@@ -394,7 +339,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="wp-block-rayden-gutenberg-container has-animation full row_padding_bottom" style="
                   background-color: #000;
                   padding-top: 80px;
@@ -410,12 +354,10 @@
                     <span class="fs-5 fw-bold">To help our clients in a rapidly changing world</span><br />
                     we must continuously innovate and extend our capabilities.
                   </h5>
-
                   <div class="wp-block-rayden-gutenberg-container" style="background-color: #f2f2f2; text-align: left">
                   </div>
                 </div>
-
-                <div class="wp-block-rayden-gutenberg-container medium-width"
+                <div id="sectionbenfit" class="wp-block-rayden-gutenberg-container medium-width"
                   style="background-color: transparent; text-align: left">
                   <div
                     class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-3 wp-block-columns-is-layout-flex">
@@ -431,24 +373,20 @@
                             <img decoding="async" src="assets/wp-content/uploads/2022/08/GDD-Website-Icons-22.png"
                               alt="" class="wp-image-4897" />
                           </figure>
-
                           <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
-
                         <div
                           class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow"
                           style="flex-basis: 75%">
                           <p class="grey-text">
-                            <span class="fs-3 fw-bold">Productivity</span><br />We ensure the maximum productivity
-                            <br />to
+                            <span class="fs-3 fw-bold">Productivity</span><br>We ensure the maximum productivity
+                            <br>to
                             meet customers expectations.
                           </p>
-
                           <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
                       </div>
                     </div>
-
                     <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis: 50%">
                       <div
                         class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-2 wp-block-columns-is-layout-flex">
@@ -459,10 +397,8 @@
                             <img decoding="async" src="assets/wp-content/uploads/2022/08/GDD-Website-Icons-plane.png"
                               alt="" class="wp-image-4900" width="109" height="109" />
                           </figure>
-
                           <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
-
                         <div
                           class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow"
                           style="flex-basis: 75%">
@@ -475,7 +411,6 @@
                       </div>
                     </div>
                   </div>
-
                   <div
                     class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-6 wp-block-columns-is-layout-flex">
                     <div
@@ -490,10 +425,8 @@
                             <img decoding="async" src="assets/wp-content/uploads/2022/08/GDD-Website-Icons-hand.png"
                               alt="" class="wp-image-4893" width="133" height="126" />
                           </figure>
-
                           <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
-
                         <div
                           class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow"
                           style="flex-basis: 75%">
@@ -502,12 +435,10 @@
                             company guarantees the quality <br />
                             of our products and solutions.
                           </p>
-
                           <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
                       </div>
                     </div>
-
                     <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis: 50%">
                       <div
                         class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-5 wp-block-columns-is-layout-flex">
@@ -518,10 +449,8 @@
                             <img decoding="async" src="assets/wp-content/uploads/2022/08/globe-1.png" alt=""
                               class="wp-image-4908" width="109" height="109" />
                           </figure>
-
                           <div style="height: 40px" aria-hidden="true" class="wp-block-spacer"></div>
                         </div>
-
                         <div
                           class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow"
                           style="flex-basis: 75%">
@@ -537,7 +466,7 @@
                   </div>
                   <hr class="wp-block-separator has-css-opacity bottom-line" />
                 </div>
-                <div class="wp-block-rayden-gutenberg-container medium-width"
+                <!-- <div class="wp-block-rayden-gutenberg-container medium-width"
                   style="background-color: transparent; text-align: left">
                   <div class="wp-block-rayden-gutenberg-container" style="
                       background-color: transparent;
@@ -783,7 +712,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
               <div class="wp-block-rayden-gutenberg-container full contact-us-bg" style="text-align: left">
                 <div
@@ -933,73 +862,6 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="wp-block-rayden-gutenberg-container full "
-									style="background-color:#01b1a0;text-align:left">
-									<div class="wp-block-rayden-gutenberg-container white-section  row_padding_top row_padding_bottom"
-										style="background-color:transparent;text-align:left">
-										<div
-											class="wp-block-columns white is-layout-flex wp-container-core-columns-is-layout-19 wp-block-columns-is-layout-flex">
-											<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-												<h5 class="has-text-align-left white wp-block-heading">Services</h5>
-
-
-
-												<ul>
-													<li><a href="/geodata/imagery/">Satellite Imagery</a></li>
-													<li><a href="/geodata/software/">Geospatial Software</a></li>
-													<li><a href="/geodata/training/">Geospatial Training</a></li>
-													<li><a href="/geodata/custom-gis/">Custom GIS</a></li>
-												</ul>
-											</div>
-
-
-
-											<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-												<h5 class="has-text-align-left white wp-block-heading">Geospatials Apps
-												</h5>
-
-
-
-												<ul>
-													<li><a href="/geodata/gem/">GEM</a></li>
-													<li><a href="/geodata/prometeo/">PROMETEO</a></li>
-												</ul>
-											</div>
-
-
-
-											<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-												<h5 class="has-text-align-left white wp-block-heading">Industries</h5>
-
-
-
-												<ul>
-													<li><a href="https://geodatadesign.co.za/agriculture/"
-															data-type="page-transition"
-															class="ajax-link">Agriculture</a></li>
-													<li><a href="https://geodatadesign.co.za/environment-climate-changes/"
-															data-type="page-transition" class="ajax-link">Environmental
-															&amp; Climate Change</a></li>
-													<li><a href="https://geodatadesign.co.za/forestry/"
-															data-type="page-transition" class="ajax-link">Forestry</a>
-													</li>
-													<li><a href="https://geodatadesign.co.za/mining-oil-gas/"
-															data-type="page-transition" class="ajax-link">Mining</a>
-													</li>
-													<li><a href="https://geodatadesign.co.za/safety-and-security/"
-															data-type="page-transition" class="ajax-link">Safety and
-															Security</a></li>
-													<li><a href="https://geodatadesign.co.za/transport-and-planning/"
-															data-type="page-transition" class="ajax-link">Transport and
-															Planning</a></li>
-													<li><a href="https://geodatadesign.co.za/utilities-and-renewable-energy/"
-															data-type="page-transition" class="ajax-link">Utilities and
-															Renewable Energy</a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div> -->
               <div class="wp-block-rayden-gutenberg-container" style="background-color: #000; text-align: left"></div>
             </div>
           </div>
@@ -1016,13 +878,7 @@
   <!--/Cd-main-content -->
   <!--/Main -->
   <div class="cd-cover-layer"></div>
-  <!-- <div id="magic-cursor">
-		<div id="ball">
-			<div id="ball-drag-x"></div>
-			<div id="ball-drag-y"></div>
-			<div id="ball-loader"></div>
-		</div>
-	</div> -->
+
   <div id="clone-image"></div>
   <div id="rotate-device"></div>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="

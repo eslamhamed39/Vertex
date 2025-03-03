@@ -1,0 +1,147 @@
+<!-- <h2>Hekko</h2> -->
+
+<app-navbar></app-navbar>
+<div id="sperator"></div>
+<section>
+	<div class="bg-wrapper">
+		<div class="bg"></div>
+		<div class="overlay"></div>
+	</div>
+	<div class="sp-container">
+		<div class="sp-content">
+			<div class="sp-globe"></div>
+			<h2 class="frame-1">Learning</h2>
+			<h2 class="frame-2">Coaching</h2>
+			<h2 class="frame-3">Development</h2>
+			<!-- <h2 class="frame-4">Training</h2> -->
+			<h2 class="frame-5">
+				<span>let's </span>
+				<span>Make </span>
+				<span>Your </span>
+				<span style="color: #ee4437ff;">Experiance.</span>
+			</h2>
+		</div>
+	</div>
+	<div class="nav-container">
+		<a class="nav-tab" href="#tab-svelte" (click)="onTabClick($event, '#tab-svelte')">Expert</a>
+		<a class="nav-tab" href="#tab-esbuild" (click)="onTabClick($event, '#tab-esbuild')">Why us?</a>
+		<a class="nav-tab" href="#tab-next" (click)="onTabClick($event, '#tab-next')">Who Benefits?</a>
+		<a class="nav-tab" href="#tab-typescript" (click)="onTabClick($event, '#tab-typescript')">Training Programs</a>
+		<!-- <a class="nav-tab" href="#tab-vite" (click)="onTabClick($event, '#tab-vite')">Section 5 </a> -->
+		<span class="nav-tab-slider"></span>
+	</div>
+</section>
+
+<main class="main">
+	<section id="tab-svelte" class="slider position-relative">
+		<div id="top-section"></div>
+		<div class="overlayer section1">
+			<h1 style="line-height: 90px;">Expert Geospatial Training Solutions</h1>
+			<h2>At <span class="company-text">Geomakani</span>, we provide top-tier GIS and Remote Sensing (RS) training
+				tailored to professionals,
+				organizations, and government agencies. Our training programs are designed to meet industry demands and
+				enhance technical expertise, covering Hexagon Geospatial Products, Imagery Interpretation,
+				Photogrammetry,
+				and Customized GIS Solutions.</h2>
+		</div>
+		<div id="bottom-section"></div>
+	</section>
+	<section id="tab-esbuild" class="slider mt4">
+		<h1 id="section2">Why Choose <br> Our Geospatial Training?</h1>
+		<div class="container mt-5">
+			<div class="row mb-5 ">
+				<div class="text-align-center col-md-4 col-sm-12">
+					<img src="https://i.ibb.co/5X2k7xWw/list-4394574.png" alt="test-passed" />
+					<h2>Tailored Programs</h2>
+					<p>Courses customized to fit your industry, experience level, and requirements.</p>
+				</div>
+				<div class="text-align-center col-md-4 col-sm-12">
+					<img src="https://i.ibb.co/N64fGPBg/settings-610127.png" alt="learning" />
+					<h2>Practical Learning</h2>
+					<p>Practical training on ERDAS Imagine, Geo media, and M. App Enterprise.</p>
+				</div>
+				<div class=" text-align-center col-md-4 col-sm-12">
+					<img src="https://i.ibb.co/YBP7VRPZ/expert-9746088.png" alt="learning" />
+					<h2>Industry Expertise</h2>
+					<p>Training for government agencies, private companies, and universities.</p>
+				</div>
+			</div>
+			<div class="row mb-5">
+				<div class="text-align-center col-md-4 col-sm-12">
+					<img src="https://i.ibb.co/YFSPSB9x/steps-4394582.png" alt="test-passed" />
+					<h2>Comprehensive</h2>
+					<p>multi-level training programs for beginners to experts.</p>
+				</div>
+				<div class="text-align-center col-md-4 col-sm-12">
+					<img src="https://i.ibb.co/RGpVHZw3/solution-6101769.png" alt="learning" />
+					<h2>Solution</h2>
+					<p>One-stop solution for consulting, software, and training.</p>
+				</div>
+				<div class=" text-align-center col-md-4 col-sm-12">
+					<img src="https://img.icons8.com/3d-fluency/100/handshake--v1.png" alt="learning" />
+					<h2>Collaboration</h2>
+					<p>Collaboration with leading geospatial companies & universities.</p>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<section id="tab-next" class="slider">
+		<h1>Who Benefits from Our Training?</h1>
+		<div>
+			<h2>Government Ministries & Agencies</h2>
+			<p>Education, Science, Agriculture, Urban Planning, Defense, and Interior Ministries…etc</p>
+		</div>
+		<div>
+			<h2>Universities & Research Institutions</h2>
+			<p>Faculties of Geography, Engineering, Agriculture, Urban Planning, and Humanities…etc</p>
+		</div>
+		<div>
+			<h2>Private Companies & Enterprises</h2>
+			<p>GIS professionals, surveyors, and industry specialists….ets</p>
+		</div>
+	</section>
+	<section id="tab-typescript">
+		<h1 style="margin-bottom: 60px;">Our Geospatial Training Programs</h1>
+		<ul>
+			<li style="--accent-color:#41516C">
+				<div class="date date1">GIS & Remote Sensing (RS) Fundamentals</div>
+				<div class="title">Introduction to GIS applications across industries.</div>
+				<div class="title">Remote sensing techniques for environmental analysis.</div>
+				<div class="title">Data collection, processing, and visualization.</div>
+				
+			</li>
+			<li style="--accent-color:#FBCA3E">
+				<div class="date">Hexagon Geospatial Products Training</div>
+				<div class="title">ERDAS Imagine</div>
+				<div class="descr">Satellite imagery analysis & remote sensing.</div>
+				<div class="title">Geo media</div>
+				<div class="descr">Advanced GIS mapping & spatial data management.</div>
+				<div class="title">M.App Enterprise</div>
+				<div class="descr">Cloud-based GIS solutions for dynamic geospatial applications.</div>
+			</li>
+			<li style="--accent-color:#E24A68">
+				<div class="date">Specialized Industry Training</div>
+				<div class="title">Agriculture</div>
+				<div class="descr">Precision farming & crop classification and urgent detection of plant needs.</div>
+				<div class="title">Mining</div>
+				<div class="descr">monitoring & manage and analyze the expansion and resource mapping.</div>
+				<div class="title">Mapping</div>
+				<div class="descr">Urban Planning &Land use analysis and city planning tools.</div>
+			</li>
+			<li style="--accent-color:#1B5F8C">
+				<div class="date">Imagery Interpretation</div>
+				<div class="title">Satellite imagery</div>
+				<div class="descr">Satellite imagery interpretation for security & surveillance and changes for (Defense & Interior).</div>
+			</li>
+			<li style="--accent-color:#4CADAD">
+				<div class="date">Photogrammetry & Image Processing</div>
+				<div class="title">Aerial and satellite imagery processing</div>
+				<div class="title">3D terrain modeling & mapping</div>
+				<div class="title">Advanced photogrammetric techniques</div>
+			</li>
+		</ul>
+	</section>
+	
+</main>
+<app-footer></app-footer>

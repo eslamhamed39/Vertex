@@ -15,7 +15,7 @@ declare var PageLoadActions: any;
 export class HomeComponent implements AfterViewInit, OnDestroy {
   isHovered = false;
   captcha:string;
-  email: string;
+    email: string;
   constructor(private router: Router) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
@@ -27,6 +27,13 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     this.captcha = '';
     this.email = 'Secret@email.com';
   }
+
+  navigateWithReload(url: string) {
+    this.router.navigateByUrl(url).then(() => {
+      window.location.reload();
+    });
+  }
+
   resolved(captchaResponse: string) {
     this.captcha = captchaResponse;
     console.log('resolved captcha with response: ' + this.captcha);

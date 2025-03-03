@@ -2875,6 +2875,25 @@ footer .swiper-pagination {
 
 	}
 
+	.subtitle {
+
+		font-size: 16px;
+
+		line-height: 30px;
+
+	}
+
+	#sectionbenfit img {
+		width: 30%;
+	}
+
+	#sectionbenfit figure {
+		text-align: center;
+		justify-content: center;
+		display: flex;
+		margin-top: 50px;
+	}
+
 
 
 	/*-- Showcase Slider --*/
@@ -3224,7 +3243,17 @@ footer .swiper-pagination {
 
 	}
 
+	.vision-mission {
+		flex-direction: column;
+	}
 
+	.style-vm {
+		max-width: 60% !important;
+	}
+
+	.logo_core {
+		display: none;
+	}
 
 	.subtitle {
 
@@ -3234,6 +3263,21 @@ footer .swiper-pagination {
 
 	}
 
+	#main {
+		border-top-left-radius: 0px !important;
+		border-top-right-radius: 0px !important;
+	}
+
+	#sectionbenfit img {
+		width: 30%;
+	}
+
+	#sectionbenfit figure {
+		text-align: center;
+		justify-content: center;
+		display: flex;
+		margin-top: 50px;
+	}
 
 
 	footer .swiper-pagination {
@@ -3421,17 +3465,41 @@ footer .swiper-pagination {
 
 	}
 
+	.vision-mission {
+		flex-direction: column;
+	}
 
+	.style-vm {
+		max-width: 60% !important;
+	}
+
+	.logo_core {
+		display: none;
+	}
 
 	.subtitle {
 
-		font-size: 14px;
+		font-size: 12px;
 
 		line-height: 30px;
 
 	}
 
+	#sectionbenfit img {
+		width: 30%;
+	}
 
+	#sectionbenfit figure {
+		text-align: center;
+		justify-content: center;
+		display: flex;
+		margin-top: 50px;
+	}
+
+	#main {
+		border-top-left-radius: 0px !important;
+		border-top-right-radius: 0px !important;
+	}
 
 	/*-- Showcase Slider --*/
 
@@ -3443,6 +3511,9 @@ footer .swiper-pagination {
 
 	}
 
+	.preloader-intro {
+		font-size: 40px !important;
+	}
 
 
 	/*-- Showcase Sticky --*/

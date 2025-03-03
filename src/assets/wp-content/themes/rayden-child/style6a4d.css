@@ -750,9 +750,9 @@ ul.custom-list li {
 		font-size: 16px;
 	}
 	
-	.grey-text br {
+	/* .grey-text br {
     	display: none;
-	}
+	} */
 	
 	.sml-text.has-large-font-size {
 	  font-size: 18px !important;

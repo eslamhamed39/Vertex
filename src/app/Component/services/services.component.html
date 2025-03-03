@@ -1,0 +1,86 @@
+<body>
+    <app-navbar></app-navbar>
+
+    <div class="solutionContainer">
+        <div class="wp-block-rayden-gutenberg-container medium-width"
+            style="background-color: transparent; text-align: left; margin-top: 100px">
+            <div class="wp-block-rayden-gutenberg-container" style="
+                          background-color: transparent;
+                          padding-top: 40px;
+                          padding-bottom: 65px;
+                          text-align: left;
+                        " id="Geospatialhead">
+                <h2 class="has-text-align-center wp-block-heading" style="color: #fff">
+                    Geospatial Services
+                </h2>
+            </div>
+            <div
+                class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-grid wp-block-columns-is-layout-flex">
+                <div *ngFor="let item of carouselItems; let i = index"
+                    class="hover_img wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+                    [ngClass]="{ showDetail: selectedItem === item }">
+                    <div
+                        class="wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-item wp-block-columns-is-layout-flex">
+                        <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+                            style="flex-basis: 33.33%">
+                            <figure class="wp-block-image size-full wp-duotone-000000-7f7f7f-5">
+                                <img decoding="async" [src]="item.imageSrc" alt=""
+                                    class="wp-image-4970 img_{{ i + 1 }}" />
+                            </figure>
+                        </div>
+                        <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+                            style="flex-basis: 66.66%">
+                            <h2 class="wp-block-heading">{{ item.title }}</h2>
+                            <p>{{ item.description }}</p>
+                            <button class="seeMore primary-color see_more" (click)="onSeeMore(item)">
+                                See More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div [ngClass]="{carousel: true,overlay: true, visible: selectedItem !== null }" #carousel>
+            <div class="list" #listHTML>
+                <div class="item" *ngFor="let item of carousel2">
+                    <img [src]="item.imageSrc" alt="{{ item.title }}" />
+                    <div class="introduce">
+                        <div class="title">{{ item.details.title }}</div>
+                        <div class="topic">{{ item.topic }}</div>
+                        <div class="des">{{ item.details.description }}</div>
+                    </div>
+                    <div class="detail">
+                        <div class="title">{{ item.details.title }}</div>
+                        <div class="des">{{ item.details.description }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="arrows">
+                <button id="prev"><</button>
+                        <button id="next">></button>
+                        <button id="back">Close</button>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="
+                  visibility: hidden;
+                  position: absolute;
+                  left: -9999px;
+                  overflow: hidden;
+                ">
+        <defs>
+            <filter id="wp-duotone-000000-7f7f7f-5">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg>
+</body>

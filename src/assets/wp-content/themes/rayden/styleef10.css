@@ -1436,7 +1436,7 @@ a {
 
 .light-content a {
 
-	color: #fff;
+	color: #fff !important;
 
 }
 
@@ -4759,7 +4759,7 @@ footer.showcase-footer {
 
 	line-height: 30px;
 
-	color: #000;
+	color: #ffffff;
 
 	pointer-events: initial;
 
@@ -4773,11 +4773,6 @@ footer.showcase-footer {
 
 
 
-.light-content .copyright {
-
-	color: #fff;
-
-}
 
 
 
@@ -4787,7 +4782,7 @@ footer.showcase-footer {
 
 	float: right;
 
-	color: #000;
+	color: #ffffff;
 
 	width: 240px;
 
@@ -4802,12 +4797,6 @@ footer.showcase-footer {
 }
 
 
-
-.light-content .socials-wrap {
-
-	color: #fff;
-
-}
 
 
 
@@ -5086,7 +5075,7 @@ footer .socials-wrap {
 
 .socials li a {
 
-	color: #000;
+	color: #fff;
 
 	font-size: 12px;
 
@@ -5120,7 +5109,7 @@ footer .socials-wrap {
 
 .socials li a:hover {
 
-	color: #000;
+	color: #fff;
 
 	opacity: 1;
 
@@ -5266,7 +5255,7 @@ footer .socials-wrap {
 
 	width: 40px;
 
-	color: #000;
+	color: #fff;
 
 	text-align: center;
 
@@ -5276,13 +5265,6 @@ footer .socials-wrap {
 
 }
 
-
-
-.light-content .button-icon {
-
-	color: #fff;
-
-}
 
 
 
@@ -5334,7 +5316,7 @@ footer .socials-wrap {
 
 	padding: 0 10px;
 
-	color: #000;
+	color: #fff;
 
 	-webkit-transition: color 0.05s ease-in-out;
 
@@ -5450,19 +5432,6 @@ footer .socials-wrap {
 
 
 
-.white-header .button-text {
-
-	color: #fff;
-
-}
-
-
-
-.light-content .white-header .button-text {
-
-	color: #000;
-
-}
 
 
 
@@ -6876,7 +6845,9 @@ nav.open {
 		top: 30px;
 
 	}
-
+	.copyright a{
+		color: #fff !important;
+	}
 
 
 	.footer-middle {
@@ -7076,8 +7047,8 @@ nav.open {
 
 
 	.button-wrap.right.menu {
-
-		right: -10px;
+		top: 20px;
+		right: -70px;
 
 	}
 

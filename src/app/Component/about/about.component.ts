@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit } from '@angular/core';
 import * as THREE from 'three';
 import { TweenMax, Power2 } from 'gsap';
+import { Router, NavigationEnd } from '@angular/router';
+
 
 interface CustomVector3 extends THREE.Vector3 {
   destination: { x: number, y: number, z: number };
@@ -34,10 +36,16 @@ export class AboutComponent implements OnInit, AfterViewInit{
   private imagedata!: ImageData;
   private locomotiveScroll: LocomotiveScroll | null = null;
 
-  constructor(private el: ElementRef) { }
+  constructor(private el: ElementRef,private router: Router) { }
 
   ngOnInit() {
     this.updateBorder(); // تحديث الحد عند تحميل الصفحة
+  }
+
+  navigateWithReload(url: string) {
+    this.router.navigateByUrl(url).then(() => {
+      window.location.reload();
+    });
   }
 
   @HostListener('window:scroll', [])

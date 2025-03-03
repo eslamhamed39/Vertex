@@ -15,7 +15,8 @@
                         <ul id="menu-main-menu" data-breakpoint="1025" class="flexnav menu">
                             <li id="menu-item-4808"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3826 current_page_item menu-item-4808 link menu-timeline active">
-                                <a href="/Home" aria-current="page" data-type="page-transition" class="ajax-link">
+                                <a href="#" (click)="navigateWithReload('/Home')" aria-current="page">
+                                <!-- <a routerLink="/Home" routerLinkActive="active" aria-current="page"> -->
                                     <div class="before-span">
                                         <span data-hover="Home">Home</span>
                                     </div>
@@ -23,8 +24,8 @@
                             </li>
                             <li id="menu-item-4809"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3826 current_page_item menu-item-4808 link menu-timeline active">
-                                <a href="/about" aria-current="page" data-type="page-transition"
-                                    class="ajax-link active">
+                                <a href="#" (click)="navigateWithReload('/about')" aria-current="page"
+                                    data-type="page-transition" class="ajax-link active">
                                     <div class="before-span">
                                         <span data-hover="WHO WE ARE">WHO WE ARE</span>
                                     </div>
@@ -32,29 +33,29 @@
                             </li>
                             <li id="menu-item-4801"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4801 link menu-timeline">
-                                <a href="">
+                                <a href="#" (click)="navigateWithReload('/what-we-do')">
                                     <div class="before-span">
                                         <span data-hover="What We Do">What We Do </span>
                                     </div>
                                 </a>
                                 <ul class="sub-menu">
-                                    <li id="menu-item-15"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15 link">
-                                        <a href="">Products</a>
-                                    </li>
                                     <li id="menu-item-14"
                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14 link">
-                                        <a href="/Solution">Solutions</a>
+                                        <a routerLink="/Solution" routerLinkActive="active">Solutions</a>
                                     </li>
                                     <li id="menu-item-13"
                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13 link">
-                                        <a href="">Services</a>
+                                        <a href="/Services" routerLinkActive="active">Services</a>
+                                    </li>
+                                    <li id="menu-item-15"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15 link">
+                                        <a href="/Training">Training</a>
                                     </li>
                                 </ul>
                             </li>
                             <li id="menu-item-4690"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4690 link menu-timeline">
-                                <a href="" data-type="page-transition" class="ajax-link">
+                                <a routerLink="/Contact" routerLinkActive="active">
                                     <div class="before-span">
                                         <span data-hover="Contact">Contact</span>
                                     </div>

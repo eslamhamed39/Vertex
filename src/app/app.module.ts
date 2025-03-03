@@ -18,6 +18,9 @@ import { WhatwedoComponent } from './Component/whatwedo/whatwedo.component';
 import { NavbarComponent } from './Component/navbar/navbar.component';
 import { EarthComponent } from './Component/earth/earth.component';
 import { SolutionComponent } from './Component/solution/solution.component';
+import { ServicesComponent } from './Component/services/services.component';
+import { TrainingComponent } from './Component/training/training.component';
+import { ContactComponent } from './Component/contact/contact.component';
 
 
 @NgModule({
@@ -31,6 +34,9 @@ import { SolutionComponent } from './Component/solution/solution.component';
     NavbarComponent,
     EarthComponent,
     SolutionComponent,
+    ServicesComponent,
+    TrainingComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

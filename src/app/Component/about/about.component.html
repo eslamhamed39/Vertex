@@ -23,8 +23,8 @@
                                         <ul id="menu-main-menu" data-breakpoint="1025" class="flexnav menu">
                                             <li id="menu-item-4808"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3826 current_page_item menu-item-4808 link menu-timeline active">
-                                                <a href="/Home" aria-current="page" data-type="page-transition"
-                                                    class="ajax-link">
+                                                <a routerLink="/Home" routerLinkActive="active" aria-current="page"
+                                                    data-type="page-transition" class="ajax-link">
                                                     <div class="before-span">
                                                         <span data-hover="Home">Home</span>
                                                     </div>
@@ -32,8 +32,8 @@
                                             </li>
                                             <li id="menu-item-4809"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3826 current_page_item menu-item-4808 link menu-timeline active">
-                                                <a href="/about" aria-current="page" data-type="page-transition"
-                                                    class="ajax-link active">
+                                                <a routerLinkActive="active" routerLink="/about" aria-current="page"
+                                                    data-type="page-transition" class="ajax-link active">
                                                     <div class="before-span">
                                                         <span data-hover="WHO WE ARE">WHO WE ARE</span>
                                                     </div>
@@ -41,30 +41,30 @@
                                             </li>
                                             <li id="menu-item-4801"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4801 link menu-timeline">
-                                                <a href="/what-we-do">
+                                                <a routerLinkActive="active" routerLink="/what-we-do">
                                                     <div class="before-span">
                                                         <span data-hover="What We Do">What We Do </span>
                                                     </div>
                                                 </a>
                                                 <ul class="sub-menu">
-                                                    <li id="menu-item-15"
-                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15 link">
-                                                        <a href="">Products</a>
-                                                    </li>
                                                     <li id="menu-item-14"
                                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14 link">
                                                         <a href="/Solution">Solutions</a>
                                                     </li>
                                                     <li id="menu-item-13"
                                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13 link">
-                                                        <a href="">Services</a>
+                                                        <a href="/Services">Services</a>
+                                                    </li>
+                                                    <li id="menu-item-15"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15 link">
+                                                        <a href="/Training">Training</a>
                                                     </li>
                                                 </ul>
                                             </li>
-    
+
                                             <li id="menu-item-4690"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4690 link menu-timeline">
-                                                <a href="" data-type="page-transition" class="ajax-link">
+                                                <a href="/Contact" data-type="page-transition" class="ajax-link">
                                                     <div class="before-span">
                                                         <span data-hover="Contact">Contact</span>
                                                     </div>
@@ -129,13 +129,16 @@
                                                     <h4>WHO WE ARE?</h4>
                                                     <p class="white">
                                                         An Egyptian company established in 2019 in Cairo, Egypt.
-                                                        Geomakani is a Pioneering Business Development System Integrator and
+                                                        Geomakani is a Pioneering Business Development System Integrator
+                                                        and
                                                         Geospatial Events Company committed to driving innovation and
                                                         empowering organizations.
-                                                        We specialize in integrating cutting-edge geospatial technologies to
+                                                        We specialize in integrating cutting-edge geospatial
+                                                        technologies to
                                                         optimize business processes, enhance efficiency, and unlock new
                                                         growth opportunities in the Middle East & Africa.
-                                                        Geomakani is taking the lead of working in the Middle East & Africa
+                                                        Geomakani is taking the lead of working in the Middle East &
+                                                        Africa
                                                         under the umbrella of STADIA Group.
                                                     </p>
                                                 </div>
@@ -155,7 +158,8 @@
                                         style="background-color: transparent; text-align: left">
                                         <!-- <div style="height: 27px" aria-hidden="true" class="wp-block-spacer"></div> -->
                                         <div class="is-layout-flex wp-container-3 wp-block-columns">
-                                            <div class="is-layout-flow wp-block-column vision-mission" style="flex-basis: 100%; margin-bottom: 10%; ">
+                                            <div class="is-layout-flow wp-block-column vision-mission"
+                                                style="flex-basis: 100%; margin-bottom: 10%; ">
                                                 <div class="wp-block-rayden-gutenberg-container text-align-center style-vm"
                                                     style="background-color: transparent; text-align: center;">
                                                     <img src="../../assets/Image/icons8-vision-100.png">
@@ -276,8 +280,9 @@
                                                     <div class="contain-image">
                                                         <figure
                                                             class="wp-block-image size-full is-resized wp-duotone-000000-7f7f7f-13">
-                                                            <img data-scroll decoding="async" src="assets/icons/shield.png"
-                                                                alt="" class="wp-image-4900" width="45%" height="auto" />
+                                                            <img data-scroll decoding="async"
+                                                                src="assets/icons/shield.png" alt=""
+                                                                class="wp-image-4900" width="45%" height="auto" />
                                                         </figure>
                                                     </div>
                                                     <div class="card-content">
@@ -291,20 +296,23 @@
                                                     <div class="contain-image">
                                                         <figure
                                                             class="wp-block-image size-full is-resized wp-duotone-000000-7f7f7f-13">
-                                                            <img data-scroll decoding="async" src="assets/icons/idea.png"
-                                                                alt="" class="wp-image-4900" width="45%" height="auto" />
+                                                            <img data-scroll decoding="async"
+                                                                src="assets/icons/idea.png" alt="" class="wp-image-4900"
+                                                                width="45%" height="auto" />
                                                         </figure>
                                                     </div>
                                                     <div class="card-content">
                                                         <h2 data-scroll class="gradient-Coretext">Innovation</h2>
-                                                        <p data-scroll class="card-description">Continuously seeking new and
+                                                        <p data-scroll class="card-description">Continuously seeking new
+                                                            and
                                                             creative
                                                             approaches to event planning and execution.</p>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="logo_core">
-                                                <img data-scroll src="https://i.ibb.co/4gfgxPG9/Geomakani-logo-only.webp"
+                                                <img data-scroll
+                                                    src="https://i.ibb.co/4gfgxPG9/Geomakani-logo-only.webp"
                                                     alt="Company Logo" width="100%">
                                             </div>
                                             <div class="values">
@@ -319,7 +327,8 @@
                                                     </div>
                                                     <div class="card-content">
                                                         <h2 data-scroll class="gradient-Coretext">Excellence</h2>
-                                                        <p data-scroll class="card-description">Striving for perfection in
+                                                        <p data-scroll class="card-description">Striving for perfection
+                                                            in
                                                             every aspect
                                                             of event planning and execution.</p>
                                                     </div>
@@ -328,8 +337,9 @@
                                                     <div class="contain-image">
                                                         <figure
                                                             class="wp-block-image size-full is-resized wp-duotone-000000-7f7f7f-13">
-                                                            <img data-scroll decoding="async" src="assets/icons/adapt.png"
-                                                                alt="" class="wp-image-4900" width="45%" height="auto" />
+                                                            <img data-scroll decoding="async"
+                                                                src="assets/icons/adapt.png" alt=""
+                                                                class="wp-image-4900" width="45%" height="auto" />
                                                         </figure>
                                                     </div>
                                                     <div class="card-content">
@@ -352,8 +362,7 @@
                                         <div class="inner">
                                             <div class="page-title-wrapper has-animation text-align-center">
                                                 <a class="page-title next-ajax-link-page disable-drag"
-                                                    href="/what-we-do"
-                                                    data-type="page-transition" data-firstline="Read"
+                                                    href="/what-we-do" data-type="page-transition" data-firstline="Read"
                                                     data-secondline="More">
                                                     <div class="next-hero-title">
                                                         <span>WHAT WE DO ...</span>
