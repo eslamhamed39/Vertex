@@ -27,20 +27,23 @@
 
 .text1 {
     top: 20%;
-    left: 24%;
+    left: 20%;
 }
 
 .text2 {
     bottom: 18%;
-    left: 29%;
+    left: 25%;
 }
 
 .text3 {
     top: 30%;
-    right: 21.7%;
+    right: 20%;
+    /* border: 1px solid white;
+    padding: 50px;
+    border-radius: 50%; */
 }
 
-.text1::before {
+/* .text1::before {
     content: " ";
     position: absolute;
     bottom: 1px;
@@ -66,13 +69,12 @@
     box-sizing: border-box;
     background: #ff0707;
     background-size: 200% 100%;
-    /* animation: moveGradient 4slinear infinite; */
     transform: translate(-50%, 0);
     rotate: 45deg;
-}
+} */
 
 
-
+/* 
 .text2::before {
     content: " ";
     position: absolute;
@@ -101,10 +103,10 @@
     background-size: 200% 100%;
     transform: translate(-50%, 0);
     rotate: 135deg;
-}
+} */
 
 
-.text3::before {
+/* .text3::before {
     content: " ";
     position: absolute;
     bottom: 1px;
@@ -132,10 +134,53 @@
     background-size: 200% 100%;
     transform: translate(-50%, 0);
     rotate: 145deg;
-}
+} */
 
 app-footer {
     position: fixed;
     bottom: 0px;
     width: 100%;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .text1 {
+        top: 20%;
+        left: 23%;
+    }
+
+    .text2 {
+        bottom: 18%;
+        left: 40%;
+    }
+
+    .text3 {
+        top: 20%;
+        right: 16.7%;
+    }
+}
+
+
+@media only screen and (max-width: 479px) {
+
+    .text1 {
+        top: 24%;
+        left: 5%;
+    }
+
+    .text2 {
+        bottom: 23%;
+        left: 34%;
+    }
+
+    .text3 {
+        top: 24%;
+        right: 5.7%;
+    }
+
+    .parallax-element h2 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
 }

@@ -26,7 +26,7 @@ export class ServicesComponent implements AfterViewChecked {
       title: 'Image Processing',
       topic: 'Service',
       description:
-        'Our experts provides a wide range of high-quality professional custom satellite...',
+        'Our experts provides a wide range of high-quality...',
       details: {
         title: 'Image Processing',
         description: `Our experts provides a wide range of high-quality professional custom
@@ -58,21 +58,7 @@ feature-rich applications using AI and enterprise-ready configurations.`,
 we can do land survey and with high accuracy and to the highest
 possible quality.`,
       },
-    },
-    {
-      imageSrc: 'assets/Image/Services/analysis_1376523.png',
-      title: 'Training',
-      topic: 'Service',
-      description:
-        'We train you at all levels, both product-related and methodically...',
-      details: {
-        title: 'Training',
-        description: `We train you at all levels, both product-related and methodically.
-Each training is individually designed for the participants, adapted to
-previous knowledge and requirements.`,
-      },
-    },
-    
+    }
   ];
 
   carousel2 : CarouselItem[] = [];

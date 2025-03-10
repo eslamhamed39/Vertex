@@ -1,7 +1,8 @@
 <body style="background-color: #161b1e">
     <div class="cd-index cd-main-content">
         <!-- Page Content -->
-        <canvas id="map" class="position-absolute"></canvas>
+        <app-logo3d></app-logo3d>
+
         <div id="page-content" class="light-content" data-bgcolor="#14141428">
             <div class="pagebackgroundcolor">
                 <header class="classic-menu bg-black">
@@ -23,7 +24,7 @@
                                         <ul id="menu-main-menu" data-breakpoint="1025" class="flexnav menu">
                                             <li id="menu-item-4808"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3826 current_page_item menu-item-4808 link menu-timeline active">
-                                                <a routerLink="/Home" routerLinkActive="active" aria-current="page"
+                                                <a href="/Home" aria-current="page"
                                                     data-type="page-transition" class="ajax-link">
                                                     <div class="before-span">
                                                         <span data-hover="Home">Home</span>
@@ -32,7 +33,7 @@
                                             </li>
                                             <li id="menu-item-4809"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3826 current_page_item menu-item-4808 link menu-timeline active">
-                                                <a routerLinkActive="active" routerLink="/about" aria-current="page"
+                                                <a href="/about" aria-current="page"
                                                     data-type="page-transition" class="ajax-link active">
                                                     <div class="before-span">
                                                         <span data-hover="WHO WE ARE">WHO WE ARE</span>
@@ -41,7 +42,7 @@
                                             </li>
                                             <li id="menu-item-4801"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4801 link menu-timeline">
-                                                <a routerLinkActive="active" routerLink="/what-we-do">
+                                                <a href="/what-we-do">
                                                     <div class="before-span">
                                                         <span data-hover="What We Do">What We Do </span>
                                                     </div>
@@ -101,9 +102,9 @@
                         <!-- Hero Section -->
                         <div id="hero">
                             <div id="hero-styles">
-                                <div id="hero-caption" class="parallax-onscroll text-align-center">
+                                <div id="hero-caption" class="parallax-onscroll text-align-center" style="box-shadow: rgb(255, 255, 255) 0px 0px 130px -78.5px;">
                                     <div class="inner">
-                                        <div class="hero-title"><span data-text="About">About</span>
+                                        <div class="hero-title"><h1 data-text="About">About</h1>
                                         </div>
                                         <div class="hero-subtitle"></div>
                                     </div>
@@ -116,9 +117,6 @@
                             <div id="main-page-content">
                                 <div class="wp-block-rayden-gutenberg-container"
                                     style="background-color: transparent; text-align: left">
-                                    <!-- <p class="has-text-align-center has-medium-font-size">As the world population
-                                            increases and the natural resources decrease, agriculture is becoming more and
-                                            more important for food &amp; land security.</p> -->
                                     <div class="wp-block-rayden-gutenberg-container"
                                         style="background-color: transparent; text-align: left">
                                         <div style="height: 27px" aria-hidden="true" class="wp-block-spacer"></div>
@@ -197,7 +195,7 @@
                                 </div>
                             </div>
                             <div class="wp-block-rayden-gutenberg-container" data-scroll-container
-                                style="background-color: #161b1e; text-align: left">
+                                style="background-color: #000; text-align: left">
                                 <div class="contain-coreValue pb-4" style="background-color: rgba(0, 0, 0, 0.5)">
                                     <div style="height: 27px" aria-hidden="true" class="wp-block-spacer"></div>
                                     <div data-scroll-section
@@ -207,73 +205,7 @@
                                                 style="background-color: transparent; text-align: center;">
                                                 <h1 data-scroll>Core Value</h1>
                                             </div>
-                                            <!-- <div class="container">
-                                                <div class="card">
-                                                    <div class="contain-image">
-                                                        <figure
-                                                            class="wp-block-image size-full is-resized wp-duotone-000000-7f7f7f-13">
-                                                            <img decoding="async" src="assets/icons/shield.png" alt=""
-                                                                class="wp-image-4900" width="45%" height="auto" />
-                                                        </figure>
-                                                    </div>
-                                                    <div class="card-content">
-                                                        <h2 class="card-title">Integrity</h2>
-                                                        <p class="card-description">Maintaining honesty, transparency, and
-                                                            ethical conduct in all business dealings.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="card">
-                                                    <div class="contain-image">
-                                                        <figure
-                                                            class="wp-block-image size-full is-resized wp-duotone-000000-7f7f7f-13">
-                                                            <img decoding="async" src="assets/icons/idea.png" alt=""
-                                                                class="wp-image-4900" width="45%" height="auto" />
-                                                        </figure>
-                                                    </div>
-                                                    <div class="card-content">
-                                                        <h2 class="card-title">Innovation</h2>
-                                                        <p class="card-description">Continuously seeking new and creative
-                                                            approaches to event planning and execution.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="card">
-                                                    <div class="contain-image">
-                                                        <figure
-                                                            class="wp-block-image size-full is-resized wp-duotone-000000-7f7f7f-13">
-                                                            <img decoding="async" src="assets/icons/excellence.png" alt=""
-                                                                class="wp-image-4900" width="45%" height="auto" />
-                                                        </figure>
-                                                    </div>
-                                                    <div class="card-content">
-                                                        <h2 class="card-title">Excellence</h2>
-                                                        <p class="card-description">Striving for perfection in every aspect
-                                                            of event planning and execution.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="card">
-                                                    <div class="contain-image">
-                                                        <figure
-                                                            class="wp-block-image size-full is-resized wp-duotone-000000-7f7f7f-13">
-                                                            <img decoding="async" src="assets/icons/adapt.png" alt=""
-                                                                class="wp-image-4900" width="45%" height="auto" />
-                                                        </figure>
-                                                    </div>
-                                                    <div class="card-content">
-                                                        <h2 class="card-title">Adaptability</h2>
-                                                        <p class="card-description">Embracing change and adapting to
-                                                            evolving industry trends and client needs.</p>
-                                                    </div>
-                                                </div>
-                                            </div> -->
                                         </div>
-                                        <!-- <div class="is-layout-flow wp-block-column" style="flex-basis:66.66%">
-                                                        <figure class="disable-drag has-animation "><a class="image-link"
-                                                                href="../wp-content/uploads/2022/05/agri-sml-01.jpg"><img
-                                                                    src="../wp-content/uploads/2022/05/agri-big-01.jpg"
-                                                                    alt="" /></a>
-                                                            <figcaption></figcaption>
-                                                        </figure>
-                                                    </div> -->
                                         <div class="Value-container">
                                             <div class="values">
                                                 <div class="card value">
@@ -357,7 +289,7 @@
                             </div>
                             <!-- Page Navigation -->
                             <div id="page-nav" style="background-color: #161b1e">
-                                <div class="next-page-wrap2" style="background-color: rgba(0, 0, 0, 0.5)">
+                                <div class="next-page-wrap2" style="background-color: rgba(0, 0, 0)">
                                     <div class="next-page-title">
                                         <div class="inner">
                                             <div class="page-title-wrapper has-animation text-align-center">

@@ -48,7 +48,7 @@ services.`,
         'Improve the quality, accuracy and availability of critical information...',
       details: {
         title: 'Public Safety',
-        description: `TImprove the quality, accuracy and availability of critical information
+        description: `Improve the quality, accuracy and availability of critical information
 with integrated technology solutions that enhance public safety and
 security performance and productivity.`,
       },

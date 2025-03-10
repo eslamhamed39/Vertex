@@ -1,0 +1,6 @@
+@media only screen and (max-width: 479px) {
+    .wp-block-rayden-gutenberg-container .wp-block-heading {
+        padding-top: 50px !important;
+    }
+}
+

@@ -1,25 +1,26 @@
 import { Component, ElementRef, AfterViewInit, ViewChild, OnDestroy } from '@angular/core';
-import * as THREE from 'three';
+import { Scene, WebGLRenderer, OrthographicCamera, Points, Mesh, Raycaster, Vector2, Clock, Texture, ShaderMaterial, TextureLoader, IcosahedronGeometry, MeshBasicMaterial, SphereGeometry, Vector3 } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-@Component({ selector: 'app-earth',
+@Component({ 
+  selector: 'app-earth',
   template: `<div class="globe-wrapper" #globeContainer></div>`,
   styleUrls: ['./earth.component.css']
 })
 export class EarthComponent implements AfterViewInit, OnDestroy {
   @ViewChild('globeContainer', { static: false }) globeContainer!: ElementRef;
-  private renderer!: THREE.WebGLRenderer;
-  private scene!: THREE.Scene;
-  private camera!: THREE.OrthographicCamera;
+  private renderer!: WebGLRenderer;
+  private scene!: Scene;
+  private camera!: OrthographicCamera;
   private controls!: OrbitControls;
-  private globe!: THREE.Points;
-  private globeMesh!: THREE.Mesh;
-  private pointer!: THREE.Mesh;
-  private rayCaster!: THREE.Raycaster;
-  private mouse!: THREE.Vector2;
-  private clock!: THREE.Clock;
-  private earthTexture!: THREE.Texture;
-  private mapMaterial!: THREE.ShaderMaterial;
+  private globe!: Points;
+  private globeMesh!: Mesh;
+  private pointer!: Mesh;
+  private rayCaster!: Raycaster;
+  private mouse!: Vector2;
+  private clock!: Clock;
+  private earthTexture!: Texture;
+  private mapMaterial!: ShaderMaterial;
   private animationFrameId!: number;
 
   ngAfterViewInit() {
@@ -29,7 +30,7 @@ export class EarthComponent implements AfterViewInit, OnDestroy {
 
   private initScene() {
     const containerEl = this.globeContainer.nativeElement;
-    this.renderer = new THREE.WebGLRenderer({ alpha: true });
+    this.renderer = new WebGLRenderer({ alpha: true });
     this.renderer.setPixelRatio(window.devicePixelRatio);
 
     // Set background color to white
@@ -37,18 +38,18 @@ export class EarthComponent implements AfterViewInit, OnDestroy {
 
     containerEl.appendChild(this.renderer.domElement);
 
-    this.scene = new THREE.Scene();
-    this.camera = new THREE.OrthographicCamera(-1.1, 1.1, 1.1, -1.1, 0, 3);
+    this.scene = new Scene();
+    this.camera = new OrthographicCamera(-1.1, 1.1, 1.1, -1.1, 0, 3);
     this.camera.position.z = 1.1;
 
-    this.rayCaster = new THREE.Raycaster();
+    this.rayCaster = new Raycaster();
     this.rayCaster.far = 1.15;
-    this.mouse = new THREE.Vector2(-1, -1);
-    this.clock = new THREE.Clock();
+    this.mouse = new Vector2(-1, -1);
+    this.clock = new Clock();
 
     this.createOrbitControls();
 
-    new THREE.TextureLoader().load(
+    new TextureLoader().load(
       'https://ksenia-k.com/img/earth-map-colored.png',
       (mapTex) => {
         this.earthTexture = mapTex;
@@ -58,8 +59,7 @@ export class EarthComponent implements AfterViewInit, OnDestroy {
         this.render();
       }
     );
-}
-
+  }
 
   private createOrbitControls() {
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
@@ -70,8 +70,8 @@ export class EarthComponent implements AfterViewInit, OnDestroy {
   }
 
   private createGlobe() {
-    const globeGeometry = new THREE.IcosahedronGeometry(1, 22);
-    this.mapMaterial = new THREE.ShaderMaterial({
+    const globeGeometry = new IcosahedronGeometry(1, 22);
+    this.mapMaterial = new ShaderMaterial({
       vertexShader: `
         uniform sampler2D u_map_tex;
         uniform float u_dot_size;
@@ -103,7 +103,7 @@ export class EarthComponent implements AfterViewInit, OnDestroy {
             pos *= (1. + delta);
 
             gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.);
-        }`, // Include the vertex shader code here
+        }`,
       fragmentShader: `
         uniform sampler2D u_map_tex;
         varying float vOpacity;
@@ -112,35 +112,35 @@ export class EarthComponent implements AfterViewInit, OnDestroy {
         void main() {
             vec3 color = texture2D(u_map_tex, vUv).rgb;
             color -= .2 * length(gl_PointCoord.xy - vec2(.5));
-        float dot = 1. - smoothstep(.38, .4, length(gl_PointCoord.xy - vec2(.5)));
-        if (dot < 0.5) discard;
-        gl_FragColor = vec4(color, dot * vOpacity);
-        }`, // Include the fragment shader code here
+            float dot = 1. - smoothstep(.38, .4, length(gl_PointCoord.xy - vec2(.5)));
+            if (dot < 0.5) discard;
+            gl_FragColor = vec4(color, dot * vOpacity);
+        }`,
       uniforms: {
         u_map_tex: { value: this.earthTexture },
         u_dot_size: { value: 0 },
-        u_pointer: { value: new THREE.Vector3(0, 0, 1) },
+        u_pointer: { value: new Vector3(0, 0, 1) },
         u_time_since_click: { value: 0 }
       },
       transparent: true
     });
 
-    this.globe = new THREE.Points(globeGeometry, this.mapMaterial);
+    this.globe = new Points(globeGeometry, this.mapMaterial);
     this.scene.add(this.globe);
 
-    this.globeMesh = new THREE.Mesh(globeGeometry, new THREE.MeshBasicMaterial({
+    this.globeMesh = new Mesh(globeGeometry, new MeshBasicMaterial({
       color: 0x222222,
       transparent: true,
       opacity: 0.05
     }));
-    (this.globeMesh.material as THREE.Material).opacity = 0.5;
+    (this.globeMesh.material as MeshBasicMaterial).opacity = 0.5;
     this.scene.add(this.globeMesh);
   }
 
   private createPointer() {
-    const geometry = new THREE.SphereGeometry(0.04, 16, 16);
-    const material = new THREE.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: 0 });
-    this.pointer = new THREE.Mesh(geometry, material);
+    const geometry = new SphereGeometry(0.04, 16, 16);
+    const material = new MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: 0 });
+    this.pointer = new Mesh(geometry, material);
     this.scene.add(this.pointer);
   }
 
@@ -155,8 +155,7 @@ export class EarthComponent implements AfterViewInit, OnDestroy {
     if (this.mapMaterial && this.mapMaterial.uniforms) {
         this.mapMaterial.uniforms['u_dot_size'].value = 0.025 * minSide;
     }
-}
-
+  }
 
   private render = () => {
     this.mapMaterial.uniforms['u_time_since_click'].value = this.clock.getElapsedTime();

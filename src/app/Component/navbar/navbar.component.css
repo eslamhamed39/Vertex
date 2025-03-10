@@ -19,3 +19,18 @@ header {
     transition: background 0s ease-in-out 0s;
     /* mix-blend-mode: exclusion; */
 }
+
+@media only screen and (max-width: 479px) {
+    #header-container{
+        padding: 0;
+    }
+    #logo img{
+        height: 50px;
+    }
+    header{
+        height: 80px;
+    }
+    #menu-burger span{
+        background-color: #fff;
+    }
+}

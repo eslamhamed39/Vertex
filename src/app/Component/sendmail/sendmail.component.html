@@ -1,0 +1,148 @@
+<app-toast-notification #toastRef></app-toast-notification>
+<div id="page-content" class="light-content" data-bgcolor="#141414">
+    <div class="wp-block-rayden-gutenberg-container full contact-us-bg" style="text-align: left">
+        <div class="wp-block-rayden-gutenberg-container green-section row_padding_top row_padding_bottom row_padding_left row_padding_right"
+            style="text-align: left">
+            <h2 class="text-align-center wp-block-heading">Contact Us</h2>
+            <p class="text-align-center has-white-color has-medium-font-size">
+                Navigating the Future,Today!
+            </p>
+            <div class="wp-block-contact-form-7-contact-form-selector text-align-center">
+                <div role="form" class="wpcf7" id="wpcf7-f5-p3826-o1" lang="en-US" dir="ltr">
+                    <div class="screen-reader-response">
+                        <p role="status" aria-live="polite" aria-atomic="true"></p>
+                        <ul></ul>
+                    </div>
+                    <form (submit)="sendEmail($event)" method="post" class="wpcf7-form init" novalidate="novalidate"
+                        data-status="init">
+                        <div style="display: none">
+                            <input type="hidden" name="_wpcf7" value="5" />
+                            <input type="hidden" name="_wpcf7_version" value="5.6.3" />
+                            <input type="hidden" name="_wpcf7_locale" value="en_US" />
+                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f5-p3826-o1" />
+                            <input type="hidden" name="_wpcf7_container_post" value="3826" />
+                            <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+                        </div>
+                        <div id="contact-formular" class="disable-drag">
+                            <div class="name-box has-animation">
+                                <span class="wpcf7-form-control-wrap" data-name="first-name"><input type="text"
+                                        name="first-name" value="" size="40"
+                                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                        aria-required="true" aria-invalid="false" placeholder="First Name" /></span>
+                            </div>
+                            <div class="name-box has-animation email-box">
+                                <span class="wpcf7-form-control-wrap" data-name="last-name"><input type="text"
+                                        name="last-name" value="" size="40"
+                                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                        aria-required="true" aria-invalid="false" placeholder="Last Name" /></span>
+                            </div>
+                            <div class="name-box has-animation">
+                                <span class="wpcf7-form-control-wrap" data-name="company-name"><input type="text"
+                                        name="company-name" value="" size="40"
+                                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                        aria-required="true" aria-invalid="false" placeholder="Company" /></span>
+                            </div>
+                            <div class="name-box has-animation email-box">
+                                <span class="wpcf7-form-control-wrap" data-name="tel-936"><input type="tel"
+                                        name="tel-936" value="" size="40"
+                                        class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel num-box"
+                                        aria-required="true" aria-invalid="false" placeholder="Phone Number" /></span>
+                            </div>
+                            <div class="email_div w-100">
+                                <div class="name-box has-animation w-100">
+                                    <span class="wpcf7-form-control-wrap" data-name="your-email"><input type="email"
+                                            name="your-email" value="" size="80"
+                                            class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email text-align-center"
+                                            aria-required="true" aria-invalid="false" placeholder="E-mail" /></span>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="message-box has-animation">
+                                <span class="wpcf7-form-control-wrap" data-name="your-message">
+                                    <textarea name="your-message" cols="40" rows="10"
+                                        class="wpcf7-form-control wpcf7-text wpcf7-textarea wpcf7-validates-as-required"
+                                        id="message" aria-required="true" aria-invalid="false"
+                                        placeholder="Type your Message here"></textarea>
+                                </span>
+                            </div>
+                            <hr />
+                            <div>
+                                <span class="wpcf7-form-control-wrap" data-name="acceptance-863"><span
+                                        class="wpcf7-form-control wpcf7-acceptance optional"><span
+                                            class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-863"
+                                                    value="1" aria-invalid="false" /><span
+                                                    class="wpcf7-list-item-label">To receive electronic
+                                                    marketing
+                                                    communications on products, services,
+                                                    publications, and events</span></label></span></span></span>
+                            </div>
+                            <hr />
+                            <div class="d-flex justify-content-center">
+                                <re-captcha (resolved)="resolved($event)"
+                                    siteKey="6LckdjUqAAAAAHUxsjpCo91A0Yb391YGf3HvL_-p"></re-captcha>
+                            </div>
+                            <div class="button-box has-animation" data-delay="100">
+                                <div class="clapat-button-wrap circle parallax-wrap bigger">
+                                    <div class="clapat-button parallax-element">
+                                        <div class="button-border outline parallax-element-second">
+                                            <input type="submit" value="Submit"
+                                                class="wpcf7-form-control has-spinner wpcf7-submit" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wpcf7-response-output" aria-hidden="true"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="wp-block-rayden-gutenberg-container full" style="text-align: left">
+            <div class="wp-block-rayden-gutenberg-container row_padding_top row_padding_bottom white-section text-align-center small change-header-color color_white"
+                style="text-align: left">
+                <h2 class="text-align-center wp-block-heading text-white">
+                    Connect with us
+                </h2>
+                <!-- <p class="has-text-align-left text-align-center text-white">Excellence in
+                                            Location-intelligence Solutions</p> -->
+                <div style="height: 46px" aria-hidden="true" class="wp-block-spacer"></div>
+                <div
+                    class="wp-block-columns text-align-center is-layout-flex wp-container-core-columns-is-layout-18 wp-block-columns-is-layout-flex">
+                    <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+                        <div class="clapat-icon icon_contact">
+                            <a href="mailto:info@geomakani.com"><img src="assets/Image/icons8-email-100.png"
+                                    alt="email" /></a>
+                        </div>
+                        <h5 class="secondary-font text-white">
+                            <a href="mailto:info@geomakani.com">info&#64;geomakani.com</a>
+                        </h5>
+                        <p>Email</p>
+                    </div>
+                    <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+                        <a target="_blank" href="https://maps.app.goo.gl/vqWBdK1i2zBpkiM39">
+                            <div class="clapat-icon icon_contact">
+                                <img src="assets/Image/location.png" alt="location" />
+                            </div>
+                            <h5 class="secondary-font"></h5>
+                            <p class="text-white">
+                                Villa 39A Al Kinda Compound,<br> Katamiya, Cairo, Egypt
+                            </p>
+                            <p>Location</p>
+                        </a>
+                    </div>
+                    <!-- <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+                            <div class="clapat-icon icon_contact">
+                                <a href="tel:+20000000000">
+                                    <img src="assets/Image/icons8-phone.png" alt="phone" />
+                                </a>
+                            </div>
+                            <h5 class="secondary-font text-white">
+                                <a href="tel:+20000000000">+20000000000</a>
+                            </h5>
+                            <p>Phone</p>
+                        </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

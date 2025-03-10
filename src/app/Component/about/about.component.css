@@ -3,8 +3,7 @@
 }
 
 header {
-    height: 100px;
-    /* background-color: #14141428; */
+    height: 100px
 }
 
 #logo img {
@@ -14,8 +13,8 @@ header {
 .wp-block-columns.wp-container-3 {
     flex-wrap: nowrap;
 }
-home
-#page-nav::after {
+
+home#page-nav::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -38,10 +37,11 @@ home
 
 @keyframes gradientMove {
     0% {
-        background-position: 0% 50%;
+        background-position: 0 50%
     }
+
     100% {
-        background-position: 100% 50%;
+        background-position: 100% 50%
     }
 }
 
@@ -54,7 +54,7 @@ home
     width: 20%;
     border-radius: 50px;
     background: rgba(255, 255, 255, 0);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
     overflow: hidden;
     text-align: center;
     position: relative;
@@ -70,36 +70,41 @@ home
     border-radius: 50px;
     border: 2px solid transparent;
     box-sizing: border-box;
-    clip-path: inset(0 100% 0 0); /* Initially hidden */
-    transition: clip-path 0.5s ease-in-out;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path .5s ease-in-out;
 }
 
 .card:hover::before {
-    /* border-color: #ee4437ff; */
-    animation: borderAnimation 0.5s linear forwards;
+    animation: borderAnimation .5s linear forwards;
 }
-.card:hover img{
+
+.card:hover img {
     filter: none !important;
 }
-.card:hover p{
+
+.card:hover p {
     color: #fff;
 }
 
 @keyframes borderAnimation {
     0% {
-        clip-path: inset(0 0 100% 0); /* Start from the left */
+        clip-path: inset(0 0 100% 0)
     }
+
     25% {
-        clip-path: inset(0 0 75% 0);
+        clip-path: inset(0 0 75% 0)
     }
+
     50% {
-        clip-path: inset(0 0 50% 0);
+        clip-path: inset(0 0 50% 0)
     }
+
     75% {
-        clip-path: inset(0 0 25% 0);
+        clip-path: inset(0 0 25% 0)
     }
+
     100% {
-        clip-path: inset(0 0 0 0); /* Fully visible */
+        clip-path: inset(0 0 0 0)
     }
 }
 
@@ -112,12 +117,6 @@ home
     padding: 15px;
 }
 
-/* .card-title {
-    font-size: 1.5em;
-    margin: 10px 0;
-    color: #ffffff;
-} */
-
 .card-description {
     font-size: 1em;
     color: #ffffff;
@@ -128,26 +127,25 @@ home
     padding-top: 20px;
 }
 
-
-
-.next-page-title{
+.next-page-title {
     z-index: 30;
 }
+
 .wp-duotone-000000-7f7f7f-13.wp-block-image img,
 .wp-duotone-000000-7f7f7f-13.wp-block-image .components-placeholder {
     filter: url(#wp-duotone-000000-7f7f7f-13);
 }
-
-
 
 .Value-container {
     max-width: 100%;
     margin: -40px auto 5% auto;
     padding: 20px;
 }
+
 .contain-coreValue h1 {
     color: #ffffff;
 }
+
 .values {
     display: flex;
     flex-wrap: wrap;
@@ -155,17 +153,21 @@ home
     align-items: center;
     margin-top: 40px;
 }
+
 .value {
     width: 30%;
     text-align: center;
     padding: 20px;
 }
+
 .value h2 {
     color: #ee4437ff;
 }
+
 .value p {
     color: #666;
 }
+
 .value-icon {
     background-color: #4CAF50;
     width: 50px;
@@ -178,6 +180,7 @@ home
     font-size: 24px;
     color: white;
 }
+
 .logo_core {
     width: 34%;
     margin: 20px auto;
@@ -186,24 +189,20 @@ home
     top: 17%;
     left: 33%;
 }
-@media (max-width: 768px) {
-    .values {
-        flex-direction: column;
-    }
-    .value {
-        width: 80%;
-    }
-}
+
+
+
 .headcore {
     position: relative;
 }
 
 @keyframes moveGradient {
     0% {
-        background-position: 0% 50%;
+        background-position: 0 50%
     }
+
     100% {
-        background-position: 100% 50%;
+        background-position: 100% 50%
     }
 }
 
@@ -215,9 +214,7 @@ home
     width: 10%;
     height: 2px;
     border-radius: 50px;
-    /* border: 2px solid transparent; */
     box-sizing: border-box;
-    /* background: linear-gradient(90deg, #f5af19, #f12711); */
     background: linear-gradient(90deg, #f12711, #f5af19, #f12711, #f5af19, #f12711);
     background-size: 200% 100%;
     animation: moveGradient 4s linear infinite;
@@ -232,21 +229,17 @@ home
     width: 4%;
     height: 2px;
     border-radius: 50px;
-    /* border: 2px solid transparent; */
     box-sizing: border-box;
-    /* background: linear-gradient(90deg, #f5af19, #f12711); */
     background: linear-gradient(90deg, #f12711, #f5af19, #f12711, #f5af19, #f12711);
     background-size: 200% 100%;
     animation: moveGradient 4s linear infinite;
     transform: translate(-50%, 0);
 }
 
-
 .gradient-Coretext {
     font-size: 2em;
     margin: 10px 0;
-    /* font-weight: bold; */
-    background: linear-gradient(90deg, #f12711, #666, #666,#f12711,#666,#666, #f12711);
+    background: linear-gradient(90deg, #f12711, #666, #666, #f12711, #666, #666, #f12711);
     background-size: 200% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -255,27 +248,64 @@ home
 
 @keyframes gradientMove2 {
     0% {
-        background-position: 0% 50%;
+        background-position: 0 50%
     }
+
     100% {
-        background-position: 100% 50%;
+        background-position: 100% 50%
     }
 }
 
-.vision-mission{
+.vision-mission {
     display: flex;
 }
 
-.style-vm{
+.style-vm {
     max-width: 40%;
 }
 
-#page-content{
-    background-color: #1d1f22;
-    /* background-color: #1d1e20; */
+#page-content {
+    background-color: #000
 }
-/* .pagebackgroundcolor{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-} */
+
+@media only screen and (max-width:479px) {
+    #header-container {
+        padding: 0
+    }
+
+    #logo img {
+        height: 50px
+    }
+
+    header {
+        height: 80px
+    }
+
+    #main-page-content .wp-block-rayden-gutenberg-container p.white {
+        padding: 0 20px
+    }
+}
+
+@media (max-width:768px) {
+    .values {
+        flex-direction: column
+    }
+
+    .value {
+        width: 80%
+    }
+    #map {
+        height: 50vh
+    }
+}
+
+@media only screen and (max-width:992px) {
+
+    .card img {
+        filter: none !important;
+    }
+    
+    .card p {
+        color: #fff;
+    }
+}

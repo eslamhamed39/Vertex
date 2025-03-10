@@ -8,6 +8,8 @@ import { SolutionComponent } from './Component/solution/solution.component';
 import { ServicesComponent } from './Component/services/services.component';
 import { TrainingComponent } from './Component/training/training.component';
 import { ContactComponent } from './Component/contact/contact.component';
+import { Logo3dComponent } from './Component/logo3d/logo3d.component';
+import { SendmailComponent } from './Component/sendmail/sendmail.component';
 
 
 const routes: Routes = [
@@ -19,6 +21,8 @@ const routes: Routes = [
   { path: 'Services', component: ServicesComponent },
   { path: 'Training', component: TrainingComponent },
   { path: 'Contact', component: ContactComponent },
+  { path: 'logo', component: Logo3dComponent },
+  { path: 'Sendmail', component: SendmailComponent },
   { path: '**', component: NotfoundComponent },
 
 ];

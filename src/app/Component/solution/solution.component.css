@@ -292,18 +292,20 @@
 }
 
 .carousel .list .item .introduce .title {
-  font-size: 2em;
+  font-size: 4em;
   font-weight: 500;
   line-height: 1em;
 }
 
 .carousel .list .item .introduce .topic {
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 500;
+  color: #f12711;
+
 }
 
 .carousel .list .item .introduce .des {
-  font-size: small;
+  font-size: 1.3em;
   color: #fff;
 }
 
@@ -681,7 +683,7 @@
 
 .arrows {
   position: absolute;
-  bottom: 45px;
+  bottom: 50px;
   width: 1140px;
   max-width: 90%;
   display: flex;
@@ -872,7 +874,7 @@
 
 .carousel .arrows {
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
   width: 1140px;
   max-width: 90%;
   left: 50%;
@@ -885,4 +887,39 @@
 
 .solutionContainer{
   margin-bottom: 100px !important;
+}
+
+@media only screen and (max-width: 479px) {
+  .carousel .arrows {
+    bottom: 100px;
+  }
+  .hover_img img {
+    filter: none !important
+  }
+  
+  .hover_img h2 {
+    color: #fff;
+  }
+  
+  .hover_img h2 {
+    color: #ffffff;
+  }
+  
+  .hover_img .seeMore {
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  .carousel .list .item .introduce .title {
+    font-size: 3em;
+  }
+  .carousel .list .item .introduce .topic {
+    font-size: 2em;
+    font-weight: 500;
+    color: #f12711;
+  
+  }
+  .carousel .list .item .introduce .des {
+    font-size: 1.3em;
+    color: #fff;
+  }
 }

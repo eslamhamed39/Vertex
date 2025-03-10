@@ -1,7 +1,8 @@
 import { Component, AfterViewInit, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { gsap } from 'gsap';
 // import {faYoutube} from '@fortawesome/free-solid-svg-icons';
-
+// declare var Swiper: any;
 declare var PageLoad: any;
 declare var ScrollEffects: any;
 declare var FirstLoad: any;
@@ -41,6 +42,10 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
 
 
   ngAfterViewInit(): void {
+    // const swiper = new Swiper('.swiper-container', {
+    //   allowTouchMove: false, // تعطيل التمرير باللمس
+    //   mousewheel: false,     // تعطيل تمرير الماوس (إذا كانت هذه الخاصية مُفعّلة)
+    // });
     this.ensureBackgroundColor();
     this.executeJsFunctions();
   }
@@ -74,4 +79,5 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     document.body.style.backgroundColor = "#000"; // Ensure background remains black
     document.documentElement.style.backgroundColor = "#000";
   }
+  
 }

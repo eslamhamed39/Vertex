@@ -1,0 +1,22 @@
+<div class="toast" [ngClass]="[toastType, showToast ? 'show' : '']" *ngIf="showToast">
+    <div class="toast-content">
+        <!-- Left icon based on toast type -->
+        <span class="toast-icon">
+            <!-- You can replace these symbols with actual icons (Font Awesome, etc.) -->
+            <ng-container [ngSwitch]="toastType">
+                <span *ngSwitchCase="'success'">&#10003;</span>
+                <span *ngSwitchCase="'info'">&#9432;</span>
+                <span *ngSwitchCase="'warning'">&#9888;</span>
+                <span *ngSwitchCase="'error'">&#10007;</span>
+            </ng-container>
+        </span>
+
+        <!-- Toast message -->
+        <span class="toast-message">{{ toastMessage }}</span>
+
+        <!-- Close icon on the right -->
+        <span class="toast-close" (click)="closeToast()">
+            &#10005;
+        </span>
+    </div>
+</div>
