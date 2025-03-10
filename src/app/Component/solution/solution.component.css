@@ -803,7 +803,7 @@
 
   .carousel .list .item:nth-child(2) .introduce .des,
   .carousel.showDetail .list .item:nth-child(2) .detail .des {
-    height: 100px;
+    height: fit-content;
     overflow: auto;
   }
 
@@ -922,4 +922,49 @@
     font-size: 1.3em;
     color: #fff;
   }
+}
+@media only screen and (max-width: 768px) {
+  .carousel .arrows {
+    bottom: 100px;
+  }
+  .hover_img img {
+    filter: none !important
+  }
+  
+  .hover_img h2 {
+    color: #fff;
+  }
+  
+  .hover_img h2 {
+    color: #ffffff;
+  }
+  
+  .hover_img .seeMore {
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  .carousel .list .item .introduce .title {
+    font-size: 3em;
+  }
+  .carousel .list .item .introduce .topic {
+    font-size: 2em;
+    font-weight: 500;
+    color: #f12711;
+  
+  }
+  .carousel .list .item .introduce .des {
+    font-size: 1.3em;
+    color: #fff;
+  }
+  .solutionContainer{
+    height: fit-content;
+  }
+  #services.wp-container-core-columns-is-layout-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr) ;
+    gap: 20px;
+    padding: 20px ;
+  }
+  .carousel .list .item img {
+    width: 35%;}
 }

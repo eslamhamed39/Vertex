@@ -5,13 +5,9 @@
 </div>
 <app-navbar></app-navbar>
 <div id="sperator"></div>
-<section>
-	<!-- <div class="bg-wrapper">
-		<div class="bg"></div>
-		<div class="overlay"></div>
-	</div> -->
-	<app-logo3d [ngClass]="{'loaded': !isLoading}"></app-logo3d>
-	<div class="sp-container" [ngClass]="{'loaded': !isLoading}">
+<section *ngIf="!isLoading" [ngClass]="{'loaded': !isLoading}">
+	<app-logo3d ></app-logo3d>
+	<div *ngIf="!isLoading" class="sp-container" [ngClass]="{'loaded': !isLoading}">
 		<div class="sp-content">
 			<!-- <div class="sp-globe"></div> -->
 			<h2 class="frame-1">Transform</h2>
@@ -45,7 +41,7 @@
 	</div>
 </section>
 
-<main class="main">
+<main *ngIf="!isLoading" class="main">
 	<section id="tab-svelte" class="slider position-relative">
 		<div id="top-section"></div>
 		<div class="overlayer section1">
@@ -162,4 +158,4 @@
 	</section>
 
 </main>
-<app-footer></app-footer>
+<app-footer *ngIf="!isLoading"></app-footer>

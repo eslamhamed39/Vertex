@@ -28,6 +28,18 @@ export class TrainingComponent implements AfterViewInit {
     if (navContainer) {
       this.tabContainerHeight = navContainer.offsetHeight;
     }
+    if (document.readyState === 'complete') {
+      setTimeout(() => {
+        this.isLoading = false;
+      }, 1000); // الانتظار لمدة ثانية بعد التحميل
+    } else {
+      // إضافة مستمع لحدث تحميل الصفحة
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          this.isLoading = false;
+        }, 1000); // الانتظار لمدة ثانية بعد تحميل الصفحة
+      });
+    }
   }
 
   scrollToTab(tabId: string) {
@@ -56,11 +68,11 @@ export class TrainingComponent implements AfterViewInit {
     this.lastScroll = window.scrollY;
   }
 
-  @HostListener('window:load')
-  onPageLoad() {
-    // إخفاء الـ Loading عند اكتمال تحميل الصفحة بالكامل
-    this.isLoading = false;
-  }
+  // @HostListener('window:load')
+  // onPageLoad() {
+  //   // إخفاء الـ Loading عند اكتمال تحميل الصفحة بالكامل
+  //   this.isLoading = false;
+  // }
 
   // onTabClick(event: Event, targetId: string): void {
   //   event.preventDefault();
