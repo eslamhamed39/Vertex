@@ -5,9 +5,9 @@
 </div>
 <app-navbar></app-navbar>
 <div id="sperator"></div>
-<section *ngIf="!isLoading" [ngClass]="{'loaded': !isLoading}">
-	<app-logo3d ></app-logo3d>
-	<div *ngIf="!isLoading" class="sp-container" [ngClass]="{'loaded': !isLoading}">
+<section *ngIf="!isLoading">
+	<app-logo3d></app-logo3d>
+	<div class="sp-container">
 		<div class="sp-content">
 			<!-- <div class="sp-globe"></div> -->
 			<h2 class="frame-1">Transform</h2>
@@ -128,7 +128,7 @@
 				<div class="date">Hexagon Geospatial Products Training</div>
 				<div class="title">ERDAS Imagine</div>
 				<div class="descr">Satellite imagery analysis & remote sensing.</div>
-				<div class="title">Geo media</div>
+				<div class="title">Geomedia</div>
 				<div class="descr">Advanced GIS mapping & spatial data management.</div>
 				<div class="title">M.App Enterprise</div>
 				<div class="descr">Cloud-based GIS solutions for dynamic geospatial applications.</div>

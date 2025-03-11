@@ -602,9 +602,13 @@ h1:hover {
 }
 
 .main .slider h1 {
-	margin-top: 165px;
+	margin-top: 0;
 	margin-bottom: 21px;
 }
+.main #section2{
+	margin-top: 86px;
+	line-height: 55px;
+  }
 
 /* .main .section1 h1 {
 	margin-top: 400px;
@@ -619,13 +623,9 @@ h1:hover {
 .main .section1 p {
 	color: #c2c2c2;
 	font-weight: bold;
-	text-shadow: 2px 2px 4px #ee4437ff;
+	text-shadow: 2px 2px 4px #175f9f;
 }
 
-
-.main #section2 {
-	margin-top: 200px;
-}
 
 .main .slider h2 {
 	font-size: 2rem;

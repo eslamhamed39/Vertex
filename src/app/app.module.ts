@@ -23,6 +23,7 @@ import { Logo3dComponent } from './Component/logo3d/logo3d.component';
 import { SendmailComponent } from './Component/sendmail/sendmail.component';
 import { FormsModule } from '@angular/forms';
 import { ToastNotificationComponent } from './Component/toast-notification/toast-notification.component';
+import { ProductComponent } from './Component/product/product.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { ToastNotificationComponent } from './Component/toast-notification/toast
     ContactComponent,
     Logo3dComponent,
     SendmailComponent,
-    ToastNotificationComponent
+    ToastNotificationComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
