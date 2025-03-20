@@ -1,0 +1,112 @@
+.box-404 {
+    max-width: 900px;
+    margin: auto;
+}
+
+.box-404 .image-404 {
+    max-width: 384px;
+    margin-right: 40px;
+}
+
+.box-404 .info-404 {
+    width: 100%;
+}
+
+.shadow-page-404 .container {
+    position: relative;
+    z-index: 2;
+}
+.cover-home3{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.shadow-page-404::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    background: url(src/assets/Image/404/shadow-1.svg) no-repeat bottom 100% right 0px;
+    z-index: 0;
+}
+
+main {
+    display: block;
+    clear: both;
+}
+
+.color-linear {
+    background: linear-gradient(90deg, rgb(14, 165, 234), rgb(11, 209, 209) 51%, rgb(14, 165, 234)) var(--x, 0)/200%;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-fill-color: transparent;
+}
+
+.text-xl {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.color-gray-500 {
+    color: #94A9C9;
+}
+
+.btn {
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    border: 0;
+}
+
+.btn:hover {
+    color: #1CC2E7 !important;
+}
+
+.btn.btn-linear {
+    background: rgb(14, 165, 234);
+    background: linear-gradient(90deg, rgb(14, 165, 234), rgb(11, 209, 209) 51%, rgb(14, 165, 234)) var(--x, 0)/200%;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.btn.btn-linear:hover {
+    --x: 100%;
+    color: #ffffff !important;
+    transition: 0.5s;
+}
+
+.btn.btn-linear i {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.hover-up {
+    transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.hover-up:hover {
+    transform: translateY(-2px);
+    transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.mt-25 {
+    margin-top: 25px !important;
+}
+
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+.mt-60 {
+    margin-top: 60px !important;
+}

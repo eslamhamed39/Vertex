@@ -1,0 +1,44 @@
+#cover {
+    background-image: url('https://i.ibb.co/9mRjbkYS/app-GEM-1024x536.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 536px;
+    margin-top: 100px;
+}
+
+#top-section {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(180deg, #000000, #00000000);
+}
+
+#bottom-section {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(180deg, #00000000, #000000);
+}
+
+.overlayer {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, #00000054, #000000);
+}
+
+.topSection {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.topSection h1{
+    color: #fff;
+    font-size: 5rem;
+}

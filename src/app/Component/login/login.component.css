@@ -1,0 +1,485 @@
+/* Global styles for body and html. Using :host ::ng-deep to apply these globally within the Angular component.
+   Alternatively, you may add these rules to your global styles.css file if preferred. */
+   :host ::ng-deep body, :host ::ng-deep html {
+    height: 100%;
+    background-repeat: no-repeat;
+    background: black;
+    position: relative;
+  }
+  
+  #login-box {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 350px;
+    margin: 0 auto;
+    border: 1px solid black;
+    background: rgba(48, 46, 45, 1);
+    min-height: 250px;
+    padding: 20px;
+    z-index: 9999;
+  }
+  
+  #login-box .logo .logo-caption {
+    font-family: 'Poiret One', cursive;
+    color: white;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  
+  #login-box .logo .tweak {
+    color: #b1c900;
+  }
+  
+  #login-box .controls {
+    padding-top: 30px;
+  }
+  
+  #login-box .controls input {
+    border-radius: 0;
+    background: rgb(98, 96, 96);
+    border: 0;
+    color: white;
+  }
+  
+  #login-box .controls input:focus {
+    box-shadow: none;
+  }
+  
+  #login-box .controls input:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+  }
+  
+  #login-box .controls input:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  
+  #login-box button.btn-custom {
+    border-radius: 2px;
+    margin-top: 8px;
+    background: #b1c900;
+    border-color: rgba(48, 46, 45, 1);
+    color: white;
+  }
+  
+  #login-box button.btn-custom:hover {
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    background: rgba(48, 46, 45, 1);
+    border-color: #b1c900;
+  }
+  
+  #particles-js {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+  
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bs-border-radius: 30px;
+    --white: #ffffff;
+}
+
+body {
+    background-color: #fcfcfc;
+    background-image: url(https://i.ibb.co/G0JtHXB/satellite-imagery-of-africa-desktop-wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    /* Standard syntax */
+}
+
+
+/* *======================== Login page ========================* */
+
+.loading {
+    background-color: #000000c5;
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    /* transition: all 1.5s ease; */
+    display: block;
+    /* animation: hide 1.5s ease-in-out forwards 1.5s; */
+    z-index: 99999;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.loading_hidden {
+    animation: hide 1.5s ease-in-out forwards 1.5s;
+}
+
+#V_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* animation: fill 1.95s ease-in-out forwards 1.5s; */
+    animation: fill 1.5s ease-in-out forwards 1.5s;
+}
+
+#V_logo path:nth-child(1) {
+    stroke-dasharray: 634.643;
+    stroke-dashoffset: 634.643;
+    /* animation: line-anim 2s ease forwards 1s; */
+    animation: line-anim 1s ease forwards 0.3s;
+}
+
+#V_logo path:nth-child(2) {
+    stroke-dasharray: 659.999;
+    stroke-dashoffset: 659.999;
+    animation: line-anim 1s ease forwards 0.6s;
+}
+
+#V_logo path:nth-child(3) {
+    stroke-dasharray: 747.408;
+    stroke-dashoffset: 747.408;
+    animation: line-anim 1s ease forwards 0.8s;
+}
+
+#V_logo path:nth-child(4) {
+    stroke-dasharray: 496;
+    stroke-dashoffset: 496;
+    animation: line-anim 1s ease forwards 1s;
+}
+
+#V_logo path:nth-child(5) {
+    stroke-dasharray: 659.999;
+    stroke-dashoffset: 659.999;
+    animation: line-anim 1s ease forwards 1.25s;
+}
+
+#V_logo path:nth-child(6) {
+    stroke-dasharray: 695.288;
+    stroke-dashoffset: 695.288;
+    animation: line-anim 1s ease forwards 1.5s;
+}
+
+
+@keyframes line-anim {
+    to {
+        /* stroke-dasharray: 0; */
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: white;
+
+    }
+}
+
+@keyframes hide {
+    from {
+        opacity: 1;
+        display: block;
+    }
+
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.Home_section {
+    opacity: 0;
+    animation: appear_map 2s ease-in-out;
+}
+
+@keyframes appear_map {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.Side_bar_hidden {
+    opacity: 0;
+    animation: appear_map 2s ease-in-out;
+}
+
+@keyframes appear_map {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+.background {
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    /* background-color: #e5e5e5;  */
+    left: 50%;
+    top: 50%;
+}
+
+.background .shape {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.shape:first-child {
+    background: linear-gradient(#182ead, #23a2f6);
+    left: -80px;
+    top: -80px;
+}
+
+.shape:last-child {
+    background: linear-gradient(to bottom, #62aaf3, #0c3f53);
+    right: -120px;
+    bottom: -80px;
+}
+
+.container_input {
+    height: 520px;
+    width: 400px;
+    /* background-color: rgba(255, 255, 255, 0.63); */
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 50px;
+    backdrop-filter: blur(1px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 20px 35px;
+    z-index: 3;
+}
+
+.container_input * {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+.container_input h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: #a8a8a838 !important;
+    border-radius: 50px;
+    padding: 0 20px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+input:focus {
+    border: 1px solid #216bc0;
+}
+
+input:valid {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #216bc0;
+    box-shadow: inset 0 0 20px 20px #23232329;
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-background-clip: text;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-background-clip: text;
+    border: 1px solid #216bc0;
+    -webkit-text-fill-color: #000000;
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px #23232329;
+}
+
+::placeholder {
+    color: #e5e5e5;
+}
+
+.btn_login,
+.btn_login1 {
+    margin-top: 30px;
+    width: 60%;
+    text-align: center;
+    background: linear-gradient(to left,#EE4037, #F9AE42);
+    color: #fcfcfc;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 100px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+.btn_login:hover {
+    border: 2px solid #216bc0;
+    background: #fff;
+    color: #216bc0;
+    filter: drop-shadow(#67aabb 0.5px 0.5px 3px);
+}
+
+.btn_login1:hover {
+    border: 2px solid  #EE4037;
+    background: #fff;
+    color: #EE4037;
+    filter: drop-shadow(#67aabb 0.5px 0.5px 3px);
+}
+
+
+
+.btn_1 {
+    /* background-color: #1845ad; */
+    text-align: center;
+}
+
+.image {
+    /* background-color: #f09819; */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    /* width: 100%; */
+    /* top:-40px; */
+}
+
+#loginPage .image img {
+    width: 58%;
+}
+
+
+
+.status,
+.redMessage {
+    /* transform: translate(-50%); */
+    margin-top: 5px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    color: rgb(255, 0, 0);
+    font-weight: 800;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 50px;
+    padding: 2px;
+}
+
+
+
+
+
+.status,
+.redMessage:empty {
+    border: none;
+}
+
+.login_Success,
+.login_SuccessHome {
+    margin-top: 15px;
+    width: 100%;
+    color: rgb(0, 255, 0);
+    font-weight: 800;
+    text-align: center;
+    border: 2px solid rgb(0, 255, 0);
+    border-radius: 50px;
+}
+
+.login_Success,
+.login_SuccessHome:empty {
+    border: none;
+    background-color: transparent;
+}
+
+.Message {
+    width: 100%;
+    margin: auto;
+    position: relative;
+
+
+}
+
+.message_border {
+    /* background-color: #f39762; */
+    position: absolute;
+    left: 80px;
+    width: 50%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.h5,
+h5 {
+    font-size: 1rem;
+}
+
+
+
+
+

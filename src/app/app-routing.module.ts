@@ -9,6 +9,7 @@ import { ServicesComponent } from './Component/services/services.component';
 import { TrainingComponent } from './Component/training/training.component';
 import { ContactComponent } from './Component/contact/contact.component';
 import { ProductComponent } from './Component/product/product.component';
+import { LoginComponent } from './Component/login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'Training', component: TrainingComponent },
   { path: 'Contact', component: ContactComponent },
   { path: 'Product', component: ProductComponent },
+  { path: 'Login', component: LoginComponent },
   { path: '**', component: NotfoundComponent },
 ];
 
