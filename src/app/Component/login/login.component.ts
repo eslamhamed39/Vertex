@@ -1,22 +1,38 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-
-declare var particlesJS: any; // Declare the external particlesJS function
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/Services/auth.service';
+import { ToastNotificationComponent } from '../toast-notification/toast-notification.component';
+declare var particlesJS: any;
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
+
 export class LoginComponent implements OnInit, AfterViewInit {
+  username: string = '';
+  password: string = '';
+  errorMessage: string = '';
+  isLoading: boolean = false;
 
-  constructor() { }
-
+  @ViewChild('toastRef') toastRef!: ToastNotificationComponent;
+  
+  constructor(private authService: AuthService,
+    private router: Router){}
   ngOnInit(): void {
     // Any initialization logic can go here
   }
 
   ngAfterViewInit(): void {
     this.loadParticlesScript();
+
+    if (!this.toastRef) {
+      console.error('Toast reference not available in ngAfterViewInit');
+    } else {
+      console.log('Toast reference successfully initialized');
+    }
   }
 
   loadParticlesScript(): void {
@@ -149,5 +165,75 @@ export class LoginComponent implements OnInit, AfterViewInit {
         "background_size": "cover"
       }
     });
+  }
+
+  showSuccess(message: string) {
+    if (this.toastRef) {
+      this.toastRef.displayToast(message, 'success');
+    } else {
+      console.error('Toast reference not available');
+    }
+  }
+
+  showInfo() {
+    if (this.toastRef) {
+      this.toastRef.displayToast('Here is some information.', 'info');
+    }
+  }
+
+  showWarning(message: string) {
+    if (this.toastRef) {
+      this.toastRef.displayToast(message, 'warning');
+    }
+  }
+
+  showError(error: any) {
+    if (this.toastRef) {
+      this.toastRef.displayToast(error, 'error');
+    }
+  }
+
+
+  login(): void {
+    this.errorMessage = '';
+    // console.log('Login attempt:', this.username, this.password);
+    if (!this.username || !this.password) {
+      this.errorMessage = 'Username and password are required';
+      this.showWarning(this.errorMessage);
+      return;
+    }
+    
+    this.isLoading = true;
+    
+    this.authService.login(this.username, this.password)
+      .subscribe({
+        next: (response) => {
+          console.log('Login response:', response);
+          this.isLoading = false;
+          if (response.success){
+            localStorage.setItem('token', 'fawzy id 58595');
+            window.location.href = '/BlogManagment';
+            this.errorMessage = response.message;
+            this.showSuccess("Login successful");
+          } else {
+            this.errorMessage = response.message;
+            this.showError(this.errorMessage);
+          }
+        },
+        error: (error) => {
+          this.isLoading = false;
+          if (error.status === 401) {
+            this.errorMessage = 'Invalid username or password';
+            this.showError(this.errorMessage);
+          } else if (error.status === 400) {
+            this.errorMessage = 'Username and password are required';
+            this.showWarning(this.errorMessage);
+          } else {
+            this.errorMessage = 'An error occurred. Please try again.';
+            this.showError(this.errorMessage);
+          }
+          console.error('Login error:', error);
+        }
+      });
   }
 }

@@ -1,30 +1,40 @@
 <!-- <div id="login-box">
-        <div class="logo">
-            <img src="http://placehold.it/100x100?text=DD" class="img img-responsive img-circle center-block"
-                alt="Logo" />
-            <h1 class="logo-caption"><span class="tweak">L</span>ogin</h1>
-        </div>
-        <div class="controls">
-            <input type="text" name="username" placeholder="Username" class="form-control" />
-            <input type="password" name="password" placeholder="Password" class="form-control" />
-            <button type="button" class="btn btn-default btn-block btn-custom">Login</button>
-        </div> 
-    </div>-->
+    <div class="logo">
+        <img src="http://placehold.it/100x100?text=DD" class="img img-responsive img-circle center-block"
+            alt="Logo" />
+        <h1 class="logo-caption"><span class="tweak">L</span>ogin</h1>
+    </div>
+    <div class="controls">
+        <input type="text" name="username" placeholder="Username" class="form-control" />
+        <input type="password" name="password" placeholder="Password" class="form-control" />
+        <button type="button" class="btn btn-default btn-block btn-custom">Login</button>
+    </div> 
+</div>-->
+<app-navbar></app-navbar>
+<app-toast-notification #toastRef></app-toast-notification>
+<div id="top-section"></div>
 <div class=" vw-100 vh-100">
     <div class="container_input col-sm-12 d-block" id="loginPage">
         <div class="image">
             <img src="https://i.ibb.co/Y70bDFvj/bitmap.webp" alt="Geomakani" border="0">
         </div>
         <label for="name">username</label>
-        <input type="text" placeholder="username" id="UserName" name="username" required>
+        <input type="text" placeholder="username" id="username" name="username" [(ngModel)]="username" required>
         <label for="id">Password</label>
-        <input type="password" placeholder="password" id="password" name="password" required>
+        <input type="password" placeholder="password" id="password" name="password" [(ngModel)]="password" required
+            style="min-width:0px !important;">
         <div class="Message">
             <h5 class="status"></h5>
         </div>
         <div class="btn_1">
-            <button onclick="getValue()" type="submit" class="btn_login1" id="login">Login</button>
+            <div class="btn_1">
+                <button (click)="login()" type="submit" class="btn_login1" id="login" [disabled]="isLoading">
+                    {{ isLoading ? 'Logging in...' : 'Login' }}
+                </button>
+            </div>
         </div>
     </div>
+    <div id="particles-js"></div>
 </div>
-<div id="particles-js"></div>
+<div id="bottom-section"></div>
+<app-footer style="position: fixed; bottom: 0;height:110px; width: 100%; z-index: 1000;"></app-footer>

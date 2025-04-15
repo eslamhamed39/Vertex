@@ -1,3 +1,134 @@
-body {
-    background-color: black;
+.preloader-wrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: #000;
+    z-index: 800;
+    text-align: center
+}
+
+.preloader-wrap.hidden {
+    display: none;
+    visibility: hidden;
+    opacity: 0
+}
+
+.light-content.preloader-wrap {
+    background: #000
+}
+
+.preloader-wrap .outer {
+    padding: 0;
+    box-sizing: border-box
+}
+
+.preloader-wrap .inner {
+    vertical-align: middle;
+    box-sizing: border-box
+}
+
+.percentage-wrapper {
+    height: 20px;
+    position: absolute;
+    margin-bottom: 20px;
+    right: 80px;
+    bottom: 40px
+}
+
+.percentage-intro {
+    height: 20px;
+    position: absolute;
+    margin-bottom: 20px;
+    left: 80px;
+    bottom: 40px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #000
+}
+
+.percentage {
+    opacity: 1;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    width: 30px;
+    height: 100px;
+    color: #000;
+    display: table;
+    margin: 0 auto
+}
+
+.percentage::after {
+    content: "%";
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #000
+}
+
+.light-content .percentage,
+.light-content .percentage:after,
+.light-content .percentage-intro {
+    color: #fff
+}
+
+.trackbar {
+    width: auto;
+    height: inherit;
+    margin: 0 auto;
+    display: table;
+    position: relative;
+    padding: 20px;
+    opacity: 1
+}
+
+.loadbar {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .8);
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden
+}
+
+.light-content .loadbar {
+    background: rgba(0, 0, 0, .8)
+}
+
+.hold-progress-bar {
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden
+}
+
+.light-content .hold-progress-bar {
+    background: rgba(0, 0, 0, 1)
+}
+
+.preloader-intro {
+    font-family: "Roboto Slab", serif;
+    font-weight: 500;
+    position: relative;
+    display: block;
+    font-size: 100px;
+    line-height: 130px;
+    color: #000
+}
+
+.light-content .preloader-intro {
+    color: #fff
+}
+
+.admin-bar header {
+    top: 32px
 }

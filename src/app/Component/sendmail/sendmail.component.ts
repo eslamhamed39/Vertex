@@ -10,13 +10,9 @@ import { ToastNotificationComponent } from '../toast-notification/toast-notifica
 export class SendmailComponent implements OnInit {
   captcha: string = '';
   email: string = 'Secret@email.com';
-
   @ViewChild('toastRef') toastRef!: ToastNotificationComponent;
-
   constructor() {}
-
   ngOnInit(): void {
-    // Verify the toast component is available
     setTimeout(() => {
       if (!this.toastRef) {
         console.error('Toast reference not found!');
@@ -25,12 +21,10 @@ export class SendmailComponent implements OnInit {
       }
     }, 0);
   }
-
   resolved(captchaResponse: string) {
     this.captcha = captchaResponse;
     console.log('resolved captcha with response: ' + this.captcha);
   }
-
   showSuccess() {
     if (this.toastRef) {
       this.toastRef.displayToast('Email sent successfully!', 'success');
@@ -38,19 +32,16 @@ export class SendmailComponent implements OnInit {
       console.error('Toast reference not available');
     }
   }
-
   showInfo() {
     if (this.toastRef) {
       this.toastRef.displayToast('Here is some information.', 'info');
     }
   }
-
   showWarning() {
     if (this.toastRef) {
       this.toastRef.displayToast('Please complete the CAPTCHA.', 'warning');
     }
   }
-
   showError(error: any) {
     if (this.toastRef) {
       this.toastRef.displayToast(error, 'error');
@@ -62,7 +53,6 @@ export class SendmailComponent implements OnInit {
       this.toastRef.displayToast(message, 'warning');
     }
   }
-
   public sendEmail(e: Event) {
     e.preventDefault();
     console.log("Sending email...");
@@ -73,7 +63,6 @@ export class SendmailComponent implements OnInit {
       this.showError('Form submission error');
       return;
     }
-  
     // Get form field values
     const firstName = (form.elements.namedItem('first-name') as HTMLInputElement)?.value.trim();
     const lastName = (form.elements.namedItem('last-name') as HTMLInputElement)?.value.trim();
@@ -81,18 +70,15 @@ export class SendmailComponent implements OnInit {
     const phoneNumber = (form.elements.namedItem('tel-936') as HTMLInputElement)?.value.trim();
     const email = (form.elements.namedItem('your-email') as HTMLInputElement)?.value.trim();
     const message = (form.elements.namedItem('your-message') as HTMLTextAreaElement)?.value.trim();
-  
     // Validation checks
     if (!firstName || !lastName || !companyName || !phoneNumber || !email || !message) {
       this.showWarningWithMessage('Please fill in all required fields.');
       return;
     }
-  
     if (!this.captcha) {
       this.showWarning();
       return;
     }
-  
     // If all validations pass, proceed with sending the email
     emailjs
       .sendForm(
@@ -118,5 +104,4 @@ export class SendmailComponent implements OnInit {
         this.showError('An unexpected error occurred');
       });
   }
-  
 }

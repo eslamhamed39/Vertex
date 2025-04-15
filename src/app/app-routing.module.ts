@@ -10,6 +10,7 @@ import { TrainingComponent } from './Component/training/training.component';
 import { ContactComponent } from './Component/contact/contact.component';
 import { ProductComponent } from './Component/product/product.component';
 import { LoginComponent } from './Component/login/login.component';
+import { BlogmanageComponent } from './Component/blogmanage/blogmanage.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
@@ -22,6 +23,8 @@ const routes: Routes = [
   { path: 'Contact', component: ContactComponent },
   { path: 'Product', component: ProductComponent },
   { path: 'Login', component: LoginComponent },
+  { path: 'Dashbord', component: LoginComponent },
+  { path: 'BlogManagment', component: BlogmanageComponent },
   { path: '**', component: NotfoundComponent },
 ];
 

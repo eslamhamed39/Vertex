@@ -11,19 +11,18 @@ export class ToastNotificationComponent {
   toastType: 'success' | 'info' | 'warning' | 'error' = 'success';
 
   displayToast(message: string, type: 'success' | 'info' | 'warning' | 'error'): void {
-    console.log('Displaying toast:', { message, type }); // Debug log
+    console.log('Displaying toast:', { message, type }); 
     this.toastMessage = message;
     this.toastType = type;
     this.showToast = true;
-
     setTimeout(() => {
-      console.log('Hiding toast'); // Debug log
+      console.log('Hiding toast'); 
       this.showToast = false;
     }, 3000);
   }
 
   closeToast(): void {
-    console.log('Toast closed manually'); // Debug log
+    console.log('Toast closed manually'); 
     this.showToast = false;
   }
 }

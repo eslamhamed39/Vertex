@@ -42,10 +42,6 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
 
 
   ngAfterViewInit(): void {
-    // const swiper = new Swiper('.swiper-container', {
-    //   allowTouchMove: false, // تعطيل التمرير باللمس
-    //   mousewheel: false,     // تعطيل تمرير الماوس (إذا كانت هذه الخاصية مُفعّلة)
-    // });
     this.ensureBackgroundColor();
     this.executeJsFunctions();
   }
@@ -53,7 +49,6 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   ngOnDestroy(): void {
     console.log("HomeComponent destroyed.");
   }
-
   private executeJsFunctions() {
     setTimeout(() => {
       if (typeof PageLoad !== 'undefined') {

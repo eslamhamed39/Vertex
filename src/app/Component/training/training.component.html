@@ -4,7 +4,7 @@
 	<p>Loading...</p>
 </div>
 <app-navbar></app-navbar>
-<div id="sperator"></div>
+<div id="sperator main"></div>
 <section *ngIf="!isLoading">
 	<app-logo3d></app-logo3d>
 	<div class="sp-container">
@@ -41,8 +41,8 @@
 	</div>
 </section>
 
-<main *ngIf="!isLoading" class="main">
-	<section id="tab-svelte" class="slider position-relative">
+<main *ngIf="!isLoading" class="main" >
+	<section id="tab-svelte"class="slider position-relative">
 		<div id="top-section"></div>
 		<div class="overlayer section1">
 			<h1 style="line-height: 90px;">Expert Geospatial Training Solutions</h1>
@@ -157,4 +157,4 @@
 		</ul>
 	</section>
 </main>
-<app-footer *ngIf="!isLoading"></app-footer> 
+<app-footer></app-footer> 

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './Component/home/home.component';
@@ -24,7 +23,11 @@ import { SendmailComponent } from './Component/sendmail/sendmail.component';
 import { FormsModule } from '@angular/forms';
 import { ToastNotificationComponent } from './Component/toast-notification/toast-notification.component';
 import { ProductComponent } from './Component/product/product.component';
+import { PreloaderComponent } from './Component/preloader/preloader.component';
 import { LoginComponent } from './Component/login/login.component';
+import { DashbordComponent } from './Component/dashbord/dashbord.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BlogmanageComponent } from './Component/blogmanage/blogmanage.component';
 
 
 @NgModule({
@@ -45,7 +48,10 @@ import { LoginComponent } from './Component/login/login.component';
     SendmailComponent,
     ToastNotificationComponent,
     ProductComponent,
-    LoginComponent
+    PreloaderComponent,
+    LoginComponent,
+    DashbordComponent,
+    BlogmanageComponent
   ],
   imports: [
     BrowserModule,
@@ -53,8 +59,8 @@ import { LoginComponent } from './Component/login/login.component';
     NgbModule,
     RecaptchaModule,
     FontAwesomeModule,
-    FormsModule
-    
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
