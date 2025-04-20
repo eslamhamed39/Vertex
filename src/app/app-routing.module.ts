@@ -11,6 +11,7 @@ import { ContactComponent } from './Component/contact/contact.component';
 import { ProductComponent } from './Component/product/product.component';
 import { LoginComponent } from './Component/login/login.component';
 import { BlogmanageComponent } from './Component/blogmanage/blogmanage.component';
+import { BlogsViewComponent } from './Component/blogs-view/blogs-view.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
@@ -24,8 +25,9 @@ const routes: Routes = [
   { path: 'Product', component: ProductComponent },
   { path: 'Login', component: LoginComponent },
   { path: 'Dashbord', component: LoginComponent },
+  { path: 'Blog', component: BlogsViewComponent },
   { path: 'BlogManagment', component: BlogmanageComponent },
-  { path: '**', component: NotfoundComponent },
+  { path: '**', component: NotfoundComponent }
 ];
 
 @NgModule({

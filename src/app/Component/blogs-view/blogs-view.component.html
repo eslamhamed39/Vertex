@@ -1,0 +1,399 @@
+<body>
+    <app-navbar></app-navbar>
+    <main class="main mt-70">
+        <div class="cover-home1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-1"></div>
+                    <div class="col-xl-10 col-lg-12">
+                        <div class="banner banner-home2">
+                            <div class="text-center">
+                                <h6 class="color-gray-600">Welcome to our blog</h6>
+                                <h1 class="color-white">Being<span class="color-linear"> Unique</span>
+                                    is better<br class="d-none d-lg-block">than being
+                                    <span class="color-linear">Erfect</span>
+                                </h1>
+                            </div>
+                        </div>
+                        <div *ngIf="!loading && blogs.length > 0" class="row mt-70 g-1">
+                            <div class="col-lg-4" *ngFor="let blog of blogs">
+                                <div class="p-1 wow animate__animated animate__fadeIn" data-wow-delay="0">
+                                    <div class="card-blog-1 hover-up">
+                                        <div class="card-image mb-20">
+                                            <a class="post-type" [routerLink]="['/blog', blog.id]"></a>
+                                            <a [routerLink]="['/blog', blog.id]">
+                                                <img [src]="blog.header_image || 'assets/imgs/page/homepage2/news3.png'"
+                                                    [alt]="blog.title" />
+                                            </a>
+                                        </div>
+                                        <div class="card-info">
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <a class="color-gray-700 text-sm" [routerLink]="['/blogs']"
+                                                        [fragment]="blog.tags">#{{ blog.tags }}</a>
+                                                </div>
+                                                <div class="col-5 text-end">
+                                                    <span class="color-gray-700 text-sm timeread">{{ blog.time_to_read
+                                                        }} mins read</span>
+                                                </div>
+                                            </div>
+                                            <a [routerLink]="['/blog', blog.id]">
+                                                <h4 class="color-white mt-20">{{ blog.title }}</h4>
+                                            </a>
+                                            <div class="row last-card align-items-center">
+                                                <div class="col-7">
+                                                    <div class="box-author">
+                                                        <img [src]="blog.creator_image || 'assets/imgs/page/homepage1/author.jpg'"
+                                                            [alt]="blog.creator" />
+                                                        <div class="author-info">
+                                                            <h6 class="color-gray-700">{{ blog.creator }}</h6>
+                                                            <span class="color-gray-700 text-sm">{{ blog.created_at |
+                                                                date: 'dd MMMM yyyy' }}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-5 text-end">
+                                                    <a class="readmore color-gray-500 text-sm"
+                                                        [routerLink]="['/blog', blog.id]">
+                                                        <span>Read more</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row mt-70">
+                            <div class="col-lg-12 mb-50 ">
+                                <h2 class="color-linear d-inline-block mb-10">Recent posts</h2>
+                                <p class="text-lg color-gray-500">Don't miss the latest trends</p>
+                            </div>
+                            <div class="col-lg-12 d-flex flex-nowrap g-2" >
+                                <div class="box-list-posts">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="card-blog-1 hover-up wow animate__animated animate__fadeIn">
+                                                <div class="card-image mb-20"><a class="post-type" href="#"></a><a
+                                                        href="single-sidebar.html"><img
+                                                            src="assets/imgs/page/homepage2/news1.png" alt="Genz"></a>
+                                                </div>
+                                                <div class="card-info">
+                                                    <div class="row">
+                                                        <div class="col-7"><a class="color-gray-700 text-sm"
+                                                                href="blog-archive.html"># Travel</a></div>
+                                                        <div class="col-5 text-end"><span
+                                                                class="color-gray-700 text-sm timeread">3 mins
+                                                                read</span></div>
+                                                    </div><a href="single-sidebar.html">
+                                                        <h5 class="color-gray-50 mt-20">16 Unheard Ways To Achieve
+                                                            Greater Walker</h5>
+                                                    </a>
+                                                    <div class="row align-items-center mt-25">
+                                                        <div class="col-7">
+                                                            <div class="box-author"><img
+                                                                    src="assets/imgs/page/homepage2/author.png"
+                                                                    alt="Genz">
+                                                                <div class="author-info">
+                                                                    <h6 class="color-gray-700">Joseph</h6><span
+                                                                        class="color-gray-700 text-sm">25 April
+                                                                        2022</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-5 text-end"><a
+                                                                class="readmore color-gray-500 text-sm"
+                                                                href="single-sidebar.html"><span>Read more</span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="card-blog-1 hover-up wow animate__animated animate__fadeIn">
+                                                <div class="card-image mb-20"><a class="post-type" href="#"></a><a
+                                                        href="single-sidebar.html"><img
+                                                            src="assets/imgs/page/homepage2/news2.png" alt="Genz"></a>
+                                                </div>
+                                                <div class="card-info">
+                                                    <div class="row">
+                                                        <div class="col-7"><a class="color-gray-700 text-sm"
+                                                                href="blog-archive.html"># Travel</a></div>
+                                                        <div class="col-5 text-end"><span
+                                                                class="color-gray-700 text-sm timeread">3 mins
+                                                                read</span></div>
+                                                    </div><a href="single-sidebar.html">
+                                                        <h5 class="color-gray-50 mt-20">Master The Art Of Nature With
+                                                            These 7 Tips</h5>
+                                                    </a>
+                                                    <div class="row align-items-center mt-25">
+                                                        <div class="col-7">
+                                                            <div class="box-author"><img
+                                                                    src="assets/imgs/page/homepage2/author2.png"
+                                                                    alt="Genz">
+                                                                <div class="author-info">
+                                                                    <h6 class="color-gray-700">Joseph</h6><span
+                                                                        class="color-gray-700 text-sm">25 April
+                                                                        2022</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-5 text-end"><a
+                                                                class="readmore color-gray-500 text-sm"
+                                                                href="single-sidebar.html"><span>Read more</span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="card-blog-1 hover-up wow animate__animated animate__fadeIn">
+                                                <div class="card-image mb-20"><a class="post-type" href="#"></a><a
+                                                        href="single-sidebar.html"><img
+                                                            src="assets/imgs/page/homepage2/news5.png" alt="Genz"></a>
+                                                </div>
+                                                <div class="card-info">
+                                                    <div class="row">
+                                                        <div class="col-7"><a class="color-gray-700 text-sm"
+                                                                href="blog-archive.html"># Travel</a></div>
+                                                        <div class="col-5 text-end"><span
+                                                                class="color-gray-700 text-sm timeread">3 mins
+                                                                read</span></div>
+                                                    </div><a href="single-sidebar.html">
+                                                        <h5 class="color-gray-50 mt-20">16 Unheard Ways To Achieve
+                                                            Greater Walker</h5>
+                                                    </a>
+                                                    <div class="row align-items-center mt-25">
+                                                        <div class="col-7">
+                                                            <div class="box-author"><img
+                                                                    src="assets/imgs/page/homepage2/author.png"
+                                                                    alt="Genz">
+                                                                <div class="author-info">
+                                                                    <h6 class="color-gray-700">Joseph</h6><span
+                                                                        class="color-gray-700 text-sm">25 April
+                                                                        2022</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-5 text-end"><a
+                                                                class="readmore color-gray-500 text-sm"
+                                                                href="single-sidebar.html"><span>Read more</span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="card-blog-1 hover-up wow animate__animated animate__fadeIn">
+                                                <div class="card-image mb-20"><a class="post-type" href="#"></a><a
+                                                        href="single-sidebar.html"><img
+                                                            src="assets/imgs/page/homepage2/news6.png" alt="Genz"></a>
+                                                </div>
+                                                <div class="card-info">
+                                                    <div class="row">
+                                                        <div class="col-7"><a class="color-gray-700 text-sm"
+                                                                href="blog-archive.html"># Travel</a></div>
+                                                        <div class="col-5 text-end"><span
+                                                                class="color-gray-700 text-sm timeread">3 mins
+                                                                read</span></div>
+                                                    </div><a href="single-sidebar.html">
+                                                        <h5 class="color-gray-50 mt-20">Master The Art Of Nature With
+                                                            These 7 Tips</h5>
+                                                    </a>
+                                                    <div class="row align-items-center mt-25">
+                                                        <div class="col-7">
+                                                            <div class="box-author"><img
+                                                                    src="assets/imgs/page/homepage2/author2.png"
+                                                                    alt="Genz">
+                                                                <div class="author-info">
+                                                                    <h6 class="color-gray-700">Joseph</h6><span
+                                                                        class="color-gray-700 text-sm">25 April
+                                                                        2022</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-5 text-end"><a
+                                                                class="readmore color-gray-500 text-sm"
+                                                                href="single-sidebar.html"><span>Read more</span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="card-blog-1 hover-up wow animate__animated animate__fadeIn">
+                                                <div class="card-image mb-20"><a class="post-type" href="#"></a><a
+                                                        href="single-sidebar.html"><img
+                                                            src="assets/imgs/page/homepage2/news7.png" alt="Genz"></a>
+                                                </div>
+                                                <div class="card-info">
+                                                    <div class="row">
+                                                        <div class="col-7"><a class="color-gray-700 text-sm"
+                                                                href="blog-archive.html"># Travel</a></div>
+                                                        <div class="col-5 text-end"><span
+                                                                class="color-gray-700 text-sm timeread">3 mins
+                                                                read</span></div>
+                                                    </div><a href="single-sidebar.html">
+                                                        <h5 class="color-gray-50 mt-20">Your Light Is About To Stop
+                                                            Being Relevant</h5>
+                                                    </a>
+                                                    <div class="row align-items-center mt-25">
+                                                        <div class="col-7">
+                                                            <div class="box-author"><img
+                                                                    src="assets/imgs/page/homepage2/author.png"
+                                                                    alt="Genz">
+                                                                <div class="author-info">
+                                                                    <h6 class="color-gray-700">Joseph</h6><span
+                                                                        class="color-gray-700 text-sm">25 April
+                                                                        2022</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-5 text-end"><a
+                                                                class="readmore color-gray-500 text-sm"
+                                                                href="single-sidebar.html"><span>Read more</span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="card-blog-1 hover-up wow animate__animated animate__fadeIn">
+                                                <div class="card-image mb-20"><a class="post-type" href="#"></a><a
+                                                        href="single-sidebar.html"><img
+                                                            src="assets/imgs/page/homepage2/news8.png" alt="Genz"></a>
+                                                </div>
+                                                <div class="card-info">
+                                                    <div class="row">
+                                                        <div class="col-7"><a class="color-gray-700 text-sm"
+                                                                href="blog-archive.html"># Travel</a></div>
+                                                        <div class="col-5 text-end"><span
+                                                                class="color-gray-700 text-sm timeread">3 mins
+                                                                read</span></div>
+                                                    </div><a href="single-sidebar.html">
+                                                        <h5 class="color-gray-50 mt-20">Your Light Is About To Stop
+                                                            Being Relevant</h5>
+                                                    </a>
+                                                    <div class="row align-items-center mt-25">
+                                                        <div class="col-7">
+                                                            <div class="box-author"><img
+                                                                    src="assets/imgs/page/homepage2/author2.png"
+                                                                    alt="Genz">
+                                                                <div class="author-info">
+                                                                    <h6 class="color-gray-700">Joseph</h6><span
+                                                                        class="color-gray-700 text-sm">25 April
+                                                                        2022</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-5 text-end"><a
+                                                                class="readmore color-gray-500 text-sm"
+                                                                href="single-sidebar.html"><span>Read more</span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="card-blog-1 hover-up wow animate__animated animate__fadeIn">
+                                                <div class="card-image mb-20"><a class="post-type" href="#"></a><a
+                                                        href="single-sidebar.html"><img
+                                                            src="assets/imgs/page/homepage2/news9.png" alt="Genz"></a>
+                                                </div>
+                                                <div class="card-info">
+                                                    <div class="row">
+                                                        <div class="col-7"><a class="color-gray-700 text-sm"
+                                                                href="blog-archive.html"># Travel</a></div>
+                                                        <div class="col-5 text-end"><span
+                                                                class="color-gray-700 text-sm timeread">3 mins
+                                                                read</span></div>
+                                                    </div><a href="single-sidebar.html">
+                                                        <h5 class="color-gray-50 mt-20">Your Light Is About To Stop
+                                                            Being Relevant</h5>
+                                                    </a>
+                                                    <div class="row align-items-center mt-25">
+                                                        <div class="col-7">
+                                                            <div class="box-author"><img
+                                                                    src="assets/imgs/page/homepage2/author.png"
+                                                                    alt="Genz">
+                                                                <div class="author-info">
+                                                                    <h6 class="color-gray-700">Joseph</h6><span
+                                                                        class="color-gray-700 text-sm">25 April
+                                                                        2022</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-5 text-end"><a
+                                                                class="readmore color-gray-500 text-sm"
+                                                                href="single-sidebar.html"><span>Read more</span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="card-blog-1 hover-up wow animate__animated animate__fadeIn">
+                                                <div class="card-image mb-20"><a class="post-type" href="#"></a><a
+                                                        href="single-sidebar.html"><img
+                                                            src="assets/imgs/page/homepage2/news10.png" alt="Genz"></a>
+                                                </div>
+                                                <div class="card-info">
+                                                    <div class="row">
+                                                        <div class="col-7"><a class="color-gray-700 text-sm"
+                                                                href="blog-archive.html"># Travel</a></div>
+                                                        <div class="col-5 text-end"><span
+                                                                class="color-gray-700 text-sm timeread">3 mins
+                                                                read</span></div>
+                                                    </div><a href="single-sidebar.html">
+                                                        <h5 class="color-gray-50 mt-20">Your Light Is About To Stop
+                                                            Being Relevant</h5>
+                                                    </a>
+                                                    <div class="row align-items-center mt-25">
+                                                        <div class="col-7">
+                                                            <div class="box-author"><img
+                                                                    src="assets/imgs/page/homepage2/author2.png"
+                                                                    alt="Genz">
+                                                                <div class="author-info">
+                                                                    <h6 class="color-gray-700">Joseph</h6><span
+                                                                        class="color-gray-700 text-sm">25 April
+                                                                        2022</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-5 text-end"><a
+                                                                class="readmore color-gray-500 text-sm"
+                                                                href="single-sidebar.html"><span>Read more</span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <nav class="mb-50">
+                                        <ul class="pagination">
+                                            <li class="page-item wow animate__animated animate__fadeIn"
+                                                data-wow-delay=".0s"><a class="page-link page-prev" href="#"><i
+                                                        class="fi-rr-arrow-small-left"></i></a></li>
+                                            <li class="page-item wow animate__animated animate__fadeIn"
+                                                data-wow-delay=".1s"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item wow animate__animated animate__fadeIn"
+                                                data-wow-delay=".2s"><a class="page-link active" href="#">2</a></li>
+                                            <li class="page-item wow animate__animated animate__fadeIn"
+                                                data-wow-delay=".3s"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item wow animate__animated animate__fadeIn"
+                                                data-wow-delay=".4s"><a class="page-link" href="#">...</a></li>
+                                            <li class="page-item wow animate__animated animate__fadeIn"
+                                                data-wow-delay=".5s"><a class="page-link page-next" href="#"><i
+                                                        class="fi-rr-arrow-small-right"></i></a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div> -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <app-footer></app-footer>
+</body>

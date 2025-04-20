@@ -28,6 +28,7 @@ import { LoginComponent } from './Component/login/login.component';
 import { DashbordComponent } from './Component/dashbord/dashbord.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BlogmanageComponent } from './Component/blogmanage/blogmanage.component';
+import { BlogsViewComponent } from './Component/blogs-view/blogs-view.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { BlogmanageComponent } from './Component/blogmanage/blogmanage.component
     PreloaderComponent,
     LoginComponent,
     DashbordComponent,
-    BlogmanageComponent
+    BlogmanageComponent,
+    BlogsViewComponent
   ],
   imports: [
     BrowserModule,
