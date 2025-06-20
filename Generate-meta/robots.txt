@@ -1,0 +1,9 @@
+User-agent: *
+
+Disallow: /Login
+Disallow: /Dashbord
+Disallow: /BlogManagment
+
+Allow: /
+
+Sitemap: https://www.geomakani.com/sitemap.xml
