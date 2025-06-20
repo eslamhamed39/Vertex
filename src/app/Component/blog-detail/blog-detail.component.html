@@ -1,0 +1,199 @@
+<!-- src/app/components/blog-detail/blog-detail.component.html -->
+
+<body>
+  <app-navbar></app-navbar>
+  <main id="main" class="main">
+    <div class="cover-home1">
+      <div class="container">
+        <!-- Loading and Error States -->
+        <div *ngIf="isLoading" class="loading text-center">
+          <p class="text-xl color-gray-500">Loading...</p>
+        </div>
+        <div *ngIf="error" class="error text-center">
+          <p class="text-xl color-gray-500">{{ error }}</p>
+        </div>
+        <!-- Blog Post Content -->
+        <div *ngIf="singlePost && !isLoading && !error" class="row">
+          <div class="col-xl-1"></div>
+          <div class="col-xl-10 col-lg-12">
+            <!-- Breadcrumbs -->
+            <div class="pt-30 border-bottom border-gray-800 pb-20">
+              <div class="box-breadcrumbs">
+                <ul class="breadcrumb">
+                  <li><a class="home" href="index.html">Home</a></li>
+                  <li><a href="blog-archive.html">Blog</a></li>
+                  <li><span>{{ singlePost.title }}</span></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Title -->
+            <div class="row mt-50 align-items-end">
+              <div class="col-lg-8 m-auto text-center">
+                <h2 class="color-linear">{{ singlePost.title }}</h2>
+              </div>
+            </div>
+            <!-- Header Image -->
+            <div class="row mt-30">
+              <div class="col-lg-12">
+                <div class="image-detail mb-30">
+                  <img *ngIf="singlePost.header_image" class="bdrd16"
+                    [src]="'https://geomakani.com/CMS/storage/uploads/' + singlePost.header_image.path"
+                    [alt]="singlePost.header_image.altText || singlePost.header_image.title">
+                </div>
+              </div>
+            </div>
+            <!-- Author and Share -->
+            <div class="col-lg-8 m-auto">
+              <div class="row mb-40">
+                <div class="col-md-6 mb-10">
+                  <div class="box-author">
+                    <img *ngIf="singlePost.creator_image" [src]="singlePost.creator_image" alt="Creator">
+                    <div class="author-info">
+                      <h6 class="color-gray-700">{{ singlePost.Creator }}</h6>
+                      <span class="color-gray-700 text-sm mr-30">
+                        {{ singlePost._created * 1000 | date: 'd MMMM yyyy' }}
+                      </span>
+                      <span class="color-gray-700 text-sm">{{ singlePost.read_time }} mins to read</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="col-md-6 text-start text-md-end">
+                  <div class="d-inline-block pt-10">
+                    <div class="d-flex align-item-center">
+                      <h6 class="d-inline-block color-gray-500 mr-10">Share</h6>
+                      <a class="icon-media icon-fb" href="#"></a>
+                      <a class="icon-media icon-tw" href="#"></a>
+                      <a class="icon-media icon-linked" href="#"></a> 
+                    </div>
+                  </div>
+                </div> -->
+                <div class="col-md-6 text-start text-md-end">
+                  <div class="d-inline-block pt-10">
+                    <div class="d-flex align-items-center">
+                      <h6 class="d-inline-block color-gray-500 mr-10">Share</h6>
+                      <!-- Facebook Share Link -->
+                      <!-- <a class="icon-media icon-fb"
+                        [href]="'https://www.facebook.com/sharer/sharer.php?u=https://www.geomakani.com/meta/' + singlePost._id + '.html'"
+                        target="_blank" rel="noopener noreferrer">
+                      </a> -->
+                      <a class="icon-media icon-fb" (click)="shareOnFacebook()" style="cursor: pointer;"
+                        title="Share on Facebook"></a>
+                      <!-- <a class="icon-media icon-tw"
+                        [href]="'https://twitter.com/intent/tweet?url=https://www.geomakani.com/meta/' + singlePost._id + '.html'"
+                        target="_blank" rel="noopener noreferrer"></a> -->
+                      <a class="icon-media icon-tw" (click)="shareOnTwitter()" style="cursor: pointer;"></a>
+                      <!-- <a class="icon-media icon-linked"
+                        [href]="'https://www.linkedin.com/sharing/share-offsite/?url=https://www.geomakani.com/meta/' + singlePost._id + '.html'"
+                        target="_blank" rel="noopener noreferrer"></a> -->
+                      <a class="icon-media icon-linked" (click)="shareOnLinkedIn()" style="cursor: pointer;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Blog Content -->
+              <div class="content-detail border-gray-800">
+                <div class="text-lg color-gray-500" [innerHTML]="singlePost.Description"></div>
+                <!-- Post Images -->
+                <div class="row mt-50" *ngIf="singlePost.Post_image?.length">
+                  <div class="gallery-container">
+                    <div class="gallery-item" *ngFor="let image of singlePost.Post_image; let i = index"
+                      [ngClass]="getGalleryItemClass(singlePost.Post_image.length)">
+                      <img class="img-bdrd-16" [src]="'https://geomakani.com/CMS/storage/uploads/'+image.path"
+                        [alt]="image.altText || image.title"
+                        [ngClass]="{'mb-30': i < singlePost.Post_image.length - 1, 'mb-0': i === singlePost.Post_image.length - 1}">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Tags -->
+              <div class="box-tags">
+                <a *ngFor="let tag of singlePost.tags" class="btn btn-tags bg-gray-850 border-gray-800 mr-10 hover-up"
+                  href="blog-archive.html">{{ tag }}</a>
+              </div>
+
+              <!-- Comments -->
+              <div class="box-comments border-gray-800">
+                <h3 class="text-heading-2 color-gray-300">Comments</h3>
+                <div class="list-comments-single">
+                  <div class="item-comment" *ngFor="let comment of comments">
+                    <div class="comment-left">
+                      <div class="box-author mb-20 d-flex align-items-center">
+                        <div class="avatar">
+                          {{ comment.name.charAt(0).toUpperCase() }}
+                        </div>
+                        <div class="author-info">
+                          <h6 class="color-gray-700">{{ comment.name || 'Anonymous' }}</h6>
+                          <span class="color-gray-700 text-sm mr-30">
+                            {{ comment._created ? (comment._created * 1000 | date: 'd MMMM yyyy') : '' }}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="comment-right">
+                      <div class="text-comment text-xl color-gray-500 bg-gray-850 border-gray-800">
+                        {{ comment.comment }}
+                      </div>
+                    </div>
+                  </div>
+                  <div *ngIf="!comments.length" class="text-xl color-gray-500">
+                    No comments yet.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Comment Form -->
+              <div class="box-form-comments mb-50">
+                <h4 class="text-heading-4 color-gray-300 mb-40">Leave a comment</h4>
+                <div class="box-forms">
+                  <form action="#" [formGroup]="commentForm" (ngSubmit)="submitComment()" novalidate>
+                    <textarea class="form-control bg-gray-850 border-gray-800 bdrd16 color-gray-500" name="comment"
+                      rows="5" placeholder="Write a comment" formControlName="comment"
+                      style="min-height: 200px;"></textarea>
+                    <div class="row mt-20">
+                      <!-- <div class="col-sm-6 mb-20">
+                        <input class="cb-agree" type="checkbox">
+                        <p class="text-sm color-gray-500 pl-25">
+                          Save my name, email, and website in this browser for the next time I comment.
+                        </p>
+                      </div> -->
+                      <div class="col-sm-12 text-center">
+                        <a class="btn btn-linear" (click)="openPopup()">Post Comment</a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="comment-modal-overlay" [ngClass]="{ 'show': showPopup }" (click)="closePopup()"></div>
+              <div class="comment-modal" [ngClass]="{ 'show': showPopup }">
+                <form [formGroup]="commentForm" (ngSubmit)="submitComment()" novalidate>
+                  <h5 class="color-gray-300 text-center mb-20">Enter Your Details</h5>
+
+                  <input class="form-control bg-gray-850 border-gray-800 bdrd16 color-gray-500 mb-15" type="text"
+                    placeholder="Your Name" formControlName="name" />
+                  <div *ngIf="commentForm.get('name')?.invalid && commentForm.get('name')?.touched"
+                    class="text-danger text-sm">
+                    Name is required.
+                  </div>
+
+                  <input class="form-control bg-gray-850 border-gray-800 bdrd16 color-gray-500 mb-15" type="email"
+                    placeholder="Your Email" formControlName="email" />
+                  <div *ngIf="commentForm.get('email')?.invalid && commentForm.get('email')?.touched"
+                    class="text-danger text-sm">
+                    Valid email is required.
+                  </div>
+
+                  <div class="text-center mt-10">
+                    <button type="submit" class="btn btn-linear">Submit Comment</button>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</body>

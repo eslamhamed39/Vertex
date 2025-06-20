@@ -12,6 +12,7 @@ import { ProductComponent } from './Component/product/product.component';
 import { LoginComponent } from './Component/login/login.component';
 import { BlogmanageComponent } from './Component/blogmanage/blogmanage.component';
 import { BlogsViewComponent } from './Component/blogs-view/blogs-view.component';
+import { BlogDetailComponent } from './Component/blog-detail/blog-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
@@ -26,12 +27,15 @@ const routes: Routes = [
   { path: 'Login', component: LoginComponent },
   { path: 'Dashbord', component: LoginComponent },
   { path: 'Blog', component: BlogsViewComponent },
-  { path: 'BlogManagment', component: BlogmanageComponent },
-  { path: '**', component: NotfoundComponent }
+  { path: 'BlogManagment', component: BlogmanageComponent},
+  // { path: 'blog/:id', component: BlogDetailComponent },
+  { path: 'Blog/:id', component: BlogDetailComponent}, // Create BlogDetailComponent if needed
+  // { path: 'BlogDetail', component: BlogDetailComponent },
+  { path: '**', component: NotfoundComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })],
+  imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload', initialNavigation: 'enabledBlocking' })],
   exports: [RouterModule],
   providers: [],
 })

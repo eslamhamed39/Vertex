@@ -12,7 +12,7 @@
      opacity="0.15"
      filter="url(#filter0_f_42_1703)"
      id="g1"
-     transform="translate(1.2569616,1.2569621)">
+     transform="translate(-471.36076,2.5139241)">
     <ellipse
        cx="506.5"
        cy="496.5"
@@ -56,14 +56,11 @@
        gradientUnits="userSpaceOnUse">
       <stop
          stop-color="#0EA5EA"
-         id="stop1"
-         offset="0"
-         style="stop-color:#f12711;stop-opacity:1;" />
+         id="stop1" />
       <stop
          offset="1"
          stop-color="#0BD1D1"
-         id="stop2"
-         style="stop-color:#f47467;stop-opacity:1;" />
+         id="stop2" />
     </linearGradient>
   </defs>
 </svg>

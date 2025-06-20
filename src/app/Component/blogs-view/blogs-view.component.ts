@@ -1,37 +1,62 @@
-import { Component } from '@angular/core';
-import { Blogs } from 'src/app/Intrface/blogs';
-import { BlogsService } from 'src/app/Services/blogs.service';
+import { Component, OnInit } from '@angular/core';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { BlogPost } from '../../Intrface/blogs'; // Path to src/app/Intrface/blogs
+import { BlogsService } from '../../Services/blogs.service'; // Path to src/app/Services/blogs.service
 
 @Component({
   selector: 'app-blogs-view',
   templateUrl: './blogs-view.component.html',
   styleUrls: ['./blogs-view.component.css']
 })
-export class BlogsViewComponent {
-  blogs: Blogs[] = [];
-  loading = false;
-  errorMessage: string | null = null;
+export class BlogsViewComponent implements OnInit {
+  posts: BlogPost[] = [];
+  singlePost: BlogPost | undefined;
+  isLoading = false;
+  error: string | null = null;
 
-  constructor(private blogsService: BlogsService) {}
+  constructor(private blogsService: BlogsService, private sanitizer: DomSanitizer) {}
 
   ngOnInit(): void {
-    this.loadBlogs();
+    this.loadAllPosts();
   }
 
-  loadBlogs(): void {
-    this.loading = true;
-    this.blogsService.getBlogs().subscribe({
-      next: (blogs) => {
-        this.blogs = blogs;
-        this.loading = false;
-        this.errorMessage = null;
-        console.log('Blogs:', blogs);
+  loadAllPosts(): void {
+    this.isLoading = true;
+    this.error = null;
+    this.blogsService.getPublishedBlogPosts().subscribe({
+      next: (data: BlogPost[]) => {
+        this.posts = data;
+        this.isLoading = false;
       },
-      error: (error) => {
-        this.errorMessage = error.message;
-        this.blogs = [];
-        this.loading = false;
+      error: (err: Error) => {
+        console.error('Error loading posts:', err);
+        this.error = 'Failed to load posts. Please try again later.';
+        this.isLoading = false;
       }
     });
+  }
+
+  // loadSinglePost(id: string): void {
+  //   this.isLoading = true;
+  //   this.error = null;
+  //   this.blogsService.getBlogPostById(id).subscribe({
+  //     next: (data: BlogPost) => {
+  //       this.singlePost = data;
+  //       this.isLoading = false;
+  //       if (!data) {
+  //         this.error = 'Post not found.';
+  //       }
+  //     },
+  //     error: (err: Error) => {
+  //       console.error('Error loading post:', err);
+  //       this.error = 'Failed to load post. Please try again later.';
+  //       this.isLoading = false;
+  //     }
+  //   });
+  // }
+
+  // Safely render HTML
+  sanitizeHtml(html: string): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(html);
   }
 }

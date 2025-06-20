@@ -116,3 +116,30 @@ html {
 }
 
 
+.content-detail h1,
+.content-detail h2,
+.content-detail h3,
+.content-detail h4,
+.content-detail h5 {
+    background: linear-gradient(
+      90deg,
+      rgb(14, 165, 234),
+      rgb(11, 209, 209) 51%,
+      rgb(14, 165, 234)
+    )
+    var(--x, 0) / 200%;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-fill-color: transparent;
+}
+.content-detail strong {
+  color: #ffffff !important;
+}
+.content-detail p {
+  color: #ffffff !important;
+}
+
+.content-detail h1{
+    font-size: 45px;
+}

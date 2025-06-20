@@ -20,7 +20,7 @@ import { TrainingComponent } from './Component/training/training.component';
 import { ContactComponent } from './Component/contact/contact.component';
 import { Logo3dComponent } from './Component/logo3d/logo3d.component';
 import { SendmailComponent } from './Component/sendmail/sendmail.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastNotificationComponent } from './Component/toast-notification/toast-notification.component';
 import { ProductComponent } from './Component/product/product.component';
 import { PreloaderComponent } from './Component/preloader/preloader.component';
@@ -29,6 +29,7 @@ import { DashbordComponent } from './Component/dashbord/dashbord.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BlogmanageComponent } from './Component/blogmanage/blogmanage.component';
 import { BlogsViewComponent } from './Component/blogs-view/blogs-view.component';
+import { BlogDetailComponent } from './Component/blog-detail/blog-detail.component';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { BlogsViewComponent } from './Component/blogs-view/blogs-view.component'
     LoginComponent,
     DashbordComponent,
     BlogmanageComponent,
-    BlogsViewComponent
+    BlogsViewComponent,
+    BlogDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +64,8 @@ import { BlogsViewComponent } from './Component/blogs-view/blogs-view.component'
     RecaptchaModule,
     FontAwesomeModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

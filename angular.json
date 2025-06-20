@@ -11,9 +11,9 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "outputPath": "dist/vertex",
+            "outputPath": "dist/Vertex/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -63,15 +63,18 @@
               "src/assets/script/jquery-3.5.1.min.dc5e7f18c8.js",
               "src/assets/wp-content/themes/rayden/js/scripts6a4d.js",
               "src/assets/script/collection-map.92cae303f.js"
-            ]
+            ],
+            "customWebpackConfig": {
+              "path": "webpack.config.js"
+            }
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "3mb"
+                  "maximumWarning": "3mb",
+                  "maximumError": "4mb"
                 }
               ],
               "outputHashing": "all",
@@ -99,7 +102,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "configurations": {
             "production": {
               "browserTarget": "Vertex:build:production"
@@ -133,6 +136,63 @@
             ],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/Vertex/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "buildOptimizer": true,
+              "outputHashing": "media",
+              "optimization": true,
+              "vendorChunk": true
+            },
+            "development": {
+              "buildOptimizer": true,
+              "optimization": true,
+              "sourceMap": false,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "Vertex:build:development",
+              "serverTarget": "Vertex:server:development"
+            },
+            "production": {
+              "browserTarget": "Vertex:build:production",
+              "serverTarget": "Vertex:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "Vertex:build:production",
+              "serverTarget": "Vertex:server:production"
+            },
+            "development": {
+              "browserTarget": "Vertex:build:development",
+              "serverTarget": "Vertex:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

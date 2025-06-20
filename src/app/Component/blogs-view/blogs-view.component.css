@@ -1,39 +1,3 @@
-/***
- Theme Name: Genz
- Description: Creative Personal Blog HTML Template
- Version: 2.0
- License: GNU General Public License v2 or later
- License URI: http://www.gnu.org/licenses/gpl-2.0.html
-==============================
-TABLE CONTENT
- Import Google Fonts
- Include Third Party CSS Library
- GENERAL
- HEADER
- Offcanvas Sidebar
- Search form
- Main header
- Mega menu
- Header layouts
- Page layouts
- Pagination
- Breadcrumb
- CATEGORY PAGES
- SINGLE POST
- Author box
- comment
- Post share social
- WP STYPE
- Custom amine
-***/
-/* @import url(https://fonts.bunny.net/css?family=noto-sans:400,500,700,800); */
-/*import vendors*/
-/* @import url(../css/vendors/normalize.css);
-@import url(../css/vendors/bootstrap.min.css);
-@import url(../css/vendors/uicons-regular-rounded.css);
-@import url(../css/plugins/swiper-bundle.min.css);
-@import url(../css/plugins/animate.min.css); */
-/*RESET*/
 html,
 body,
 div,
@@ -325,13 +289,13 @@ input[type="number"]:focus,
   border-radius: 20px;
 }
 
-.hover-up {
+/* .hover-up {
   transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
 }
 .hover-up:hover {
   transform: translateY(-2px);
   transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
-}
+} */
 
 .hover-shadow {
   transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
@@ -607,20 +571,6 @@ h6 {
 
 .border-gray-500 {
   border-color: #94a9c9 !important;
-}
-
-.color-linear {
-  background: linear-gradient(
-      90deg,
-      rgb(14, 165, 234),
-      rgb(11, 209, 209) 51%,
-      rgb(14, 165, 234)
-    )
-    var(--x, 0) / 200%;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-  text-fill-color: transparent;
 }
 
 .color-white {
@@ -1536,7 +1486,7 @@ input {
   border-radius: 8px;
   background: url(src/assets/imgs/page/homepage1/bg-trans.png) repeat-x left
     bottom;
-    display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
@@ -1564,25 +1514,27 @@ input {
 }
 
 .card-blog-1 {
-  padding: 20px;
+  padding: 2px;
   position: relative;
   width: 100%;
   border-radius: 16px;
-  border-width: 1px;
-  border-style: solid;
-  margin-bottom: 20px;
-  border: 1px solid #222f43;
-  background-color: #131c31;
-  min-height: 450px;
-  max-height: 450px;
+  /* margin-bottom: 20px; */
+  /* background-color: #131c31; */
+  /* min-height: 450px; */
+  /* max-height: 450px; */
+  /* backdrop-filter: blur(5px); Added blur effect */
+  /* border: 1px solid #EE4037; */
+  /* box-shadow: 0 0 40px rgba(8, 7, 16, 0.6); */
 }
 
 .card-blog-1 .card-image {
   position: relative;
+  height: 190px;
 }
 .card-blog-1 .card-image img {
   border-radius: 16px;
   width: 100%;
+  height: 100%;
 }
 .card-blog-1 .card-info a:hover {
   color: #0ea5ea !important;
@@ -1595,7 +1547,6 @@ input {
   color: #1cc2e7 !important;
 }
 
-.card-blog-1,
 .card-style-1,
 .card-style-2 {
   margin-bottom: 20px; /* adjust as necessary */
@@ -1786,7 +1737,8 @@ input {
 
 .box-newsletter {
   padding: 90px 0px;
-  background: #0f172a url("/assets/imgs/template/bg-newsletter.svg") no-repeat right 10px bottom 10px;
+  background: #0f172a url("/assets/imgs/template/bg-newsletter.svg") no-repeat
+    right 10px bottom 10px;
 }
 .box-newsletter .box-form-newsletter {
   position: relative;
@@ -5215,9 +5167,9 @@ input {
   margin-right: 200px !important;
 }
 
-.banner {
+/* .banner {
   padding-top: 50px;
-}
+} */
 
 .banner-img {
   position: relative;
@@ -5357,11 +5309,11 @@ input {
   z-index: 2;
 }
 .cover-home1::after {
-  height: 800px;
+  height: 1500px;
   width: 500px;
   content: "";
-  z-index: 1;
-  background: url(src/assets/imgs/template/shadow-1.svg) no-repeat right top;
+  z-index: 1000;
+  background: url(/assets/imgs/template/shadow-1.svg) no-repeat right top;
   position: absolute;
   left: 0px;
   top: 0px;
@@ -5371,7 +5323,7 @@ input {
   width: 500px;
   content: "";
   z-index: 1;
-  background: url(src/assets/imgs/template/shadow-3.svg) no-repeat right bottom;
+  background: url(/assets/imgs/template/shadow-3.svg) no-repeat right bottom;
   position: absolute;
   right: 0px;
   top: 700px;
@@ -5408,9 +5360,9 @@ input {
   background-color: transparent;
 }
 
-.banner-home2 {
+/* .banner-home2 {
   padding-top: 80px;
-}
+} */
 
 .banner-1 {
   position: absolute;
@@ -7179,6 +7131,7 @@ iframe.google-map {
 .theme-day .form-login input.border-gray-800 {
   border: 1px solid #c2d4ee !important;
 }
+
 .theme-day
   .mobile-header-wrapper-style
   .mobile-header-wrapper-inner
@@ -7205,6 +7158,7 @@ iframe.google-map {
   .menu-expand {
   color: #66768f;
 }
+
 .theme-day
   .mobile-header-wrapper-style
   .mobile-header-wrapper-inner
@@ -7216,6 +7170,7 @@ iframe.google-map {
   > .menu-expand {
   background: none;
 }
+
 .theme-day
   .mobile-header-wrapper-style
   .mobile-header-wrapper-inner
@@ -7230,9 +7185,8 @@ iframe.google-map {
 }
 /*# sourceMappingURL=style.css.map */
 
-
-.container * { 
-  box-sizing: border-box; 
+.container * {
+  box-sizing: border-box;
 }
 
 .last-card {
@@ -7245,8 +7199,8 @@ iframe.google-map {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  min-height: 450px;
-  max-height: 450px;
+  /* min-height: 450px;
+  max-height: 450px; */
 }
 
 .card-info {
@@ -7256,5 +7210,133 @@ iframe.google-map {
 }
 
 .card-info .last-card {
+  margin-top: auto;
+}
+
+.gradient-Coretext {
+  background: linear-gradient(
+    90deg,
+    #f12711,
+    #666,
+    #666,
+    #f12711,
+    #666,
+    #666,
+    #f12711
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove2 6s linear infinite;
+}
+
+@keyframes gradientMove2 {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.color-linear {
+  background: linear-gradient(
+      90deg,
+      rgb(14, 165, 234),
+      rgb(11, 209, 209) 51%,
+      rgb(14, 165, 234)
+    )
+    var(--x, 0) / 200%;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-fill-color: transparent;
+}
+
+.outer-border {
+  position: relative;
+  width: 320px;
+  /* padding: 2px;*/
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.border-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 250%;
+  /* background-color:#00d9ff;  */
+  background: linear-gradient(
+    to right,
+    #333 0%,
+    #333 20%,
+    #f12711 40%,
+    #f12711 60%,
+    #333 80%,
+    #333 100%
+  );
+  animation: rotate 8s linear infinite;
+  border-radius: 2rem;
+  z-index: 0;
+}
+
+.animated-card {
+  position: relative;
+  /* background: var(--dark-bg); */
+  border-radius: 0.9rem;
+  padding: 10px;
+  background-color: #000;
+  font-family: sans-serif;
+  text-align: center;
+  z-index: 1;
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* تأكد أن كل الكروت تأخذ نفس الطول داخل الأعمدة */
+.col-lg-4 {
+  display: flex;
+}
+
+.main-card {
+  width: 100%;
+  display: flex;
+}
+
+.outer-border.card-blog-1 {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+  min-height: 480px; /* أو الارتفاع الذي يناسبك */
+}
+
+/* هذا الجزء يجعل المحتوى الداخلي مرن ويوزع المسافات */
+.animated-card.card-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+}
+
+/* المحتوى العلوي */
+.card-info {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* تأكد أن آخر صف في الكارت في الأسفل دائماً */
+.last-card {
   margin-top: auto;
 }

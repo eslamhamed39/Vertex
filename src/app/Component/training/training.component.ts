@@ -4,26 +4,35 @@ import {
   HostListener,
   OnInit,
   ElementRef,
+  Inject,
+  PLATFORM_ID
 } from '@angular/core';
 import { Router } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
 
-declare var particlesJS: any; // تعريف Particles.js يدوياً
 @Component({
   selector: 'app-training',
   templateUrl: './training.component.html',
   styleUrls: ['./training.component.css'],
 })
-// export class TrainingComponent  {
 export class TrainingComponent implements AfterViewInit {
   currentId: string | null = null;
   tabContainerHeight = 75;
   lastScroll: number = 0;
   currentTab: HTMLElement | null = null;
-  isLoading: boolean = true; // متغير للتحكم في الـ Loading
+  isLoading: boolean = true;
+  isBrowser: boolean;
 
-  constructor(private router: Router, private el: ElementRef) {}
+  constructor(
+    private router: Router,
+    private el: ElementRef,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
 
   ngAfterViewInit() {
+    if (!this.isBrowser) return;
     const navContainer = this.el.nativeElement.querySelector('.nav-container');
     if (navContainer) {
       this.tabContainerHeight = navContainer.offsetHeight;
@@ -31,6 +40,7 @@ export class TrainingComponent implements AfterViewInit {
   }
 
   scrollToTab(tabId: string) {
+    if (!this.isBrowser) return;
     const element = document.querySelector(tabId);
     if (element) {
       const offset =
@@ -42,15 +52,9 @@ export class TrainingComponent implements AfterViewInit {
     }
   }
 
-  // @HostListener('window:scroll', [])
-  // onScroll() {
-  //   this.checkHeaderPosition();
-  //   this.findCurrentTabSelector();
-  //   this.lastScroll = window.scrollY;
-  // }
-
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
+    if (!this.isBrowser) return;
     this.checkHeaderPosition();
     this.findCurrentTabSelector();
     this.lastScroll = window.scrollY;
@@ -58,69 +62,50 @@ export class TrainingComponent implements AfterViewInit {
 
   @HostListener('window:load')
   onPageLoad() {
-    // إخفاء الـ Loading عند اكتمال تحميل الصفحة بالكامل
+    if (!this.isBrowser) return;
     this.isLoading = false;
   }
 
-  // onTabClick(event: Event, targetId: string): void {
-  //   event.preventDefault();
-  //   const targetElement = document.querySelector(targetId) as HTMLElement;
-  //   if (targetElement) {
-  //     const scrollTop = targetElement.getBoundingClientRect().top + window.scrollY - this.tabContainerHeight + 1;
-  //     window.scrollTo({ top: scrollTop, behavior: 'smooth' });
-  //   }
-  // }
-
   onTabClick(event: Event, targetId: string): void {
+    if (!this.isBrowser) return;
     event.preventDefault();
     const targetElement = document.querySelector(targetId) as HTMLElement;
     if (targetElement) {
       if (targetId === '#tab-typescript') {
         const titleElement = targetElement.querySelector('h1') as HTMLElement;
-        if (titleElement) {
-          const scrollTop =
-            titleElement.getBoundingClientRect().top + window.scrollY - 185;
-          console.log('Scroll to Training Programs title at:', scrollTop);
-          window.scrollTo({ top: scrollTop, behavior: 'smooth' });
-        } else {
-          const scrollTop = targetElement.offsetTop - this.tabContainerHeight;
-          console.log('No h1 found, scrolling to section top:', scrollTop);
-          window.scrollTo({ top: scrollTop, behavior: 'smooth' });
-        }
+        const scrollTop =
+          titleElement?.getBoundingClientRect().top +
+          window.scrollY -
+          185;
+        window.scrollTo({ top: scrollTop, behavior: 'smooth' });
       } else {
         const scrollTop =
           targetElement.getBoundingClientRect().top +
           window.scrollY -
           this.tabContainerHeight +
           1;
-        console.log('Scroll to other section:', scrollTop);
         window.scrollTo({ top: scrollTop, behavior: 'smooth' });
       }
-    } else {
-      console.log('Target element not found for:', targetId);
     }
   }
 
   @HostListener('window:resize', [])
   onWindowResize(): void {
+    if (!this.isBrowser) return;
     if (this.currentId) {
       this.setSliderCss();
     }
   }
 
   checkHeaderPosition(): void {
+    if (!this.isBrowser) return;
     const headerHeight = 100;
     const navContainer = this.el.nativeElement.querySelector('.nav-container');
-    if (!navContainer) {
-      console.error('nav-container غير موجود');
-      return;
-    }
+    if (!navContainer) return;
 
-    // حساب الـ offset باستخدام العنصر نفسه
     const offset =
       navContainer.offsetTop + navContainer.offsetHeight - headerHeight;
 
-    // إضافة أو إزالة الكلاسات بناءً على موقع التمرير
     if (window.scrollY > headerHeight) {
       navContainer.classList.add('nav-container--scrolled');
     } else {
@@ -142,57 +127,16 @@ export class TrainingComponent implements AfterViewInit {
         'nav-container--top-second'
       );
     }
-
-    // تحديث قيمة this.lastScroll بعد كل تمرير
     this.lastScroll = window.scrollY;
   }
 
-  // findCurrentTabSelector(): void {
-  //   const navTabs: NodeListOf<HTMLElement> = this.el.nativeElement.querySelectorAll('.nav-tab');
-  //   let newCurrentId: string | null = null;
-  //   let newCurrentTab: HTMLElement | null = null;
-
-  //   navTabs.forEach(tab => {
-  //     const targetId = tab.getAttribute('data-target');
-  //     if (targetId) {
-  //       const targetElement = document.querySelector(targetId) as HTMLElement;
-  //       const titleElement = targetElement.querySelector('h1') as HTMLElement;
-  //       if (targetElement) {
-  //         let offsetTop: number;
-  //         let offsetBottom: number;
-
-  //         if (targetId === '#tab-typescript') {
-  //           // لـ "Training Programs"، استخدم 3825 كنقطة البداية
-  //           offsetTop = titleElement.getBoundingClientRect().top + window.scrollY - 185;
-  //           offsetBottom = targetElement.offsetTop + targetElement.offsetHeight - this.tabContainerHeight; // النهاية الديناميكية
-  //         } else {
-  //           // للأقسام الأخرى، استخدم المنطق الديناميكي العادي
-  //           offsetTop = targetElement.offsetTop - this.tabContainerHeight;
-  //           offsetBottom = targetElement.offsetTop + targetElement.offsetHeight - this.tabContainerHeight;
-  //         }
-
-  //         if (window.scrollY >= offsetTop && window.scrollY < offsetBottom) {
-  //           newCurrentId = targetId;
-  //           newCurrentTab = tab;
-  //         }
-  //       }
-  //     }
-  //   });
-
-  //   if (this.currentId !== newCurrentId || this.currentId === null) {
-  //     this.currentId = newCurrentId;
-  //     this.currentTab = newCurrentTab;
-  //     this.setSliderCss();
-  //   }
-  // }
-
   findCurrentTabSelector(): void {
+    if (!this.isBrowser) return;
     const navTabs: NodeListOf<HTMLElement> =
       this.el.nativeElement.querySelectorAll('.nav-tab');
     let newCurrentId: string | null = null;
     let newCurrentTab: HTMLElement | null = null;
 
-    // التحقق من حجم الشاشة (أقل من 767px)
     const isMobile = window.matchMedia('(max-width: 767px)').matches;
 
     navTabs.forEach((tab) => {
@@ -201,27 +145,15 @@ export class TrainingComponent implements AfterViewInit {
         const targetElement = document.querySelector(targetId) as HTMLElement;
         const titleElement = targetElement.querySelector('h1') as HTMLElement;
         if (targetElement) {
-          let offsetTop: number;
-          let offsetBottom: number;
+          // let offsetTop: number = titleElement?.getBoundingClientRect().top + window.scrollY - 185 ?? 0;
+          let offsetTop: number = titleElement
+            ? titleElement.getBoundingClientRect().top + window.scrollY - 185
+            : 0;
+          let offsetBottom =
+            targetElement.offsetTop +
+            targetElement.offsetHeight -
+            this.tabContainerHeight;
 
-          if (targetId === '#tab-typescript') {
-            // لـ "Training Programs"، استخدم 3825 كنقطة البداية
-            offsetTop =
-              titleElement.getBoundingClientRect().top + window.scrollY - 185;
-            offsetBottom =
-              targetElement.offsetTop +
-              targetElement.offsetHeight -
-              this.tabContainerHeight;
-          } else {
-            // للأقسام الأخرى، استخدم المنطق الديناميكي العادي
-            offsetTop = targetElement.offsetTop - this.tabContainerHeight;
-            offsetBottom =
-              targetElement.offsetTop +
-              targetElement.offsetHeight -
-              this.tabContainerHeight;
-          }
-
-          // إضافة 100 بكسل إلى offsetTop في الشاشات أقل من 767px
           if (isMobile) {
             offsetTop += 500;
           }
@@ -242,6 +174,7 @@ export class TrainingComponent implements AfterViewInit {
   }
 
   setSliderCss(): void {
+    if (!this.isBrowser) return;
     const slider = this.el.nativeElement.querySelector(
       '.nav-tab-slider'
     ) as HTMLElement;
